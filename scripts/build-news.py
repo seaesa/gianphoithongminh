@@ -31,7 +31,10 @@ NEWS = json.load(open('data/news.json', encoding='utf-8'))
 POSTS = NEWS['posts']
 
 MENU_STATE = {'nav': [''] * 5, 'sidebar': [''] * 5, 'mobile': [''] * 5,
-              'footer': [''] * 9, 'topmenu': [''] * 2}
+              'footer': [''] * 9, 'topmenu': [''] * 2,
+              # index 0 of `extranav` is TIN TỨC — every page in the news
+              # taxonomy is "current" for it (see render.py's header())
+              'extranav': ['current-menu-item', '']}
 
 CATEGORY_INTRO = {
     'tin-tuc': 'Tin tức và dịch vụ mới nhất về giàn phơi thông minh, lưới cáp '

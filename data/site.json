@@ -1568,5 +1568,15 @@
  "floating": {
   "ring_html": "<div class=\"hotline-phone-ring-wrap\"><div class=\"hotline-phone-ring\"><div class=\"hotline-phone-ring-circle\"></div><div class=\"hotline-phone-ring-circle-fill\"></div><div class=\"hotline-phone-ring-img-circle\"> <a class=\"pps-btn-img locationus\" href=\"tel:0902 725 760\"> <img alt=\"Gọi điện thoại\" src=\"https://thegioigianphoi.vn/wp-content/themes/hrm/images/icon-call.png\" width=\"50\"/> </a></div></div></div>",
   "tail_html": ""
- }
+ },
+ "extranav": [
+  {
+   "text": "TIN TỨC",
+   "href": "https://thegioigianphoi.vn/category/tin-tuc/"
+  },
+  {
+   "text": "LIÊN HỆ",
+   "href": "https://thegioigianphoi.vn/lien-he/"
+  }
+ ]
 }

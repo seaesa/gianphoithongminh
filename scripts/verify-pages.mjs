@@ -44,7 +44,20 @@ const VIEWPORTS = has('--responsive')
   ? [{ n: 'desktop', w: 1440, h: 900 }, { n: 'tablet', w: 768, h: 1024 }, { n: 'mobile', w: 390, h: 844 }]
   : [{ n: 'desktop', w: 1440, h: 900 }];
 
-const PROBE = () => {
+/**
+ * Selectors the clone deliberately renders differently, so comparing them
+ * against the live site is meaningless (see components/site-fixes.spec.md):
+ *   - the main menu carries two extra items, which needed tighter gaps to stay
+ *     on one row — the bar's own height still has to match, and `#main-menu`
+ *     below checks exactly that
+ *   - below 992px the search field, its button and the cart icon are laid out
+ *     as one flex row instead of the theme's three stacked ones
+ */
+const NAV_ITEMS = ['#navigation > li.current-menu-item'];
+const MOBILE_HEADER = ['#masthead'];
+const divergent = (w) => NAV_ITEMS.concat(w <= 991 ? MOBILE_HEADER : []);
+
+const PROBE = (skip) => {
   const P = ['display', 'position', 'float', 'width', 'height', 'padding-top', 'padding-left',
     'margin-top', 'margin-left', 'background-color', 'color', 'font-size', 'font-weight',
     'line-height', 'text-align', 'border-top-width', 'border-top-color', 'overflow', 'z-index'];
@@ -54,6 +67,7 @@ const PROBE = () => {
   const box = el => { const r = el.getBoundingClientRect(); return [r.x, r.y, r.width, r.height].map(n => Math.round(n * 10) / 10); };
   const out = { height: document.documentElement.scrollHeight, sel: {}, kids: [] };
   for (const s of SELS) {
+    if (skip.indexOf(s) !== -1) continue;
     const el = document.querySelector(s);
     if (!el) { out.sel[s] = null; continue; }
     const c = getComputedStyle(el);
@@ -107,7 +121,7 @@ async function grab(page, url, vp) {
     await new Promise(res => { let n = 0; const t = setInterval(() => { window.scrollBy(0, 1000); if (++n > 60) { clearInterval(t); window.scrollTo(0, 0); res(); } }, 30); });
   });
   await page.waitForTimeout(900);
-  const data = await page.evaluate(PROBE);
+  const data = await page.evaluate(PROBE, divergent(vp.w));
   const shot = await page.screenshot({ fullPage: true, scale: 'css' });
   return { data, shot };
 }

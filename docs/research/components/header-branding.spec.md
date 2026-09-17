@@ -16,6 +16,9 @@
 `float:left` · `width:65%` · `padding-top:13px`
 ### `.search-form`
 `width:450px; max-width:100%; float:left`
+The live form posts `?s=` to WordPress; this clone points its `action` at
+`/tim-kiem/` and ranks an inlined index in the browser — see
+`site-fixes.spec.md`. Nothing about the box's styling changes.
 `#s` — `display:inline-block; width:300px; max-width:80%; height:36px; padding:5px 10px;`
 `background:#fff; color:#4e5256; border:1px solid #1a7b1c`
 `.search-submit` — `background:#0082c6; border:1px solid #0082c6; color:#fff; font-size:12px;`
@@ -23,6 +26,8 @@
 ### `.cart-header`
 `float:right; position:relative; padding:1px; border:1px solid #fcb040`
 `.cart-icon` — `padding:5px 10px; background:#1a7b1c; color:#fff; display:block; text-align:center`
+The live theme gives it `href="#"` and a WooCommerce click handler; the clone
+links it straight to `/gio-hang/` — see `site-fixes.spec.md`.
 
 ## States
 ### Cart dropdown — hover on `.cart-header`

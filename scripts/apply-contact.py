@@ -236,10 +236,15 @@ def apply_pages():
     touched = 0
     for f in sorted(glob.glob('data/pages/*.json')):
         rec = json.load(open(f, encoding='utf-8'))
-        before = (rec['main'], rec['title'])
-        rec['main'] = CONTACT_PAGE if f.endswith('/lien-he.json') else rewrite(before[0])
+        before = (rec['main'], rec['title'], json.dumps(rec['menuState'], sort_keys=True))
+        if f.endswith('/lien-he.json'):
+            rec['main'] = CONTACT_PAGE
+            # index 1 of `extranav` is LIÊN HỆ (see render.py's header())
+            rec['menuState']['extranav'] = ['', 'current-menu-item']
+        else:
+            rec['main'] = rewrite(before[0])
         rec['title'] = STRAY_TITLE_RE.sub(SITE_NAME, rec['title'])
-        if (rec['main'], rec['title']) != before:
+        if (rec['main'], rec['title'], json.dumps(rec['menuState'], sort_keys=True)) != before:
             json.dump(rec, open(f, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
             touched += 1
 

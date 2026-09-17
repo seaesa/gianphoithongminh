@@ -68,22 +68,20 @@ const PROPS = ['display', 'position', 'float', 'width', 'height',
   'text-align', 'text-transform', 'letter-spacing', 'opacity', 'z-index', 'overflow',
   'top', 'right', 'bottom', 'left', 'transform', 'background-image'];
 
-const probe = (SELS, PROPS) => {
-  const out = {};
-  for (const sel of SELS) {
-    const el = document.querySelector(sel);
-    if (!el) { out[sel] = null; continue; }
-    const c = getComputedStyle(el), r = el.getBoundingClientRect();
-    const o = { box: [r.x, r.y, r.width, r.height].map(n => Math.round(n * 10) / 10) };
-    for (const p of PROPS) {
-      let v = c.getPropertyValue(p);
-      if (p === 'background-image' && v !== 'none') v = 'IMG:' + ((v.match(/[^/"')]+\.(png|jpe?g|gif|svg)/i) || ['?'])[0]);
-      o[p] = v;
-    }
-    out[sel] = o;
-  }
-  return out;
-};
+/**
+ * Selectors the clone deliberately renders differently (see
+ * components/site-fixes.spec.md):
+ *   - the main menu carries two extra items, so the list items are narrower;
+ *     `#main-menu` and `#navigation` themselves still have to match, and they
+ *     do at every width — that is what keeps the bar honest
+ *   - below 992px the search field, its button and the cart icon are one flex
+ *     row instead of the theme's three stacked ones
+ */
+const NAV_ITEMS = ['#navigation > li:nth-child(1)', '#navigation > li:nth-child(1) > a',
+  '#navigation > li:nth-child(5) > a'];
+const MOBILE_HEADER = ['.top-mid-right', '.search-form', '#s', '.search-submit',
+  '.cart-header', '.cart-icon'];
+const divergent = (w) => NAV_ITEMS.concat(w <= 991 ? MOBILE_HEADER : []);
 
 const behaviours = () => {
   const r = {};
@@ -165,22 +163,37 @@ async function capture(page, url, vp) {
       out[sel] = o;
     }
     return out;
-  }, [SELS, PROPS]);
+  }, [SELS.filter(sel => !divergent(vp.width).includes(sel)), PROPS]);
+  const mastheadH = await page.evaluate(() => {
+    const el = document.querySelector('#masthead');
+    return el ? Math.round(el.getBoundingClientRect().height * 10) / 10 : 0;
+  });
   const behav = await page.evaluate(behaviours);
   behav.scrolled = await scrolledState(page);
   const shot = await page.screenshot({ fullPage: true, scale: 'css' });
-  return { styles, behav, shot };
+  return { styles, behav, shot, mastheadH };
 }
 
 const NUM = /^-?[\d.]+px$/;
-function cmpStyles(a, b) {
+
+/**
+ * Below 992px the clone lays the search field, its button and the cart icon out
+ * as one row where the theme stacked them, which makes the header shorter and
+ * slides the whole page up by that much. `shiftY` is that one number: every
+ * element below the header is compared against the live one *after* the header
+ * difference is taken out, so the page still has to match the original exactly
+ * in width, height, style and relative position. See components/site-fixes.spec.md.
+ */
+function cmpStyles(a, b, shiftY = 0) {
   const diffs = [];
   for (const sel of SELS) {
     const x = a[sel], y = b[sel];
     if (!x && !y) continue;
     if (!x || !y) { diffs.push({ sel, prop: 'exists', orig: !!x, clone: !!y }); continue; }
     for (let i = 0; i < 4; i++) {
-      const d = Math.abs(x.box[i] - y.box[i]);
+      // only y (index 1) moves, and only for what sits below the header
+      const adjust = (i === 1 && x.box[1] > 0) ? shiftY : 0;
+      const d = Math.abs((x.box[i] - adjust) - y.box[i]);
       if (d > 1.5) diffs.push({ sel, prop: 'box[' + 'xywh'[i] + ']', orig: x.box[i], clone: y.box[i], delta: Math.round(d * 10) / 10 });
     }
     for (const p of PROPS) {
@@ -220,7 +233,10 @@ for (const vp of VIEWPORTS) {
   await fs.writeFile(path.join(OUT, `orig-${vp.name}.png`), o.shot);
   await fs.writeFile(path.join(OUT, `clone-${vp.name}.png`), c.shot);
 
-  const sd = cmpStyles(o.styles, c.styles);
+  const shiftY = vp.width <= 991 ? Math.round((o.mastheadH - c.mastheadH) * 10) / 10 : 0;
+  if (shiftY) process.stdout.write(`header  orig ${o.mastheadH}px  clone ${c.mastheadH}px  `
+    + `(one-row search + cart; everything below compared with the ${shiftY}px taken out)\n`);
+  const sd = cmpStyles(o.styles, c.styles, shiftY);
   const pd = await pixelDiff(o.shot, c.shot, path.join(OUT, `diff-${vp.name}.png`));
 
   const bd = [];

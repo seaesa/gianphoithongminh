@@ -70,7 +70,7 @@ driving the same actions**.
 | Homepage full-page height | **identical** at all 15 widths |
 | Homepage interactions (hover / click / scroll / responsive) | **37 / 37 match** |
 | Single-product interactions (tabs, carousel, stepper, modal, lightbox) | **15 / 15 match** |
-| All 56 comparable pages — height, chrome geometry, `main` children, image integrity | **56 / 56 clean**, worst pixel diff **0.41 %** |
+| All 56 comparable pages — height, chrome geometry, `main` children, image integrity | **56 / 56 clean**, worst pixel diff **0.38 %** |
 | Cart / checkout / quick-order / new category (end to end) | **66 / 66 checks pass** |
 | Imported news — 47 pages load clean, pagination walks, feed coverage, phone layout | **310 / 310 checks pass** |
 | Cart icon, footer Facebook card, search (ranking, accents, highlight offsets) | **46 / 46 checks pass** |
@@ -129,7 +129,7 @@ assets/
   css/news.css             article body + archive card styling (added, not cloned)
   css/site.css             Facebook card + search results (added, not cloned)
   vendor/                  Font Awesome, prettyPhoto, Select2 (subsets)
-  fonts/ uploads/ theme/   564 downloaded assets (46 MB)
+  fonts/ uploads/ theme/   564 assets downloaded from the live site (46 MB)
   news/                    138 images for the imported posts (7.8 MB)
   js/main.js               behaviour layer (see docs/research/BEHAVIORS.md)
   js/cart.js               localStorage cart + header mini-cart

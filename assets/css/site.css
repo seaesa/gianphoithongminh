@@ -192,3 +192,92 @@
   color: inherit;
   font-weight: 700;
 }
+
+/* ── header: search + cart on one row below 992px ───────────────────────────
+   The theme stacks them. Below 768px `.top-mid-right` goes full width and
+   centres, the search form keeps `float:left` while `.cart-header` keeps
+   `float:right`, and below 500px `#s` picks up a `margin-bottom` that drops the
+   submit button onto a line of its own — three rows on a phone. Between 768 and
+   991px the cart still wraps under the field. This lays the same three controls
+   out as one flex row instead; nothing changes at 992px and up, where the theme
+   already fits them on one line. */
+
+@media (max-width: 991px) {
+  .site-header .top-mid-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0 15px;
+  }
+
+  .site-header .top-mid-right .search-form {
+    display: flex;
+    flex: 1 1 auto;
+    float: none;
+    width: auto;
+    /* a flex item will not shrink past its content unless told to */
+    min-width: 0;
+    margin-right: 10px;
+  }
+
+  /* beats the theme's `margin-bottom: 10px` at ≤500px on source order */
+  .site-header .search-form input[type="search"] {
+    flex: 1 1 auto;
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    margin-bottom: 0;
+  }
+
+  .site-header .search-form button.search-submit {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .site-header .top-mid-right .cart-header {
+    flex: 0 0 auto;
+    float: none;
+  }
+
+  /* the mini-cart hangs off the right edge; keep it inside the viewport */
+  .site-header .cart-header .cart-container-list {
+    right: 0;
+    max-width: calc(100vw - 30px);
+  }
+}
+
+/* the narrowest phones cannot fit "Tìm kiếm" next to the field as well as the
+   cart — keep the button, drop its label to the magnifier alone */
+@media (max-width: 400px) {
+  .site-header .search-form button.search-submit {
+    font-size: 0;
+    padding: 0 10px;
+  }
+  .site-header .search-form button.search-submit .fa {
+    font-size: 14px;
+  }
+}
+
+/* ── header: the two menu items this clone adds ─────────────────────────────
+   The theme sized the bar for exactly five items: at ≥1200px they are 1020px
+   wide inside a 1140px <ul>, leaving 120px — not enough for "TIN TỨC" and
+   "LIÊN HỆ", so the bar wrapped to two rows. Tightening the gaps keeps all
+   seven on one row at every width where the live site fits its five. */
+
+@media (min-width: 1200px) {
+  /* theme: padding 13px 25px → 7 items need 1229px of a 1140px bar */
+  ul#navigation > li > a {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* theme already drops to 10px 15px here; seven items still overflow the
+     940px bar, so the label shrinks a point as well */
+  ul#navigation > li > a {
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 12px;
+  }
+}

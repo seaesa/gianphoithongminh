@@ -89,6 +89,8 @@ def offcanvas(ctx):
          '  <div class="menu-danh-muc-san-pham-container"><ul id="menu-danh-muc-san-pham" class="menu">']
     for i, it in enumerate(DATA['mainnav']):
         o.append(f'    <li class="menu-item{ctx.state("mobile", i)}"><a href="{ctx.link(it["href"])}">{e(it["text"])}</a></li>')
+    for i, it in enumerate(DATA.get('extranav', [])):
+        o.append(f'    <li class="menu-item menu-item-extra{ctx.state("extranav", i)}"><a href="{ctx.link(it["href"])}">{e(it["text"])}</a></li>')
     o += ['  </ul></div>', '</div>']
     return o
 
@@ -151,6 +153,10 @@ def header(ctx, home=False):
           '        <ul id="navigation" class="nav navbar-nav navbar-left">']
     for i, it in enumerate(DATA['mainnav']):
         o.append(f'          <li class="menu-item{ctx.state("nav", i)}"><a href="{ctx.link(it["href"])}">{e(it["text"])}</a></li>')
+    # Tin tức and Liên hệ are not product categories, so they sit after the five
+    # the live menu ships and carry their own current-item state.
+    for i, it in enumerate(DATA.get('extranav', [])):
+        o.append(f'          <li class="menu-item menu-item-extra{ctx.state("extranav", i)}"><a href="{ctx.link(it["href"])}">{e(it["text"])}</a></li>')
     o += ['        </ul>', '      </div></nav>', '    </div>',
           '  </div></div></div></div>', '</header>']
     return o

@@ -41,6 +41,10 @@
   "topmenu": [
    "",
    ""
+  ],
+  "extranav": [
+   "current-menu-item",
+   ""
   ]
  },
  "breadcrumbs": [

@@ -113,6 +113,15 @@ directly put the `<mark>` two characters out and produced
 character and records which original character each folded character came from,
 so the highlight lands exactly on `<mark>GIÀN</mark> <mark>PHƠI</mark>`.
 
+### A note on hiding it in `verify-pages.mjs`
+
+The verifiers hide the page plugin on both sides, since the live one is a
+third-party iframe that could never match. The selector is
+`.fb-page-placeholder, .fb-page` — **not** `.fb_iframe_widget`. Facebook's SDK
+stamps that class on the *comments* box further up every product page too, and
+hiding it removed 48px from the live side only, which failed all 26 product
+pages until the selector was narrowed.
+
 ---
 
 ## Verification — `scripts/verify-site.mjs`

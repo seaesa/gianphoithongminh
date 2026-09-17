@@ -57,7 +57,12 @@ Then `#text-10` — "Bản quyền được bảo vệ bởi" + the DMCA badge (
   Chính sách trả hàng · Chính sách hậu mãi · Hợp tác với chúng tôi · Trang chủ · Chính sách hậu mãi
 - `#footer-sidebar-4` — `#text-6`: a pipe-separated SEO link row (Dây cáp cầu thang |
   Cáp tăng đơ cầu thang | cáp inox cầu thang | Lưới cầu thang | Luoi cau thang |
-  Luoi an toan cau thang), then a **340×200** Facebook page embed; then an empty `#text-11`
+  Luoi an toan cau thang), then a **340×200** Facebook page embed; then an empty `#text-11`.
+  The SDK is not loaded, so the clone draws its own card in that same 340×200 box —
+  see `site-fixes.spec.md`.
+
+Contact lines (address, hotline, email) come from `data/contact.json` and are
+**not** the live site's — see `news.spec.md`.
 
 ## `.footer-bottom`
 `.site-info` — empty on this page (kept so the trailing spacing matches).

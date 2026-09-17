@@ -1,0 +1,23 @@
+{
+ "_note": "Single source of truth for every contact detail on the site. Taken from gianphoichinhhang.com — this clone borrows that business's real contact information. scripts/apply-contact.py pushes these values into data/site.json and data/pages/*.json; render.py and build-pages.py read them directly.",
+ "company": "CÔNG TY TNHH NỘI THẤT THÔNG MINH ĐẠI HOA PHÁT",
+ "companyMixed": "Công ty TNHH Nội Thất Thông Minh Đại Hoa Phát",
+ "shortName": "ĐẠI HOA PHÁT",
+ "brand": "GIÀN PHƠI CHÍNH HÃNG",
+ "storeTitle": "HỆ THỐNG CỬA HÀNG GIÀN PHƠI CHÍNH HÃNG",
+ "phone": "0902 725 760",
+ "phoneDots": "0902.725.760",
+ "phoneTel": "0902725760",
+ "phoneIntl": "+84 902.725.760",
+ "email": "daihoaphat999@gmail.com",
+ "address": "Đường 48, khu phố 6, Hiệp Bình Chánh, TP Hồ Chí Minh",
+ "addressShort": "Đường 48, KP6, Hiệp Bình Chánh, TP.HCM",
+ "area": "TP.HCM & Bình Dương",
+ "hours": "08:00 – 20:00, tất cả các ngày trong tuần",
+ "facebook": "https://www.facebook.com/noithatthongminhdaihoaphat",
+ "facebookName": "Cửa Lưới Ngăn Kiến Ba Khoang - Rèm Cửa Hoà Phát S-G",
+ "zalo": "https://zalo.me/0902725760",
+ "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.6904174540286!2d106.72319487438278!3d10.834986758112127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527d69da51feb%3A0x89d202595915c550!2zxJAuIFPDtCA0OCwgSGnhu4dwIELDrG5oIENow6FuaCwgVGjhu6cgxJDhu6ljLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1760106600886!5m2!1sen!2s",
+ "website": "https://www.gianphoichinhhang.com",
+ "websiteLabel": "gianphoichinhhang.com"
+}

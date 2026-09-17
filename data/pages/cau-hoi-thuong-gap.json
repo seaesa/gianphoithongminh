@@ -1,0 +1,58 @@
+{
+ "url": "https://thegioigianphoi.vn/cau-hoi-thuong-gap/",
+ "path": "cau-hoi-thuong-gap/index.html",
+ "kind": "page",
+ "bodyClass": "page-template-default page page-id-295",
+ "title": "Câu hỏi thường gặp - thegioigianphoi.vn",
+ "description": "",
+ "menuState": {
+  "nav": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "sidebar": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "mobile": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "footer": [
+   "",
+   "",
+   "current-menu-item page_item page-item-295 current_page_item",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "topmenu": [
+   "",
+   ""
+  ]
+ },
+ "breadcrumbs": [
+  {
+   "text": "Trang chủ",
+   "href": "https://thegioigianphoi.vn"
+  },
+  {
+   "text": "Câu hỏi thường gặp"
+  }
+ ],
+ "main": "\n<article class=\"post-295 page type-page status-publish hentry\" id=\"post-295\">\n<header class=\"entry-header\">\n<h1 class=\"entry-title\">Câu hỏi thường gặp</h1> </header><!-- .entry-header -->\n<div class=\"entry-content\">\n<p><span style=\"font-family: 'times new roman', times, serif; font-size: 16px;\">Chúng tôi đang cập nhật thông tin…</span></p>\n</div><!-- .entry-content -->\n<footer class=\"entry-footer\">\n</footer><!-- .entry-footer -->\n</article><!-- #post-## -->\n",
+ "primaryClass": "content-area col-md-9",
+ "extraCss": []
+}

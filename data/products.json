@@ -1,0 +1,766 @@
+[
+ {
+  "id": "1692",
+  "slug": "cua-hang-ba-t-che-nang-mua-tu-cuon-hoa-phat",
+  "url": "https://thegioigianphoi.vn/cua-hang/ba%cc%a3t-che-nang-mua-tu%cc%a3-cuon-hoa-phat/",
+  "path": "cua-hang/ba-t-che-nang-mua-tu--cuon-hoa-phat/index.html",
+  "title": "Bạt tự cuốn Hòa Phát",
+  "img": "assets/uploads/2017/12/su-dung-bat-che-dung-cach-1-400x339.png",
+  "alt": "su-dung-bat-che-dung-cach-1",
+  "old": null,
+  "new": null,
+  "discount": null,
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "SẢN PHẨM KHÁC",
+    "href": "https://thegioigianphoi.vn/danh-muc/san-pham-khac/"
+   }
+  ]
+ },
+ {
+  "id": "1734",
+  "slug": "cua-hang-dich-vu-sua-chua",
+  "url": "https://thegioigianphoi.vn/cua-hang/dich-vu-sua-chua/",
+  "path": "cua-hang/dich-vu-sua-chua/index.html",
+  "title": "DỊCH VỤ SỬA CHỮA",
+  "img": "assets/uploads/2019/06/gian-phoi-hoa-phat-2-400x400.png",
+  "alt": "gian-phoi-hoa-phat-2",
+  "old": null,
+  "new": null,
+  "discount": null,
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi/"
+   }
+  ]
+ },
+ {
+  "id": "1768",
+  "slug": "cua-hang-gian-phoi-4-thanh",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-4-thanh/",
+  "path": "cua-hang/gian-phoi-4-thanh/index.html",
+  "title": "Giàn Phơi 4 Thanh",
+  "img": "assets/uploads/2019/06/received_333703417258663-400x400.jpeg",
+  "alt": "received_333703417258663",
+  "old": {
+   "num": "2,500,000",
+   "sym": "₫",
+   "value": 2500000
+  },
+  "new": {
+   "num": "2,000,000",
+   "sym": "₫",
+   "value": 2000000
+  },
+  "discount": "20%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi/"
+   },
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   }
+  ]
+ },
+ {
+  "id": "1769",
+  "slug": "cua-hang-gian-phoi-bam-dien",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-bam-dien/",
+  "path": "cua-hang/gian-phoi-bam-dien/index.html",
+  "title": "GIàn Phơi Bấm Điện",
+  "img": "assets/uploads/2019/06/gian-ban-dien-400x400.jpg",
+  "alt": "gian-ban-dien",
+  "old": null,
+  "new": null,
+  "discount": null,
+  "stock": "Còn hàng",
+  "cats": []
+ },
+ {
+  "id": "1249",
+  "slug": "cua-hang-gian-phoi-cao-cap-seri-999a",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-cao-cap-seri-999a/",
+  "path": "cua-hang/gian-phoi-cao-cap-seri-999a/index.html",
+  "title": "Giàn phơi Seri 999B",
+  "img": "assets/uploads/2017/03/bo-toi-999a-500x682-400x400.png",
+  "alt": "bo-toi-999a-500x682",
+  "old": {
+   "num": "1,550,000",
+   "sym": "₫",
+   "value": 1550000
+  },
+  "new": {
+   "num": "1,300,000",
+   "sym": "₫",
+   "value": 1300000
+  },
+  "discount": "16%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI BÁN CHẠY 2017",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-ban-chay-2017/"
+   },
+   {
+    "text": "GIÀN PHƠI ĐỒ",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-do/"
+   },
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   },
+   {
+    "text": "GIÀN PHƠI THÔNG MINH",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-minh/"
+   }
+  ]
+ },
+ {
+  "id": "1771",
+  "slug": "cua-hang-gian-phoi-chuong-co",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-chuong-co/",
+  "path": "cua-hang/gian-phoi-chuong-co/index.html",
+  "title": "Giàn Phơi Chuông Cổ",
+  "img": "assets/uploads/2019/06/gian-phoi-chuong-co-2-400x400.jpg",
+  "alt": "gian-phoi-chuong-co-2",
+  "old": {
+   "num": "2,500,000",
+   "sym": "₫",
+   "value": 2500000
+  },
+  "new": {
+   "num": "1,750,000",
+   "sym": "₫",
+   "value": 1750000
+  },
+  "discount": "30%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   }
+  ]
+ },
+ {
+  "id": "1310",
+  "slug": "cua-hang-gian-phoi-dieu-khien-duy-loi",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-dieu-khien-duy-loi/",
+  "path": "cua-hang/gian-phoi-dieu-khien-duy-loi/index.html",
+  "title": "Giàn phơi điều khiển từ xa Hòa Phát",
+  "img": "assets/uploads/2017/03/45shoe-360-gian-phoi-dieu-khien-tu-xa-400x400.jpg",
+  "alt": "45shoe-360-gian-phoi-dieu-khien-tu-xa",
+  "old": {
+   "num": "13,500,000",
+   "sym": "₫",
+   "value": 13500000
+  },
+  "new": {
+   "num": "12,500,000",
+   "sym": "₫",
+   "value": 12500000
+  },
+  "discount": "7%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI BÁN CHẠY 2017",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-ban-chay-2017/"
+   },
+   {
+    "text": "GIÀN PHƠI ĐIỀU KHIỂN",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-dieu-khien/"
+   },
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   }
+  ]
+ },
+ {
+  "id": "1772",
+  "slug": "cua-hang-gian-phoi-dieu-khien",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-dieu-khien/",
+  "path": "cua-hang/gian-phoi-dieu-khien/index.html",
+  "title": "Giàn Phơi Điều Khiển",
+  "img": "assets/uploads/2019/06/IMG_20190511_092005-400x400.jpg",
+  "alt": "IMG_20190511_092005",
+  "old": {
+   "num": "18,500,000",
+   "sym": "₫",
+   "value": 18500000
+  },
+  "new": {
+   "num": "12,500,000",
+   "sym": "₫",
+   "value": 12500000
+  },
+  "discount": "32%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI ĐIỀU KHIỂN",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-dieu-khien/"
+   }
+  ]
+ },
+ {
+  "id": "1252",
+  "slug": "cua-hang-gian-phoi-inox-cma-888",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-inox-cma-888/",
+  "path": "cua-hang/gian-phoi-inox-cma-888/index.html",
+  "title": "Giàn phơi inox CMA – 888",
+  "img": "assets/uploads/2017/03/gian-phoi-inox-CMA–888-400x400.jpg",
+  "alt": "gian-phoi-inox-CMA–888",
+  "old": {
+   "num": "1,450,000",
+   "sym": "₫",
+   "value": 1450000
+  },
+  "new": {
+   "num": "1,100,000",
+   "sym": "₫",
+   "value": 1100000
+  },
+  "discount": "24%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   },
+   {
+    "text": "GIÀN PHƠI QUẦN ÁO",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-quan-ao/"
+   },
+   {
+    "text": "GIÀN PHƠI THÔNG MINH",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-minh/"
+   }
+  ]
+ },
+ {
+  "id": "1253",
+  "slug": "cua-hang-gian-phoi-inox-series-b-01-model-2013",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-inox-series-b-01-model-2013/",
+  "path": "cua-hang/gian-phoi-inox-series-b-01-model-2013/index.html",
+  "title": "Giàn phơi inox Series B – 01 model 2013",
+  "img": "assets/uploads/2017/03/gian-phoi-inox-Series-B–01-model-2013-400x400.jpg",
+  "alt": "gian-phoi-inox-Series-B–01-model-2013",
+  "old": {
+   "num": "1,250,000",
+   "sym": "₫",
+   "value": 1250000
+  },
+  "new": {
+   "num": "850,000",
+   "sym": "₫",
+   "value": 850000
+  },
+  "discount": "32%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI BÁN CHẠY 2017",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-ban-chay-2017/"
+   },
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   },
+   {
+    "text": "GIÀN PHƠI QUẦN ÁO",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-quan-ao/"
+   },
+   {
+    "text": "GIÀN PHƠI THÔNG MINH",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-minh/"
+   }
+  ]
+ },
+ {
+  "id": "1363",
+  "slug": "cua-hang-gian-phoi-s-20a-nhap-khau-dai-loan",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-s-20a-nhap-khau-dai-loan/",
+  "path": "cua-hang/gian-phoi-s-20a-nhap-khau-dai-loan/index.html",
+  "title": "GP S-20A Nhập khẩu Đài Loan",
+  "img": "assets/uploads/2017/03/gian-phoi-nhap-khau-20A-01-400x400.jpg",
+  "alt": "gian-phoi-nhap-khau-20A-01",
+  "old": {
+   "num": "2,000,000",
+   "sym": "₫",
+   "value": 2000000
+  },
+  "new": {
+   "num": "1,500,000",
+   "sym": "₫",
+   "value": 1500000
+  },
+  "discount": "25%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI BÁN CHẠY 2017",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-ban-chay-2017/"
+   },
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   },
+   {
+    "text": "GIÀN PHƠI QUẦN ÁO",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-quan-ao/"
+   },
+   {
+    "text": "GIÀN PHƠI THÔNG DỤNG",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-dung/"
+   }
+  ]
+ },
+ {
+  "id": "1766",
+  "slug": "cua-hang-gian-phoi-takashi",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-takashi/",
+  "path": "cua-hang/gian-phoi-takashi/index.html",
+  "title": "Giàn Phơi TAKASHI",
+  "img": "assets/uploads/2019/06/FB_IMG_1537770874091-400x400.jpg",
+  "alt": "FB_IMG_1537770874091",
+  "old": {
+   "num": "2,500,000",
+   "sym": "₫",
+   "value": 2500000
+  },
+  "new": {
+   "num": "1,750,000",
+   "sym": "₫",
+   "value": 1750000
+  },
+  "discount": "30%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   }
+  ]
+ },
+ {
+  "id": "1323",
+  "slug": "cua-hang-gian-phoi-thong-minh-seri-02",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-thong-minh-seri-02/",
+  "path": "cua-hang/gian-phoi-thong-minh-seri-02/index.html",
+  "title": "GP Hòa Phát Seri 02",
+  "img": "assets/uploads/2017/03/GP-THONG_DUNG_DUY_LOI_SERI02-400x331.png",
+  "alt": "GP-THONG_DUNG_DUY_LOI_SERI02",
+  "old": {
+   "num": "1,950,000",
+   "sym": "₫",
+   "value": 1950000
+  },
+  "new": {
+   "num": "1,000,000",
+   "sym": "₫",
+   "value": 1000000
+  },
+  "discount": "49%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   }
+  ]
+ },
+ {
+  "id": "1251",
+  "slug": "cua-hang-gian-phoi-thong-minh-seri-888",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-thong-minh-seri-888/",
+  "path": "cua-hang/gian-phoi-thong-minh-seri-888/index.html",
+  "title": "Giàn phơi Seri 888 A",
+  "img": "assets/uploads/2017/03/gian-phoi-888A-400x400.png",
+  "alt": "gian-phoi-888A",
+  "old": {
+   "num": "1,500,000",
+   "sym": "₫",
+   "value": 1500000
+  },
+  "new": {
+   "num": "1,150,000",
+   "sym": "₫",
+   "value": 1150000
+  },
+  "discount": "23%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI BÁN CHẠY 2017",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-ban-chay-2017/"
+   },
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   },
+   {
+    "text": "GIÀN PHƠI QUẦN ÁO",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-quan-ao/"
+   },
+   {
+    "text": "GIÀN PHƠI THÔNG MINH",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-minh/"
+   }
+  ]
+ },
+ {
+  "id": "1767",
+  "slug": "cua-hang-gian-phoi-xep-ngang-inox",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-xep-ngang-inox/",
+  "path": "cua-hang/gian-phoi-xep-ngang-inox/index.html",
+  "title": "Giàn Phơi xếp ngang Inox",
+  "img": "assets/uploads/2019/06/gian-phoi-xep-ngang-17-400x400.jpg",
+  "alt": "gian-phoi-xep-ngang-17",
+  "old": {
+   "num": "1,850,000",
+   "sym": "₫",
+   "value": 1850000
+  },
+  "new": {
+   "num": "1,500,000",
+   "sym": "₫",
+   "value": 1500000
+  },
+  "discount": "19%",
+  "stock": "Còn hàng",
+  "cats": []
+ },
+ {
+  "id": "1359",
+  "slug": "cua-hang-gian-phoi-xep-ngang-loai",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-xep-ngang-loai/",
+  "path": "cua-hang/gian-phoi-xep-ngang-loai/index.html",
+  "title": "Giàn phơi xếp ngang loại to",
+  "img": "assets/uploads/2017/03/gian-phoi-xep-ngang-loai-to-01-400x400.jpg",
+  "alt": "gian-phoi-xep-ngang-loai-to-01",
+  "old": {
+   "num": "2,050,000",
+   "sym": "₫",
+   "value": 2050000
+  },
+  "new": {
+   "num": "1,800,000",
+   "sym": "₫",
+   "value": 1800000
+  },
+  "discount": "12%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI BÁN CHẠY 2017",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-ban-chay-2017/"
+   },
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   },
+   {
+    "text": "GIÀN PHƠI QUẦN ÁO",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-quan-ao/"
+   },
+   {
+    "text": "GIÀN PHƠI THÔNG DỤNG",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-dung/"
+   }
+  ]
+ },
+ {
+  "id": "1313",
+  "slug": "cua-hang-gian-phoi-xep-ngang-thanh-nhom-duy-loi",
+  "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-xep-ngang-thanh-nhom-duy-loi/",
+  "path": "cua-hang/gian-phoi-xep-ngang-thanh-nhom-duy-loi/index.html",
+  "title": "Giàn phơi xếp ngang thanh nhôm Hòa Phát",
+  "img": "assets/uploads/2017/03/gian-phoi-xep-ngang-loai-to-400x400.jpg",
+  "alt": "gian-phoi-xep-ngang-loai-to",
+  "old": {
+   "num": "1,350,000",
+   "sym": "₫",
+   "value": 1350000
+  },
+  "new": {
+   "num": "1,000,000",
+   "sym": "₫",
+   "value": 1000000
+  },
+  "discount": "26%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI BÁN CHẠY 2017",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-ban-chay-2017/"
+   },
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   },
+   {
+    "text": "GIÀN PHƠI THÔNG DỤNG",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-dung/"
+   }
+  ]
+ },
+ {
+  "id": "1325",
+  "slug": "cua-hang-gp-duy-loi-seri-01",
+  "url": "https://thegioigianphoi.vn/cua-hang/gp-duy-loi-seri-01/",
+  "path": "cua-hang/gp-duy-loi-seri-01/index.html",
+  "title": "GP Hòa Phát Seri 01",
+  "img": "assets/uploads/2017/03/Gian-phoi-thong-minh-seri01-400x400.jpg",
+  "alt": "Gian-phoi-thong-minh-seri01",
+  "old": {
+   "num": "1,850,000",
+   "sym": "₫",
+   "value": 1850000
+  },
+  "new": {
+   "num": "1,250,000",
+   "sym": "₫",
+   "value": 1250000
+  },
+  "discount": "32%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   },
+   {
+    "text": "GIÀN PHƠI THÔNG DỤNG",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-dung/"
+   }
+  ]
+ },
+ {
+  "id": "1320",
+  "slug": "cua-hang-gp-duy-loi-seri-03",
+  "url": "https://thegioigianphoi.vn/cua-hang/gp-duy-loi-seri-03/",
+  "path": "cua-hang/gp-duy-loi-seri-03/index.html",
+  "title": "GP Hòa Phát seri 03",
+  "img": "assets/uploads/2017/03/Gin_phi__GP14-400x400.jpg",
+  "alt": "Gin_phi__GP14",
+  "old": {
+   "num": "2,050,000",
+   "sym": "₫",
+   "value": 2050000
+  },
+  "new": {
+   "num": "1,700,000",
+   "sym": "₫",
+   "value": 1700000
+  },
+  "discount": "17%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   },
+   {
+    "text": "GIÀN PHƠI QUẦN ÁO",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-quan-ao/"
+   },
+   {
+    "text": "GIÀN PHƠI THÔNG MINH",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-minh/"
+   }
+  ]
+ },
+ {
+  "id": "1331",
+  "slug": "cua-hang-gp-duy-loi-seri-04",
+  "url": "https://thegioigianphoi.vn/cua-hang/gp-duy-loi-seri-04/",
+  "path": "cua-hang/gp-duy-loi-seri-04/index.html",
+  "title": "GP Hòa Phát Seri 04",
+  "img": "assets/uploads/2017/03/gian-phoi-duy-loi-400x339.png",
+  "alt": "gian-phoi-duy-loi",
+  "old": {
+   "num": "2,250,000",
+   "sym": "₫",
+   "value": 2250000
+  },
+  "new": {
+   "num": "1,500,000",
+   "sym": "₫",
+   "value": 1500000
+  },
+  "discount": "33%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   },
+   {
+    "text": "GIÀN PHƠI THÔNG DỤNG",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-dung/"
+   }
+  ]
+ },
+ {
+  "id": "1335",
+  "slug": "cua-hang-gp-duy-loi-seri-07",
+  "url": "https://thegioigianphoi.vn/cua-hang/gp-duy-loi-seri-07/",
+  "path": "cua-hang/gp-duy-loi-seri-07/index.html",
+  "title": "GP Hòa Phát Seri 07",
+  "img": "assets/uploads/2017/03/gian-phoi-duy-loi-07-400x400.jpeg",
+  "alt": "gian-phoi-duy-loi-07",
+  "old": {
+   "num": "1,850,000",
+   "sym": "₫",
+   "value": 1850000
+  },
+  "new": {
+   "num": "1,400,000",
+   "sym": "₫",
+   "value": 1400000
+  },
+  "discount": "24%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI THÔNG DỤNG",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-dung/"
+   }
+  ]
+ },
+ {
+  "id": "1351",
+  "slug": "cua-hang-gp-nhap-khau-bo-toi-k-95",
+  "url": "https://thegioigianphoi.vn/cua-hang/gp-nhap-khau-bo-toi-k-95/",
+  "path": "cua-hang/gp-nhap-khau-bo-toi-k-95/index.html",
+  "title": "GP nhập khẩu bộ tời K-95",
+  "img": "assets/uploads/2017/03/gian-phoi-05-400x400.jpg",
+  "alt": "gian-phoi-05",
+  "old": {
+   "num": "3,000,000",
+   "sym": "₫",
+   "value": 3000000
+  },
+  "new": {
+   "num": "1,500,000",
+   "sym": "₫",
+   "value": 1500000
+  },
+  "discount": "50%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   },
+   {
+    "text": "GIÀN PHƠI THÔNG DỤNG",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-dung/"
+   }
+  ]
+ },
+ {
+  "id": "1347",
+  "slug": "cua-hang-gp-nhap-khau-bo-toi",
+  "url": "https://thegioigianphoi.vn/cua-hang/gp-nhap-khau-bo-toi/",
+  "path": "cua-hang/gp-nhap-khau-bo-toi/index.html",
+  "title": "GP nhập khẩu bộ tời",
+  "img": "assets/uploads/2017/03/gian-phoi-cu-chuong-02-400x400.jpg",
+  "alt": "gian-phoi-cu-chuong-02",
+  "old": {
+   "num": "2,150,000",
+   "sym": "₫",
+   "value": 2150000
+  },
+  "new": {
+   "num": "1,250,000",
+   "sym": "₫",
+   "value": 1250000
+  },
+  "discount": "42%",
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "GIÀN PHƠI BÁN CHẠY 2017",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-ban-chay-2017/"
+   },
+   {
+    "text": "GIÀN PHƠI HÒA PHÁT",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+   },
+   {
+    "text": "GIÀN PHƠI THÔNG DỤNG",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-dung/"
+   },
+   {
+    "text": "GIÀN PHƠI THÔNG MINH",
+    "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-minh/"
+   }
+  ]
+ },
+ {
+  "id": "1701",
+  "slug": "cua-hang-luoi-cu-a-so-hoa-phat",
+  "url": "https://thegioigianphoi.vn/cua-hang/luoi-cu%cc%89a-so%cc%89-hoa-phat/",
+  "path": "cua-hang/luoi-cu-a-so--hoa-phat/index.html",
+  "title": "Lưới cửa sổ Hòa Phát",
+  "img": "assets/uploads/2017/12/skf1480845044-400x400.jpg",
+  "alt": "skf1480845044",
+  "old": null,
+  "new": null,
+  "discount": null,
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "SẢN PHẨM KHÁC",
+    "href": "https://thegioigianphoi.vn/danh-muc/san-pham-khac/"
+   }
+  ]
+ },
+ {
+  "id": "1686",
+  "slug": "cua-hang-luoi-toan-ban-cong-hoa-phat",
+  "url": "https://thegioigianphoi.vn/cua-hang/luoi-toan-ban-cong-hoa-phat/",
+  "path": "cua-hang/luoi-toan-ban-cong-hoa-phat/index.html",
+  "title": "Lưới ban công Hòa Phát",
+  "img": "assets/uploads/2017/12/lưới_at-400x400.jpg",
+  "alt": "lưới_at",
+  "old": null,
+  "new": null,
+  "discount": null,
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "SẢN PHẨM KHÁC",
+    "href": "https://thegioigianphoi.vn/danh-muc/san-pham-khac/"
+   }
+  ]
+ },
+ {
+  "id": "1697",
+  "slug": "cua-hang-luoi-toan-cau-thang-hoa-phat",
+  "url": "https://thegioigianphoi.vn/cua-hang/luoi-toan-cau-thang-hoa-phat/",
+  "path": "cua-hang/luoi-toan-cau-thang-hoa-phat/index.html",
+  "title": "Lưới cầu thang Hòa Phát",
+  "img": "assets/uploads/2017/12/15400967_890814741019758_4023223122909052422_n-400x400.jpg",
+  "alt": "15400967_890814741019758_4023223122909052422_n",
+  "old": null,
+  "new": null,
+  "discount": null,
+  "stock": "Còn hàng",
+  "cats": [
+   {
+    "text": "SẢN PHẨM KHÁC",
+    "href": "https://thegioigianphoi.vn/danh-muc/san-pham-khac/"
+   }
+  ]
+ }
+]

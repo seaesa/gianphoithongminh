@@ -1,0 +1,64 @@
+{
+ "url": "https://thegioigianphoi.vn/cua-hang/gian-phoi-bam-dien/",
+ "path": "cua-hang/gian-phoi-bam-dien/index.html",
+ "kind": "product",
+ "bodyClass": "product-template-default single single-product postid-1769 woocommerce woocommerce-page",
+ "title": "GIàn Phơi Bấm Điện - Giàn phơi quần áo thông minh Hòa Phát",
+ "description": "",
+ "menuState": {
+  "nav": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "sidebar": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "mobile": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "footer": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "topmenu": [
+   "",
+   ""
+  ]
+ },
+ "breadcrumbs": [
+  {
+   "text": "Trang chủ",
+   "href": "https://thegioigianphoi.vn"
+  },
+  {
+   "text": "Sản phẩm",
+   "href": "https://thegioigianphoi.vn//cua-hang/"
+  },
+  {
+   "text": "GIàn Phơi Bấm Điện"
+  }
+ ],
+ "main": "\n<div id=\"container\"><div id=\"content\" role=\"main\"><nav class=\"woocommerce-breadcrumb\" itemprop=\"breadcrumb\"><a href=\"@@ROOT@@/index.html\">Trang chủ</a> / <a href=\"@@ROOT@@/cua-hang/index.html\">Sản phẩm</a> / GIàn Phơi Bấm Điện</nav>\n<div class=\"post-1769 product type-product status-publish has-post-thumbnail first instock shipping-taxable product-type-simple\" id=\"product-1769\" itemscope=\"\" itemtype=\"http://schema.org/Product\">\n<div class=\"images single-product-images\">\n<a class=\"woocommerce-main-image zoom\" data-rel=\"prettyPhoto\" href=\"#\" itemprop=\"image\" title=\"\"><img alt=\"gian-ban-dien\" class=\"attachment-shop_single size-shop_single wp-post-image\" height=\"400\" sizes=\"(max-width: 400px) 100vw, 400px\" src=\"@@ROOT@@/assets/uploads/2019/06/gian-ban-dien-400x400.jpg\" srcset=\"@@ROOT@@/assets/uploads/2019/06/gian-ban-dien-400x400.jpg 400w, @@ROOT@@/assets/uploads/2019/06/gian-ban-dien-150x150.jpg 150w, @@ROOT@@/assets/uploads/2019/06/gian-ban-dien-300x300.jpg 300w, @@ROOT@@/assets/uploads/2019/06/gian-ban-dien-180x180.jpg 180w, @@ROOT@@/assets/uploads/2019/06/gian-ban-dien.jpg 600w\" title=\"gian-ban-dien\" width=\"400\"/></a></div>\n<div class=\"summary entry-summary\">\n<h1 class=\"product_title entry-title\" itemprop=\"name\">GIàn Phơi Bấm Điện</h1><div class=\"price-block\" itemprop=\"offers\" itemscope=\"\" itemtype=\"http://schema.org/Offer\">\n<p class=\"price\"></p>\n<meta content=\"0\" itemprop=\"price\"/>\n<meta content=\"VND\" itemprop=\"priceCurrency\"/>\n<link href=\"http://schema.org/InStock\" itemprop=\"availability\"/>\n</div>\n<div class=\"extras-meta\">\n<div class=\"extra-meta pr_tinh_trang\">\n<label>Tình trạng:</label><span>Còn hàng</span>\n</div>\n</div>\n<div class=\"product_meta\">\n</div>\n<div class=\"hrm_custom_price clearfix\">\n<button class=\"btn btn-big button btn-dathang\" data-target=\"#myModal\" data-toggle=\"modal\">\n<i aria-hidden=\"true\" class=\"fa fa-paper-plane-o\"></i> ĐẶT HÀNG NHANH<br/><span>(Đặt mua hàng nhanh, giao hàng toàn quốc)</span> </button>\n<!-- Modal dat hang -->\n<div aria-hidden=\"true\" aria-labelledby=\"myModalLabel\" class=\"modal fade dat-hang-nhanh-form\" id=\"myModal\" role=\"dialog\" tabindex=\"-1\">\n<div class=\"modal-dialog modal-lg\">\n<div class=\"modal-content\">\n<div class=\"modal-header\">\n<button class=\"close\" data-dismiss=\"modal\" type=\"button\"><span aria-hidden=\"true\" style=\"font-size:30px\">×</span><span class=\"sr-only\">Close</span></button>\n<h4 class=\"modal-title\" id=\"myModalLabel\">ĐẶT HÀNG NHANH</h4><span>Vui lòng điền đầy đủ thông tin của Quý khách sau đó Click vào ĐẶT HÀNG</span> </div>\n<div class=\"modal-body\">\n<div class=\"row\">\n<div class=\"col-xs-12 col-md-6\">\n<div class=\"product-detail-order\">\n<div class=\"thumb-product-order\">\n<img alt=\"GIàn Phơi Bấm Điện\" class=\"img-responsive\" src=\"@@ROOT@@/assets/uploads/2019/06/gian-ban-dien.jpg\"/> </div>\n<h3 class=\"order-title\"><a href=\"@@ROOT@@/cua-hang/gian-phoi-bam-dien/index.html\" title=\"GIàn Phơi Bấm Điện\">GIàn Phơi Bấm Điện</a></h3>\n<p class=\"price\" itemprop=\"price\"></p>\n<meta content=\"VND\" itemprop=\"priceCurrency\"/>\n<link href=\"http://schema.org/InStock\" itemprop=\"availability\"/><br/>\n<div class=\"bank_info_order\">\n<h2 class=\"wc-bacs-bank-details-heading\" style=\"box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; font-weight: 500; line-height: 1.4; margin: 0px 0px 15px; font-size: 18px; color: #f00;\"></h2> </div>\n</div> <!-- end .product-detail-order -->\n</div>\n<div class=\"col-xs-12 col-md-6\">\n\n\n\t\t\t\t\t\t\t\t[ninja_forms id=5]\t\t\t\t\t\t\t</div>\n</div>\n</div>\n</div>\n</div>\n</div> <!-- end Modal dat hang -->\n</div>\n</div><!-- .summary -->\n<div class=\"hrm-social-share\">\n<h3><span class=\"share-text\" style=\"color:#1a7b1c\">Chia sẻ bài viết!</span></h3>\n<ul class=\"hrm-share\">\n<li>\n<a class=\"facebook\" href=\"#\" target=\"_blank\">\n<i class=\"fa fa-facebook\"></i>\n<span>Facebook</span>\n</a>\n</li>\n<li>\n<a class=\"google\" href=\"#\" target=\"_blank\">\n<i class=\"fa fa-google-plus\"></i>\n<span>Google Plus</span>\n</a>\n</li>\n<li>\n<a class=\"twitter\" href=\"#\" target=\"_blank\">\n<i class=\"fa fa-twitter\"></i>\n<span>Twitter</span>\n</a>\n</li>\n<li>\n<a class=\"linkedin\" href=\"#\" target=\"_blank\">\n<i class=\"fa fa-linkedin\"></i>\n<span>LinkedIn</span>\n</a>\n</li>\n<li class=\"pinterest\">\n<div class=\"share-pin-origin\">\n<a data-pin-config=\"beside\" data-pin-do=\"buttonPin\" href=\"#\"><img src=\"@@ROOT@@/assets/external/assets.pinterest.com-images-pidgets-pinit_fg_en_rect_gray_20.png\"/></a>\n<!-- Please call pinit.js only once per page -->\n\n</div>\n<i class=\"fa fa-pinterest-p\"></i>\n<span class=\"share-pin-alt pinterest\">Pinterest</span>\n</li>\n</ul>\n</div>\n<div class=\"woocommerce-tabs wc-tabs-wrapper\">\n<ul class=\"tabs wc-tabs\">\n<li class=\"description_tab\">\n<a href=\"#tab-description\">Mô tả</a>\n</li>\n<li class=\"reviews_tab\">\n<a href=\"#tab-reviews\">Đánh giá (0)</a>\n</li>\n</ul>\n<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab\" id=\"tab-description\">\n<!--\n  <h2>Mô tả sản phẩm</h2>\n -->\n<p style=\"text-align: center;\"><span style=\"font-size: 24px;\"><strong>Giàn Phơi Bấm Điện</strong></span></p>\n<p><img alt=\"\" class=\"size-full wp-image-1746 aligncenter\" height=\"600\" sizes=\"(max-width: 600px) 100vw, 600px\" src=\"@@ROOT@@/assets/uploads/2019/06/gian-ban-dien.jpg\" srcset=\"@@ROOT@@/assets/uploads/2019/06/gian-ban-dien.jpg 600w, @@ROOT@@/assets/uploads/2019/06/gian-ban-dien-150x150.jpg 150w, @@ROOT@@/assets/uploads/2019/06/gian-ban-dien-300x300.jpg 300w, @@ROOT@@/assets/uploads/2019/06/gian-ban-dien-180x180.jpg 180w, @@ROOT@@/assets/uploads/2019/06/gian-ban-dien-400x400.jpg 400w\" width=\"600\"/></p>\n<p style=\"text-align: center;\"><strong>Thông tin chi tiết xin vui lòng liên hệ:</strong></p>\n<p style=\"text-align: center;\"><strong>Hotline : 0902 725 760</strong></p>\n<p style=\"text-align: center;\"><strong>TƯ VẤN MIỄN PHÍ 24/24– KHÔNG NGẠI XA</strong></p>\n<p style=\"text-align: center;\"><strong>THẾ GIỚI GIÀN PHƠI LỢI CHO NGƯỜI VIỆT TIỆN CHO NGƯỜI DÙNG</strong></p>\n<p style=\"text-align: center;\">Địa chỉ: Đường 48, khu phố 6, Hiệp Bình Chánh, TP Hồ Chí Minh</p>\n<p style=\"text-align: center;\">Khu vực phục vụ: TP.HCM & Bình Dương — khảo sát và lắp đặt tận nơi</p>\n<p style=\"text-align: center;\">Giờ làm việc: 08:00 – 20:00, tất cả các ngày trong tuần</p>\n<p style=\"text-align: center;\">Zalo / hotline: 0902 725 760</p></div>\n<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab\" id=\"tab-reviews\">\n<div class=\"woocommerce-Reviews\" id=\"reviews\">\n<div id=\"comments\">\n<h2 class=\"woocommerce-Reviews-title\">Đánh giá</h2>\n<p class=\"woocommerce-noreviews\">Chưa có đánh giá nào.</p>\n</div>\n<p class=\"woocommerce-verification-required\">Chỉ những khách hàng đã đăng nhập và mua sản phẩm này mới có thể đưa ra đánh giá.</p>\n<div class=\"clear\"></div>\n</div>\n</div>\n</div>\n<div class=\"fb-comments\" data-href=\"https://thegioigianphoi.vn/cua-hang/gian-phoi-bam-dien/\" data-numposts=\"5\"></div>\n<meta content=\"https://thegioigianphoi.vn/cua-hang/gian-phoi-bam-dien/\" itemprop=\"url\"/>\n</div><!-- #product-1769 -->\n</div></div> ",
+ "primaryClass": "content-area product-main col-md-9 col-right no-padding",
+ "extraCss": [
+  "assets/vendor/prettyPhoto.css"
+ ]
+}

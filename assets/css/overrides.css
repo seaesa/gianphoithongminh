@@ -1,0 +1,199 @@
+/* ===========================================================================
+   Overrides — these were inline <style> blocks on the live page, so they win
+   over theme.css and must load last.
+   =========================================================================== */
+
+/* --- page-level tweaks (inline block #2 on the original) ------------------ */
+.link-acc {
+  float: right;
+  margin-right: 50px;
+  line-height: 25px;
+  display: none;
+}
+
+.owl-carousel .owl-item img {
+  display: block;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+  height: 250px;
+}
+
+span.woocommerce-Price-amount.amount { font-weight: 700; }
+
+/* --- customiser output ---------------------------------------------------- */
+.top-header,
+.top-header a { color: #ffffff; }
+.menu-responsive ul li a { color: #ffffff; }
+
+/* --- late inline block: wins over everything above ------------------------ */
+.navbar-header.has-product-nav { width: 100%; }
+.logo > .site-title > a { zoom: 0.6; }
+.owl-carousel .owl-item img { height: auto; }
+.block-static-inner .content { width: 50%; }
+#footer-sidebar-2 { display: none; }
+
+/* --- floating phone bar (mobile only) ------------------------------------- */
+#floating-phone {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 48px;
+  width: 360px;
+  background: #111111 url(../uploads/2017/03/anh-bia-mau-den-1-300x74.jpg) center / 330px no-repeat;
+  z-index: 99;
+  color: #fff;
+  font-size: 35px;
+  line-height: 55px;
+  border-radius: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+@media (max-width: 650px) {
+  #floating-phone { display: block; }
+}
+
+/* --- hotline ring ---------------------------------------------------------- */
+.hotline-phone-ring-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999999;
+}
+.hotline-phone-ring {
+  position: relative;
+  visibility: visible;
+  background-color: transparent;
+  width: 110px;
+  height: 110px;
+  cursor: pointer;
+  z-index: 11;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transition: visibility .5s;
+  left: 0;
+  bottom: 0;
+  display: block;
+}
+.hotline-phone-ring-circle {
+  width: 100px;
+  height: 100px;
+  top: 2px;
+  left: 1px;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 100%;
+  border: 2px solid red;
+  animation: phonering-alo-circle-anim 1.2s infinite ease-in-out;
+  transition: all .5s;
+  transform-origin: 50% 50%;
+  opacity: .5;
+}
+.hotline-phone-ring-circle-fill {
+  width: 75px;
+  height: 75px;
+  top: 14px;
+  left: 14px;
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.7);
+  border-radius: 100%;
+  border: 2px solid transparent;
+  animation: phonering-alo-circle-fill-anim 2.3s infinite ease-in-out;
+  transition: all .5s;
+  transform-origin: 50% 50%;
+}
+.hotline-phone-ring-img-circle {
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  top: 27px;
+  left: 27px;
+  position: absolute;
+  background-size: 20px;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
+  transform-origin: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.locationus { display: block; z-index: 9; }
+
+@keyframes phonering-alo-circle-anim {
+  0%   { transform: rotate(0) scale(0.5) skew(1deg); opacity: .1; }
+  30%  { transform: rotate(0) scale(0.7) skew(1deg); opacity: .5; }
+  100% { transform: rotate(0) scale(1)   skew(1deg); opacity: .1; }
+}
+@keyframes phonering-alo-circle-fill-anim {
+  0%   { transform: rotate(0) scale(0.7) skew(1deg); opacity: .6; }
+  50%  { transform: rotate(0) scale(1)   skew(1deg); opacity: .6; }
+  100% { transform: rotate(0) scale(0.7) skew(1deg); opacity: .6; }
+}
+@keyframes phonering-alo-circle-img-anim {
+  0%   { transform: rotate(0)     scale(1) skew(1deg); }
+  10%  { transform: rotate(-25deg) scale(1) skew(1deg); }
+  20%  { transform: rotate(25deg)  scale(1) skew(1deg); }
+  30%  { transform: rotate(-25deg) scale(1) skew(1deg); }
+  40%  { transform: rotate(25deg)  scale(1) skew(1deg); }
+  50%  { transform: rotate(0)      scale(1) skew(1deg); }
+  100% { transform: rotate(0)      scale(1) skew(1deg); }
+}
+
+/* --- Zalo button (inline style attribute on the original anchor) ---------- */
+.zalo-float {
+  position: fixed;
+  z-index: 14;
+  left: 18px;
+  bottom: 110px;
+}
+
+/* --- Facebook page embed stands in for the FB SDK iframe ------------------ */
+/* The live page embeds a 340x200 Facebook page plugin iframe here. */
+.fb-page-placeholder {
+  width: 340px;
+  max-width: 100%;
+  height: 200px;
+  border: 1px solid #dddfe2;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fb-page-placeholder a {
+  color: #365899;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* --- Single product: stand-ins for third-party embeds --------------------- */
+/* The live page loads the Facebook comments plugin here; unrendered it still
+   occupies a 20px line box, so reserve the same space. */
+.fb-comments { min-height: 20px; }
+
+/* Minimal prettyPhoto replacement for the product gallery lightbox. */
+.pp_pic_holder.pp_clone {
+  position: fixed;
+  inset: 0;
+  z-index: 200000;
+  background: rgba(0, 0, 0, .85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+.pp_clone_inner { position: relative; max-width: 92vw; max-height: 92vh; }
+.pp_clone_inner img { max-width: 92vw; max-height: 92vh; display: block; }
+.pp_clone_close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  font-size: 22px;
+  line-height: 30px;
+  cursor: pointer;
+}

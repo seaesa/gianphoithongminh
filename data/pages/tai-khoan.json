@@ -1,0 +1,60 @@
+{
+ "url": "https://thegioigianphoi.vn/tai-khoan/",
+ "path": "tai-khoan/index.html",
+ "kind": "page",
+ "bodyClass": "page-template-default page page-id-57 woocommerce-account woocommerce-page",
+ "title": "Tài khoản của tôi - thegioigianphoi.vn",
+ "description": "",
+ "menuState": {
+  "nav": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "sidebar": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "mobile": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "footer": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "topmenu": [
+   "",
+   ""
+  ]
+ },
+ "breadcrumbs": [
+  {
+   "text": "Trang chủ",
+   "href": "https://thegioigianphoi.vn"
+  },
+  {
+   "text": "Tài khoản của tôi"
+  }
+ ],
+ "main": "\n<article class=\"post-57 page type-page status-publish hentry\" id=\"post-57\">\n<header class=\"entry-header\">\n<h1 class=\"entry-title\">Tài khoản của tôi</h1> </header><!-- .entry-header -->\n<div class=\"entry-content\">\n<div class=\"woocommerce\">\n<div class=\"u-columns col2-set\" id=\"customer_login\">\n<div class=\"u-column1 col-1\">\n<h2>Đăng nhập</h2>\n<form action=\"#\" class=\"login\" method=\"get\">\n<p class=\"woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide\">\n<label for=\"username\">Tên tài khoản hoặc địa chỉ email <span class=\"required\">*</span></label>\n<input class=\"woocommerce-Input woocommerce-Input--text input-text\" id=\"username\" name=\"username\" type=\"text\" value=\"\"/>\n</p>\n<p class=\"woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide\">\n<label for=\"password\">Mật khẩu <span class=\"required\">*</span></label>\n<input class=\"woocommerce-Input woocommerce-Input--text input-text\" id=\"password\" name=\"password\" type=\"password\"/>\n</p>\n<p class=\"form-row\">\n<input id=\"woocommerce-login-nonce\" name=\"woocommerce-login-nonce\" type=\"hidden\" value=\"e0719add6c\"/><input name=\"_wp_http_referer\" type=\"hidden\" value=\"/tai-khoan/\"/> <input class=\"woocommerce-Button button\" name=\"login\" type=\"submit\" value=\"Đăng nhập\"/>\n<label class=\"inline\" for=\"rememberme\">\n<input class=\"woocommerce-Input woocommerce-Input--checkbox\" id=\"rememberme\" name=\"rememberme\" type=\"checkbox\" value=\"forever\"/> Ghi nhớ mật khẩu\t\t\t\t</label>\n</p>\n<p class=\"woocommerce-LostPassword lost_password\">\n<a href=\"#\">Quên mật khẩu?</a>\n</p>\n</form>\n</div>\n<div class=\"u-column2 col-2\">\n<h2>Đăng ký</h2>\n<form action=\"#\" class=\"register\" method=\"get\">\n<p class=\"form-row form-row-wide\">\n<label for=\"reg_billing_first_name\">Họ và tên<span class=\"required\">*</span></label>\n<input class=\"input-text\" id=\"reg_billing_first_name\" name=\"billing_first_name\" type=\"text\" value=\"\"/>\n</p>\n<div class=\"clear\"></div>\n<p class=\"form-row form-row-wide\">\n<label for=\"reg_billing_phone\">Số điện thoại<span class=\"required\">*</span></label>\n<input class=\"input-text\" id=\"reg_billing_phone\" name=\"billing_phone\" type=\"text\" value=\"\"/>\n</p>\n<p class=\"woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide\">\n<label for=\"reg_email\">Địa chỉ email <span class=\"required\">*</span></label>\n<input class=\"woocommerce-Input woocommerce-Input--text input-text\" id=\"reg_email\" name=\"email\" type=\"email\" value=\"\"/>\n</p>\n<p class=\"woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide\">\n<label for=\"reg_password\">Mật khẩu <span class=\"required\">*</span></label>\n<input class=\"woocommerce-Input woocommerce-Input--text input-text\" id=\"reg_password\" name=\"password\" type=\"password\"/>\n</p>\n<!-- Spam Trap -->\n<div style=\"left: -999em; position: absolute;\"><label for=\"trap\">Chống Spam</label><input autocomplete=\"off\" id=\"trap\" name=\"email_2\" tabindex=\"-1\" type=\"text\"/></div>\n<p class=\"woocomerce-FormRow form-row\">\n<input id=\"woocommerce-register-nonce\" name=\"woocommerce-register-nonce\" type=\"hidden\" value=\"92a3f67259\"/><input name=\"_wp_http_referer\" type=\"hidden\" value=\"/tai-khoan/\"/> <input class=\"woocommerce-Button button\" name=\"register\" type=\"submit\" value=\"Đăng ký\"/>\n</p>\n</form>\n</div>\n</div>\n</div>\n</div><!-- .entry-content -->\n<footer class=\"entry-footer\">\n</footer><!-- .entry-footer -->\n</article><!-- #post-## -->\n",
+ "primaryClass": "content-area col-md-9",
+ "extraCss": [
+  "assets/vendor/select2.css"
+ ]
+}

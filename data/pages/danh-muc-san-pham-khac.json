@@ -1,0 +1,58 @@
+{
+ "url": "https://thegioigianphoi.vn/danh-muc/san-pham-khac/",
+ "path": "danh-muc/san-pham-khac/index.html",
+ "kind": "product-archive",
+ "bodyClass": "archive tax-product_cat term-san-pham-khac term-377 woocommerce woocommerce-page hfeed",
+ "title": "SẢN PHẨM KHÁC Archives - Giàn phơi quần áo thông minh Hòa Phát",
+ "description": "",
+ "menuState": {
+  "nav": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "sidebar": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "mobile": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "footer": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "topmenu": [
+   "",
+   ""
+  ]
+ },
+ "breadcrumbs": [
+  {
+   "text": "Trang chủ",
+   "href": "https://thegioigianphoi.vn"
+  },
+  {
+   "text": "Sản phẩm"
+  }
+ ],
+ "main": "\n<div id=\"container\"><div id=\"content\" role=\"main\"><nav class=\"woocommerce-breadcrumb\"><a href=\"@@ROOT@@/index.html\">Trang chủ</a> / <a href=\"@@ROOT@@/cua-hang/index.html\">Sản phẩm</a> / SẢN PHẨM KHÁC</nav>\n<h1 class=\"page-title\">SẢN PHẨM KHÁC</h1>\n<p class=\"woocommerce-result-count\">\n\tHiển thị tất cả sản phẩm</p><form action=\"#\" class=\"woocommerce-ordering\" method=\"get\">\n<select class=\"orderby\" name=\"orderby\">\n<option selected=\"selected\" value=\"menu_order\">Thứ tự mặc định</option>\n<option value=\"popularity\">Thứ tự theo mức độ phổ biến</option>\n<option value=\"date\">Thứ tự theo sản phẩm mới</option>\n<option value=\"price\">Thứ tự theo giá: thấp đến cao</option>\n<option value=\"price-desc\">Thứ tự theo giá: cao xuống thấp</option>\n</select>\n</form>\n<div class=\"woocommerce-loop\">\n<ul class=\"products\">\n<li class=\"post-1692 product type-product status-publish has-post-thumbnail product_cat-san-pham-khac first instock shipping-taxable product-type-simple\">\n<div class=\"product-loop-inner\">\n<div class=\"thumb-outter\">\n<a class=\"woocommerce-LoopProduct-link\" href=\"@@ROOT@@/cua-hang/ba-t-che-nang-mua-tu--cuon-hoa-phat/index.html\">\n<img alt=\"su-dung-bat-che-dung-cach-1\" class=\"attachment-shop_catalog size-shop_catalog wp-post-image\" height=\"300\" sizes=\"(max-width: 300px) 100vw, 300px\" src=\"@@ROOT@@/assets/uploads/2017/12/su-dung-bat-che-dung-cach-1-300x300.png\" srcset=\"@@ROOT@@/assets/uploads/2017/12/su-dung-bat-che-dung-cach-1-300x300.png 300w, @@ROOT@@/assets/uploads/2017/12/su-dung-bat-che-dung-cach-1-150x150.png 150w, @@ROOT@@/assets/uploads/2017/12/su-dung-bat-che-dung-cach-1-180x180.png 180w\" title=\"su-dung-bat-che-dung-cach-1\" width=\"300\"/> <div class=\"link-to-product\">\n<a class=\"link_a\" href=\"@@ROOT@@/cua-hang/ba-t-che-nang-mua-tu--cuon-hoa-phat/index.html\" rel=\"nofollow\" title=\"Bạt tự cuốn Hòa Phát\">Xem chi tiết</a>\n</div>\n</a></div>\n<div class=\"pr-loop-footer\">\n<a href=\"@@ROOT@@/cua-hang/ba-t-che-nang-mua-tu--cuon-hoa-phat/index.html\" title=\"Bạt tự cuốn Hòa Phát\">\n<h3>Bạt tự cuốn Hòa Phát</h3> </a>\n<a class=\"button product_type_simple ajax_add_to_cart\" data-product_id=\"1692\" data-product_sku=\"\" data-quantity=\"1\" href=\"@@ROOT@@/cua-hang/ba-t-che-nang-mua-tu--cuon-hoa-phat/index.html\" rel=\"nofollow\">Đọc tiếp</a> </div>\n</div>\n</li>\n<li class=\"post-1686 product type-product status-publish has-post-thumbnail product_cat-san-pham-khac instock shipping-taxable product-type-simple\">\n<div class=\"product-loop-inner\">\n<div class=\"thumb-outter\">\n<a class=\"woocommerce-LoopProduct-link\" href=\"@@ROOT@@/cua-hang/luoi-toan-ban-cong-hoa-phat/index.html\">\n<img alt=\"lưới_at\" class=\"attachment-shop_catalog size-shop_catalog wp-post-image\" height=\"300\" sizes=\"(max-width: 300px) 100vw, 300px\" src=\"@@ROOT@@/assets/uploads/2017/12/lưới_at-300x300.jpg\" srcset=\"@@ROOT@@/assets/uploads/2017/12/lưới_at-300x300.jpg 300w, @@ROOT@@/assets/uploads/2017/12/lưới_at-150x150.jpg 150w, @@ROOT@@/assets/uploads/2017/12/lưới_at-180x180.jpg 180w, @@ROOT@@/assets/uploads/2017/12/lưới_at-400x400.jpg 400w, @@ROOT@@/assets/uploads/2017/12/lưới_at.jpg 700w\" title=\"lưới_at\" width=\"300\"/> <div class=\"link-to-product\">\n<a class=\"link_a\" href=\"@@ROOT@@/cua-hang/luoi-toan-ban-cong-hoa-phat/index.html\" rel=\"nofollow\" title=\"Lưới ban công Hòa Phát\">Xem chi tiết</a>\n</div>\n</a></div>\n<div class=\"pr-loop-footer\">\n<a href=\"@@ROOT@@/cua-hang/luoi-toan-ban-cong-hoa-phat/index.html\" title=\"Lưới ban công Hòa Phát\">\n<h3>Lưới ban công Hòa Phát</h3> </a>\n<a class=\"button product_type_simple ajax_add_to_cart\" data-product_id=\"1686\" data-product_sku=\"\" data-quantity=\"1\" href=\"@@ROOT@@/cua-hang/luoi-toan-ban-cong-hoa-phat/index.html\" rel=\"nofollow\">Đọc tiếp</a> </div>\n</div>\n</li>\n<li class=\"post-1697 product type-product status-publish has-post-thumbnail product_cat-san-pham-khac instock shipping-taxable product-type-simple\">\n<div class=\"product-loop-inner\">\n<div class=\"thumb-outter\">\n<a class=\"woocommerce-LoopProduct-link\" href=\"@@ROOT@@/cua-hang/luoi-toan-cau-thang-hoa-phat/index.html\">\n<img alt=\"15400967_890814741019758_4023223122909052422_n\" class=\"attachment-shop_catalog size-shop_catalog wp-post-image\" height=\"300\" sizes=\"(max-width: 300px) 100vw, 300px\" src=\"@@ROOT@@/assets/uploads/2017/12/15400967_890814741019758_4023223122909052422_n-300x300.jpg\" srcset=\"@@ROOT@@/assets/uploads/2017/12/15400967_890814741019758_4023223122909052422_n-300x300.jpg 300w, @@ROOT@@/assets/uploads/2017/12/15400967_890814741019758_4023223122909052422_n-150x150.jpg 150w, @@ROOT@@/assets/uploads/2017/12/15400967_890814741019758_4023223122909052422_n-180x180.jpg 180w, @@ROOT@@/assets/uploads/2017/12/15400967_890814741019758_4023223122909052422_n-400x400.jpg 400w\" title=\"15400967_890814741019758_4023223122909052422_n\" width=\"300\"/> <div class=\"link-to-product\">\n<a class=\"link_a\" href=\"@@ROOT@@/cua-hang/luoi-toan-cau-thang-hoa-phat/index.html\" rel=\"nofollow\" title=\"Lưới cầu thang Hòa Phát\">Xem chi tiết</a>\n</div>\n</a></div>\n<div class=\"pr-loop-footer\">\n<a href=\"@@ROOT@@/cua-hang/luoi-toan-cau-thang-hoa-phat/index.html\" title=\"Lưới cầu thang Hòa Phát\">\n<h3>Lưới cầu thang Hòa Phát</h3> </a>\n<a class=\"button product_type_simple ajax_add_to_cart\" data-product_id=\"1697\" data-product_sku=\"\" data-quantity=\"1\" href=\"@@ROOT@@/cua-hang/luoi-toan-cau-thang-hoa-phat/index.html\" rel=\"nofollow\">Đọc tiếp</a> </div>\n</div>\n</li>\n<li class=\"post-1701 product type-product status-publish has-post-thumbnail product_cat-san-pham-khac last instock shipping-taxable product-type-simple\">\n<div class=\"product-loop-inner\">\n<div class=\"thumb-outter\">\n<a class=\"woocommerce-LoopProduct-link\" href=\"@@ROOT@@/cua-hang/luoi-cu-a-so--hoa-phat/index.html\">\n<img alt=\"skf1480845044\" class=\"attachment-shop_catalog size-shop_catalog wp-post-image\" height=\"300\" sizes=\"(max-width: 300px) 100vw, 300px\" src=\"@@ROOT@@/assets/uploads/2017/12/skf1480845044-300x300.jpg\" srcset=\"@@ROOT@@/assets/uploads/2017/12/skf1480845044-300x300.jpg 300w, @@ROOT@@/assets/uploads/2017/12/skf1480845044-150x150.jpg 150w, @@ROOT@@/assets/uploads/2017/12/skf1480845044-180x180.jpg 180w, @@ROOT@@/assets/uploads/2017/12/skf1480845044-400x400.jpg 400w\" title=\"skf1480845044\" width=\"300\"/> <div class=\"link-to-product\">\n<a class=\"link_a\" href=\"@@ROOT@@/cua-hang/luoi-cu-a-so--hoa-phat/index.html\" rel=\"nofollow\" title=\"Lưới cửa sổ Hòa Phát\">Xem chi tiết</a>\n</div>\n</a></div>\n<div class=\"pr-loop-footer\">\n<a href=\"@@ROOT@@/cua-hang/luoi-cu-a-so--hoa-phat/index.html\" title=\"Lưới cửa sổ Hòa Phát\">\n<h3>Lưới cửa sổ Hòa Phát</h3> </a>\n<a class=\"button product_type_simple ajax_add_to_cart\" data-product_id=\"1701\" data-product_sku=\"\" data-quantity=\"1\" href=\"@@ROOT@@/cua-hang/luoi-cu-a-so--hoa-phat/index.html\" rel=\"nofollow\">Đọc tiếp</a> </div>\n</div>\n</li>\n</ul>\n</div>\n<!-- /.woocommerce-loop -->\n</div></div>\n",
+ "primaryClass": "content-area col-md-9",
+ "extraCss": []
+}

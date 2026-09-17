@@ -1,0 +1,64 @@
+{
+ "url": "https://thegioigianphoi.vn/cua-hang/dich-vu-sua-chua/",
+ "path": "cua-hang/dich-vu-sua-chua/index.html",
+ "kind": "product",
+ "bodyClass": "product-template-default single single-product postid-1734 woocommerce woocommerce-page",
+ "title": "DỊCH VỤ SỬA CHỮA - Giàn phơi quần áo thông minh Hòa Phát",
+ "description": "",
+ "menuState": {
+  "nav": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "sidebar": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "mobile": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "footer": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "topmenu": [
+   "",
+   ""
+  ]
+ },
+ "breadcrumbs": [
+  {
+   "text": "Trang chủ",
+   "href": "https://thegioigianphoi.vn"
+  },
+  {
+   "text": "Sản phẩm",
+   "href": "https://thegioigianphoi.vn//cua-hang/"
+  },
+  {
+   "text": "DỊCH VỤ SỬA CHỮA"
+  }
+ ],
+ "main": "\n<div id=\"container\"><div id=\"content\" role=\"main\"><nav class=\"woocommerce-breadcrumb\" itemprop=\"breadcrumb\"><a href=\"@@ROOT@@/index.html\">Trang chủ</a> / <a href=\"@@ROOT@@/cua-hang/index.html\">Sản phẩm</a> / <a href=\"@@ROOT@@/danh-muc/gian-phoi/index.html\">GIÀN PHƠI</a> / DỊCH VỤ SỬA CHỮA</nav>\n<div class=\"post-1734 product type-product status-publish has-post-thumbnail product_cat-gian-phoi first instock shipping-taxable product-type-simple\" id=\"product-1734\" itemscope=\"\" itemtype=\"http://schema.org/Product\">\n<div class=\"images single-product-images\">\n<a class=\"woocommerce-main-image zoom\" data-rel=\"prettyPhoto\" href=\"#\" itemprop=\"image\" title=\"\"><img alt=\"gian-phoi-hoa-phat-2\" class=\"attachment-shop_single size-shop_single wp-post-image\" height=\"400\" sizes=\"(max-width: 400px) 100vw, 400px\" src=\"@@ROOT@@/assets/uploads/2019/06/gian-phoi-hoa-phat-2-400x400.png\" srcset=\"@@ROOT@@/assets/uploads/2019/06/gian-phoi-hoa-phat-2-400x400.png 400w, @@ROOT@@/assets/uploads/2019/06/gian-phoi-hoa-phat-2-150x150.png 150w, @@ROOT@@/assets/uploads/2019/06/gian-phoi-hoa-phat-2-180x180.png 180w, @@ROOT@@/assets/uploads/2019/06/gian-phoi-hoa-phat-2-300x300.png 300w\" title=\"gian-phoi-hoa-phat-2\" width=\"400\"/></a></div>\n<div class=\"summary entry-summary\">\n<h1 class=\"product_title entry-title\" itemprop=\"name\">DỊCH VỤ SỬA CHỮA</h1><div class=\"price-block\" itemprop=\"offers\" itemscope=\"\" itemtype=\"http://schema.org/Offer\">\n<p class=\"price\"></p>\n<meta content=\"0\" itemprop=\"price\"/>\n<meta content=\"VND\" itemprop=\"priceCurrency\"/>\n<link href=\"http://schema.org/InStock\" itemprop=\"availability\"/>\n</div>\n<div class=\"extras-meta\">\n<div class=\"extra-meta pr_tinh_trang\">\n<label>Tình trạng:</label><span>Còn hàng</span>\n</div>\n</div>\n<div class=\"product_meta\">\n<span class=\"posted_in\">Danh mục: <a href=\"@@ROOT@@/danh-muc/gian-phoi/index.html\" rel=\"tag\">GIÀN PHƠI</a></span>\n</div>\n<div class=\"hrm_custom_price clearfix\">\n<button class=\"btn btn-big button btn-dathang\" data-target=\"#myModal\" data-toggle=\"modal\">\n<i aria-hidden=\"true\" class=\"fa fa-paper-plane-o\"></i> ĐẶT HÀNG NHANH<br/><span>(Đặt mua hàng nhanh, giao hàng toàn quốc)</span> </button>\n<!-- Modal dat hang -->\n<div aria-hidden=\"true\" aria-labelledby=\"myModalLabel\" class=\"modal fade dat-hang-nhanh-form\" id=\"myModal\" role=\"dialog\" tabindex=\"-1\">\n<div class=\"modal-dialog modal-lg\">\n<div class=\"modal-content\">\n<div class=\"modal-header\">\n<button class=\"close\" data-dismiss=\"modal\" type=\"button\"><span aria-hidden=\"true\" style=\"font-size:30px\">×</span><span class=\"sr-only\">Close</span></button>\n<h4 class=\"modal-title\" id=\"myModalLabel\">ĐẶT HÀNG NHANH</h4><span>Vui lòng điền đầy đủ thông tin của Quý khách sau đó Click vào ĐẶT HÀNG</span> </div>\n<div class=\"modal-body\">\n<div class=\"row\">\n<div class=\"col-xs-12 col-md-6\">\n<div class=\"product-detail-order\">\n<div class=\"thumb-product-order\">\n<img alt=\"DỊCH VỤ SỬA CHỮA\" class=\"img-responsive\" src=\"@@ROOT@@/assets/uploads/2019/06/gian-phoi-hoa-phat-2.png\"/> </div>\n<h3 class=\"order-title\"><a href=\"@@ROOT@@/cua-hang/dich-vu-sua-chua/index.html\" title=\"DỊCH VỤ SỬA CHỮA\">DỊCH VỤ SỬA CHỮA</a></h3>\n<p class=\"price\" itemprop=\"price\"></p>\n<meta content=\"VND\" itemprop=\"priceCurrency\"/>\n<link href=\"http://schema.org/InStock\" itemprop=\"availability\"/><br/>\n<div class=\"bank_info_order\">\n<h2 class=\"wc-bacs-bank-details-heading\" style=\"box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; font-weight: 500; line-height: 1.4; margin: 0px 0px 15px; font-size: 18px; color: #f00;\"></h2> </div>\n</div> <!-- end .product-detail-order -->\n</div>\n<div class=\"col-xs-12 col-md-6\">\n\n\n\t\t\t\t\t\t\t\t[ninja_forms id=5]\t\t\t\t\t\t\t</div>\n</div>\n</div>\n</div>\n</div>\n</div> <!-- end Modal dat hang -->\n</div>\n</div><!-- .summary -->\n<div class=\"hrm-social-share\">\n<h3><span class=\"share-text\" style=\"color:#1a7b1c\">Chia sẻ bài viết!</span></h3>\n<ul class=\"hrm-share\">\n<li>\n<a class=\"facebook\" href=\"#\" target=\"_blank\">\n<i class=\"fa fa-facebook\"></i>\n<span>Facebook</span>\n</a>\n</li>\n<li>\n<a class=\"google\" href=\"#\" target=\"_blank\">\n<i class=\"fa fa-google-plus\"></i>\n<span>Google Plus</span>\n</a>\n</li>\n<li>\n<a class=\"twitter\" href=\"#\" target=\"_blank\">\n<i class=\"fa fa-twitter\"></i>\n<span>Twitter</span>\n</a>\n</li>\n<li>\n<a class=\"linkedin\" href=\"#\" target=\"_blank\">\n<i class=\"fa fa-linkedin\"></i>\n<span>LinkedIn</span>\n</a>\n</li>\n<li class=\"pinterest\">\n<div class=\"share-pin-origin\">\n<a data-pin-config=\"beside\" data-pin-do=\"buttonPin\" href=\"#\"><img src=\"@@ROOT@@/assets/external/assets.pinterest.com-images-pidgets-pinit_fg_en_rect_gray_20.png\"/></a>\n<!-- Please call pinit.js only once per page -->\n\n</div>\n<i class=\"fa fa-pinterest-p\"></i>\n<span class=\"share-pin-alt pinterest\">Pinterest</span>\n</li>\n</ul>\n</div>\n<div class=\"woocommerce-tabs wc-tabs-wrapper\">\n<ul class=\"tabs wc-tabs\">\n<li class=\"description_tab\">\n<a href=\"#tab-description\">Mô tả</a>\n</li>\n<li class=\"reviews_tab\">\n<a href=\"#tab-reviews\">Đánh giá (0)</a>\n</li>\n</ul>\n<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab\" id=\"tab-description\">\n<!--\n  <h2>Mô tả sản phẩm</h2>\n -->\n<p style=\"text-align: center;\">GIÀN PHƠI HÒA PHÁT</p>\n<p style=\"text-align: center;\">Chuyên : CUNG CẤP – LẮP ĐẶT – SỬA CHỮA – BẢO DƯỠNG</p>\n<p style=\"text-align: center;\">GIÀN PHƠI THÔNG MINH – BẠT CHE NẮNG MƯA – LƯỚI BẢO VỆ BAN CÔNG</p>\n<p style=\"text-align: center;\"><em>Mobile</em><em> : 0902 725 760</em></p>\n<ul>\n<li style=\"text-align: center;\">–  Thay dây cáp bị đứt</li>\n<li style=\"text-align: center;\"><img alt=\"\" class=\"alignnone size-full wp-image-1765\" height=\"430\" sizes=\"(max-width: 430px) 100vw, 430px\" src=\"@@ROOT@@/assets/uploads/2019/06/gian-phoi-thong-minh-ba-sao-seri-666-model-20132-1.jpg\" srcset=\"@@ROOT@@/assets/uploads/2019/06/gian-phoi-thong-minh-ba-sao-seri-666-model-20132-1.jpg 430w, @@ROOT@@/assets/uploads/2019/06/gian-phoi-thong-minh-ba-sao-seri-666-model-20132-1-150x150.jpg 150w, @@ROOT@@/assets/uploads/2019/06/gian-phoi-thong-minh-ba-sao-seri-666-model-20132-1-300x300.jpg 300w, @@ROOT@@/assets/uploads/2019/06/gian-phoi-thong-minh-ba-sao-seri-666-model-20132-1-180x180.jpg 180w, @@ROOT@@/assets/uploads/2019/06/gian-phoi-thong-minh-ba-sao-seri-666-model-20132-1-400x400.jpg 400w\" width=\"430\"/></li>\n<li style=\"text-align: center;\"> 350k / bộ</li>\n<li style=\"text-align: center;\"></li>\n<li style=\"text-align: center;\">– Thay bộ tời hư hỏng</li>\n<li style=\"text-align: center;\"><img alt=\"\" class=\"alignnone size-full wp-image-1745\" height=\"920\" sizes=\"(max-width: 690px) 100vw, 690px\" src=\"@@ROOT@@/assets/uploads/2019/06/FB_IMG_1559282797551.jpg\" srcset=\"@@ROOT@@/assets/uploads/2019/06/FB_IMG_1559282797551.jpg 690w, @@ROOT@@/assets/uploads/2019/06/FB_IMG_1559282797551-225x300.jpg 225w\" width=\"690\"/></li>\n<li style=\"text-align: center;\"><strong>Thông tin chi tiết xin vui lòng liên hệ:</strong><strong>Hotline : 0902 725 760</strong>\n<p><strong>TƯ VẤN MIỄN PHÍ 24/24– KHÔNG NGẠI XA</strong></p>\n<p><strong>THẾ GIỚI GIÀN PHƠI LỢI CHO NGƯỜI VIỆT TIỆN CHO NGƯỜI DÙNG</strong></p>\n<ul>\n<li>Địa chỉ: Đường 48, khu phố 6, Hiệp Bình Chánh, TP Hồ Chí Minh</li>\n<li>Khu vực phục vụ: TP.HCM & Bình Dương — khảo sát và lắp đặt tận nơi</li>\n<li>Giờ làm việc: 08:00 – 20:00, tất cả các ngày trong tuần</li>\n<li>Zalo / hotline: 0902 725 760</li></ul>\n</li>\n</ul>\n</div>\n<div class=\"woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab\" id=\"tab-reviews\">\n<div class=\"woocommerce-Reviews\" id=\"reviews\">\n<div id=\"comments\">\n<h2 class=\"woocommerce-Reviews-title\">Đánh giá</h2>\n<p class=\"woocommerce-noreviews\">Chưa có đánh giá nào.</p>\n</div>\n<p class=\"woocommerce-verification-required\">Chỉ những khách hàng đã đăng nhập và mua sản phẩm này mới có thể đưa ra đánh giá.</p>\n<div class=\"clear\"></div>\n</div>\n</div>\n</div>\n<div class=\"fb-comments\" data-href=\"https://thegioigianphoi.vn/cua-hang/dich-vu-sua-chua/\" data-numposts=\"5\"></div>\n<div class=\"related products\">\n<h2><span>Sản phẩm liên quan</span></h2>\n<div class=\"woocommerce-loop\">\n<ul class=\"products\">\n<li class=\"post-1768 product type-product status-publish has-post-thumbnail product_cat-gian-phoi product_cat-gian-phoi-hoa-phat first instock sale shipping-taxable purchasable product-type-simple\">\n<div class=\"product-loop-inner\">\n<div class=\"thumb-outter\">\n<a class=\"woocommerce-LoopProduct-link\" href=\"@@ROOT@@/cua-hang/gian-phoi-4-thanh/index.html\">\n<span class=\"onsale\">\n<span>\n            20%        </span>\n        Giảm giá!    </span>\n<img alt=\"received_333703417258663\" class=\"attachment-shop_catalog size-shop_catalog wp-post-image\" height=\"300\" sizes=\"(max-width: 300px) 100vw, 300px\" src=\"@@ROOT@@/assets/uploads/2019/06/received_333703417258663-300x300.jpeg\" srcset=\"@@ROOT@@/assets/uploads/2019/06/received_333703417258663-300x300.jpeg 300w, @@ROOT@@/assets/uploads/2019/06/received_333703417258663-150x150.jpeg 150w, @@ROOT@@/assets/uploads/2019/06/received_333703417258663-180x180.jpeg 180w, @@ROOT@@/assets/uploads/2019/06/received_333703417258663-400x400.jpeg 400w\" title=\"received_333703417258663\" width=\"300\"/> <div class=\"link-to-product\">\n<a class=\"link_a\" href=\"@@ROOT@@/cua-hang/gian-phoi-4-thanh/index.html\" rel=\"nofollow\" title=\"Giàn Phơi 4 Thanh\">Xem chi tiết</a>\n</div>\n</a></div>\n<div class=\"pr-loop-footer\">\n<a href=\"@@ROOT@@/cua-hang/gian-phoi-4-thanh/index.html\" title=\"Giàn Phơi 4 Thanh\">\n<h3>Giàn Phơi 4 Thanh</h3> </a>\n<span class=\"price\"><del><span class=\"woocommerce-Price-amount amount\">2,500,000 <span class=\"woocommerce-Price-currencySymbol\">₫</span></span></del> <ins><span class=\"woocommerce-Price-amount amount\">2,000,000 <span class=\"woocommerce-Price-currencySymbol\">₫</span></span></ins></span>\n<a class=\"button product_type_simple add_to_cart_button ajax_add_to_cart\" data-product_id=\"1768\" data-product_sku=\"\" data-quantity=\"1\" href=\"@@ROOT@@/cua-hang/dich-vu-sua-chua/index.html\" rel=\"nofollow\">Thêm vào giỏ</a> </div>\n</div>\n</li>\n</ul>\n</div>\n<!-- /.woocommerce-loop -->\n</div>\n<meta content=\"https://thegioigianphoi.vn/cua-hang/dich-vu-sua-chua/\" itemprop=\"url\"/>\n</div><!-- #product-1734 -->\n</div></div> ",
+ "primaryClass": "content-area product-main col-md-9 col-right no-padding",
+ "extraCss": [
+  "assets/vendor/prettyPhoto.css"
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "url": "https://thegioigianphoi.vn/danh-muc/gian-phoi-do/",
+ "path": "danh-muc/gian-phoi-do/index.html",
+ "kind": "product-archive",
+ "bodyClass": "archive tax-product_cat term-gian-phoi-do term-305 woocommerce woocommerce-page hfeed",
+ "title": "GIÀN PHƠI ĐỒ",
+ "description": "",
+ "menuState": {
+  "nav": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "sidebar": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "mobile": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "footer": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "topmenu": [
+   "",
+   ""
+  ]
+ },
+ "breadcrumbs": [
+  {
+   "text": "Trang chủ",
+   "href": "https://thegioigianphoi.vn"
+  },
+  {
+   "text": "Sản phẩm"
+  }
+ ],
+ "main": "\n<div id=\"container\"><div id=\"content\" role=\"main\"><nav class=\"woocommerce-breadcrumb\"><a href=\"@@ROOT@@/index.html\">Trang chủ</a> / <a href=\"@@ROOT@@/cua-hang/index.html\">Sản phẩm</a> / GIÀN PHƠI ĐỒ</nav>\n<h1 class=\"page-title\">GIÀN PHƠI ĐỒ</h1>\n<p class=\"woocommerce-result-count\">\n\tHiển thị tất cả sản phẩm</p><form action=\"#\" class=\"woocommerce-ordering\" method=\"get\">\n<select class=\"orderby\" name=\"orderby\">\n<option selected=\"selected\" value=\"menu_order\">Thứ tự mặc định</option>\n<option value=\"popularity\">Thứ tự theo mức độ phổ biến</option>\n<option value=\"date\">Thứ tự theo sản phẩm mới</option>\n<option value=\"price\">Thứ tự theo giá: thấp đến cao</option>\n<option value=\"price-desc\">Thứ tự theo giá: cao xuống thấp</option>\n</select>\n</form>\n<div class=\"woocommerce-loop\">\n<ul class=\"products\">\n<li class=\"post-1249 product type-product status-publish has-post-thumbnail product_cat-gian-phoi-ban-chay-2017 product_cat-gian-phoi-do product_cat-gian-phoi-hoa-phat product_cat-gian-phoi-thong-minh first instock sale shipping-taxable purchasable product-type-simple\">\n<div class=\"product-loop-inner\">\n<div class=\"thumb-outter\">\n<a class=\"woocommerce-LoopProduct-link\" href=\"@@ROOT@@/cua-hang/gian-phoi-cao-cap-seri-999a/index.html\">\n<span class=\"onsale\">\n<span>\n            16%        </span>\n        Giảm giá!    </span>\n<img alt=\"bo-toi-999a-500x682\" class=\"attachment-shop_catalog size-shop_catalog wp-post-image\" height=\"300\" sizes=\"(max-width: 300px) 100vw, 300px\" src=\"@@ROOT@@/assets/uploads/2017/03/bo-toi-999a-500x682-300x300.png\" srcset=\"@@ROOT@@/assets/uploads/2017/03/bo-toi-999a-500x682-300x300.png 300w, @@ROOT@@/assets/uploads/2017/03/bo-toi-999a-500x682-150x150.png 150w, @@ROOT@@/assets/uploads/2017/03/bo-toi-999a-500x682-180x180.png 180w, @@ROOT@@/assets/uploads/2017/03/bo-toi-999a-500x682-400x400.png 400w\" title=\"bo-toi-999a-500x682\" width=\"300\"/> <div class=\"link-to-product\">\n<a class=\"link_a\" href=\"@@ROOT@@/cua-hang/gian-phoi-cao-cap-seri-999a/index.html\" rel=\"nofollow\" title=\"Giàn phơi Seri 999B\">Xem chi tiết</a>\n</div>\n</a></div>\n<div class=\"pr-loop-footer\">\n<a href=\"@@ROOT@@/cua-hang/gian-phoi-cao-cap-seri-999a/index.html\" title=\"Giàn phơi Seri 999B\">\n<h3>Giàn phơi Seri 999B</h3> </a>\n<span class=\"price\"><del><span class=\"woocommerce-Price-amount amount\">1,550,000 <span class=\"woocommerce-Price-currencySymbol\">₫</span></span></del> <ins><span class=\"woocommerce-Price-amount amount\">1,300,000 <span class=\"woocommerce-Price-currencySymbol\">₫</span></span></ins></span>\n<a class=\"button product_type_simple add_to_cart_button ajax_add_to_cart\" data-product_id=\"1249\" data-product_sku=\"\" data-quantity=\"1\" href=\"@@ROOT@@/danh-muc/gian-phoi-do/index.html\" rel=\"nofollow\">Thêm vào giỏ</a> </div>\n</div>\n</li>\n</ul>\n</div>\n<!-- /.woocommerce-loop -->\n</div></div>\n",
+ "primaryClass": "content-area col-md-9",
+ "extraCss": []
+}

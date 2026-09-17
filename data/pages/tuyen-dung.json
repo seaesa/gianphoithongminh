@@ -1,0 +1,58 @@
+{
+ "url": "https://thegioigianphoi.vn/tuyen-dung/",
+ "path": "tuyen-dung/index.html",
+ "kind": "page",
+ "bodyClass": "page-template-default page page-id-394",
+ "title": "Tuyển dụng - thegioigianphoi.vn",
+ "description": "",
+ "menuState": {
+  "nav": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "sidebar": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "mobile": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "footer": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "topmenu": [
+   "",
+   ""
+  ]
+ },
+ "breadcrumbs": [
+  {
+   "text": "Trang chủ",
+   "href": "https://thegioigianphoi.vn"
+  },
+  {
+   "text": "Tuyển dụng"
+  }
+ ],
+ "main": "\n<article class=\"post-394 page type-page status-publish hentry\" id=\"post-394\">\n<header class=\"entry-header\">\n<h1 class=\"entry-title\">Tuyển dụng</h1> </header><!-- .entry-header -->\n<div class=\"entry-content\">\n<p>Tin tức tuyển dụng cập nhật tại đây!!!</p>\n<p> </p>\n</div><!-- .entry-content -->\n<footer class=\"entry-footer\">\n</footer><!-- .entry-footer -->\n</article><!-- #post-## -->\n",
+ "primaryClass": "content-area col-md-9",
+ "extraCss": []
+}

@@ -1,0 +1,280 @@
+{
+ "_note": "Hand-built additions that do not exist (or are broken) on the live site. See README > 'Added on top of the clone'.",
+ "pages": [
+  {
+   "url": "https://thegioigianphoi.vn/gio-hang/",
+   "path": "gio-hang/index.html",
+   "kind": "custom-cart",
+   "title": "Giỏ hàng - Giàn Phơi Hòa Phát",
+   "description": "Giỏ hàng của bạn tại Giàn Phơi Hòa Phát.",
+   "bodyClass": "page-template-default page woocommerce-cart woocommerce-page gp-shop",
+   "heading": "Giỏ hàng",
+   "breadcrumbs": [
+    {
+     "text": "Trang chủ",
+     "href": "https://thegioigianphoi.vn/"
+    },
+    {
+     "text": "Giỏ hàng"
+    }
+   ]
+  },
+  {
+   "url": "https://thegioigianphoi.vn/thanh-toan/",
+   "path": "thanh-toan/index.html",
+   "kind": "custom-checkout",
+   "title": "Thanh toán - Giàn Phơi Hòa Phát",
+   "description": "Hoàn tất đơn hàng: thanh toán khi nhận hàng hoặc chuyển khoản ngân hàng.",
+   "bodyClass": "page-template-default page woocommerce-checkout woocommerce-page gp-shop",
+   "heading": "Thanh toán",
+   "breadcrumbs": [
+    {
+     "text": "Trang chủ",
+     "href": "https://thegioigianphoi.vn/"
+    },
+    {
+     "text": "Giỏ hàng",
+     "href": "https://thegioigianphoi.vn/gio-hang/"
+    },
+    {
+     "text": "Thanh toán"
+    }
+   ]
+  },
+  {
+   "url": "https://thegioigianphoi.vn/danh-muc/gian-phoi-xep-ngang/",
+   "path": "danh-muc/gian-phoi-xep-ngang/index.html",
+   "kind": "custom-archive",
+   "title": "GIÀN PHƠI XẾP NGANG - Giàn Phơi Hòa Phát",
+   "description": "Giàn phơi xếp ngang inox, thanh nhôm - tiết kiệm diện tích cho ban công và logia.",
+   "bodyClass": "archive tax-product_cat woocommerce woocommerce-page",
+   "heading": "GIÀN PHƠI XẾP NGANG",
+   "navIndex": 2,
+   "breadcrumbs": [
+    {
+     "text": "Trang chủ",
+     "href": "https://thegioigianphoi.vn/"
+    },
+    {
+     "text": "GIÀN PHƠI XẾP NGANG"
+    }
+   ]
+  },
+  {
+   "url": "https://thegioigianphoi.vn/tim-kiem/",
+   "path": "tim-kiem/index.html",
+   "kind": "custom-search",
+   "title": "Tìm kiếm - Giàn Phơi Hòa Phát",
+   "description": "Tìm sản phẩm, tin tức và trang thông tin trên toàn bộ website.",
+   "bodyClass": "search search-results hfeed",
+   "heading": "Tìm kiếm",
+   "breadcrumbs": [
+    {
+     "text": "Trang chủ",
+     "href": "https://thegioigianphoi.vn/"
+    },
+    {
+     "text": "Tìm kiếm"
+    }
+   ]
+  }
+ ],
+ "bank": {
+  "name": "Vietcombank — Chi nhánh Hà Nội",
+  "account": "0123 456 789",
+  "holder": "CÔNG TY TNHH NỘI THẤT THÔNG MINH ĐẠI HOA PHÁT",
+  "note": "Họ tên + số điện thoại đặt hàng"
+ },
+ "shipping": {
+  "freeNote": "Miễn phí khảo sát và lắp đặt tại TP.HCM & Bình Dương.",
+  "codNote": "Trả tiền mặt cho nhân viên sau khi lắp đặt xong.",
+  "bankNote": "Thông tin tài khoản hiện ra sau khi bạn chọn."
+ },
+ "provinces": [
+  {
+   "name": "Hà Nội",
+   "wards": [
+    "Quận Ba Đình",
+    "Quận Cầu Giấy",
+    "Quận Đống Đa",
+    "Quận Hà Đông",
+    "Quận Hai Bà Trưng",
+    "Quận Hoàng Mai",
+    "Quận Long Biên",
+    "Quận Nam Từ Liêm",
+    "Quận Bắc Từ Liêm",
+    "Quận Thanh Xuân"
+   ]
+  },
+  {
+   "name": "TP. Hồ Chí Minh",
+   "wards": [
+    "Quận 1",
+    "Quận 3",
+    "Quận 4",
+    "Quận 5",
+    "Quận 7",
+    "Quận Bình Thạnh",
+    "Quận Gò Vấp",
+    "Quận Phú Nhuận",
+    "Quận Tân Bình",
+    "TP. Thủ Đức"
+   ]
+  },
+  {
+   "name": "Đà Nẵng",
+   "wards": [
+    "Quận Hải Châu",
+    "Quận Thanh Khê",
+    "Quận Sơn Trà",
+    "Quận Ngũ Hành Sơn",
+    "Quận Liên Chiểu",
+    "Quận Cẩm Lệ"
+   ]
+  },
+  {
+   "name": "Hải Phòng",
+   "wards": [
+    "Quận Hồng Bàng",
+    "Quận Lê Chân",
+    "Quận Ngô Quyền",
+    "Quận Hải An",
+    "Quận Kiến An"
+   ]
+  },
+  {
+   "name": "Bắc Ninh",
+   "wards": [
+    "TP. Bắc Ninh",
+    "TX. Từ Sơn",
+    "Huyện Tiên Du",
+    "Huyện Yên Phong"
+   ]
+  },
+  {
+   "name": "Hưng Yên",
+   "wards": [
+    "TP. Hưng Yên",
+    "Huyện Văn Giang",
+    "Huyện Văn Lâm",
+    "Huyện Mỹ Hào"
+   ]
+  },
+  {
+   "name": "Quảng Ninh",
+   "wards": [
+    "TP. Hạ Long",
+    "TP. Cẩm Phả",
+    "TP. Uông Bí",
+    "TX. Quảng Yên"
+   ]
+  },
+  {
+   "name": "Nam Định",
+   "wards": [
+    "TP. Nam Định",
+    "Huyện Nam Trực",
+    "Huyện Ý Yên",
+    "Huyện Giao Thủy"
+   ]
+  },
+  {
+   "name": "Thái Bình",
+   "wards": [
+    "TP. Thái Bình",
+    "Huyện Đông Hưng",
+    "Huyện Vũ Thư",
+    "Huyện Kiến Xương"
+   ]
+  },
+  {
+   "name": "Bình Dương",
+   "wards": [
+    "TP. Thủ Dầu Một",
+    "TP. Dĩ An",
+    "TP. Thuận An",
+    "TX. Bến Cát"
+   ]
+  },
+  {
+   "name": "Đồng Nai",
+   "wards": [
+    "TP. Biên Hòa",
+    "TP. Long Khánh",
+    "Huyện Trảng Bom",
+    "Huyện Nhơn Trạch"
+   ]
+  },
+  {
+   "name": "Tỉnh/Thành khác",
+   "wards": [
+    "Khác"
+   ]
+  }
+ ],
+ "xepNgang": {
+  "intro": "Giàn phơi xếp ngang gấp gọn sát tường, phù hợp với ban công và logia chung cư có diện tích hạn chế. Tất cả sản phẩm đều được khảo sát và lắp đặt miễn phí tại Hà Nội và TP.HCM.",
+  "_demoNote": "The live site's /danh-muc/gian-phoi-xep-ngang/ returns 404 (broken menu link). Items marked demo:true are sample variants written for this clone; each links to the real base product it varies and reuses an image already on the site.",
+  "products": [
+   {
+    "ref": "1767"
+   },
+   {
+    "ref": "1359"
+   },
+   {
+    "ref": "1313"
+   },
+   {
+    "demo": true,
+    "id": "demo-xn-inox-170",
+    "title": "Giàn phơi xếp ngang Inox 304 - 1m7",
+    "base": "1767",
+    "img": "assets/uploads/2019/06/gian-phoi-xep-ngang-1-2-300x300.jpg",
+    "alt": "gian-phoi-xep-ngang-1-2",
+    "old": "1,750,000",
+    "new": "1,350,000"
+   },
+   {
+    "demo": true,
+    "id": "demo-xn-inox-200",
+    "title": "Giàn phơi xếp ngang Inox 304 - 2m0",
+    "base": "1767",
+    "img": "assets/uploads/2019/06/gian-phoi-xep-ngang-2-3-300x300.jpg",
+    "alt": "gian-phoi-xep-ngang-2-3",
+    "old": "2,100,000",
+    "new": "1,650,000"
+   },
+   {
+    "demo": true,
+    "id": "demo-xn-nhom-mini",
+    "title": "Giàn phơi xếp ngang thanh nhôm - bản mini",
+    "base": "1313",
+    "img": "assets/uploads/2019/06/gian-phoi-xep-ngang-17-300x300.jpg",
+    "alt": "gian-phoi-xep-ngang-17",
+    "old": "1,100,000",
+    "new": "850,000"
+   },
+   {
+    "demo": true,
+    "id": "demo-xn-loai-to-3t",
+    "title": "Giàn phơi xếp ngang loại to - 3 thanh",
+    "base": "1359",
+    "img": "assets/uploads/2017/03/gian-phoi-xep-ngang-loai-to-01-300x300.jpg",
+    "alt": "gian-phoi-xep-ngang-loai-to-01",
+    "old": "2,250,000",
+    "new": "1,950,000"
+   },
+   {
+    "demo": true,
+    "id": "demo-xn-ban-cong",
+    "title": "Giàn phơi xếp ngang ban công gấp gọn",
+    "base": "1313",
+    "img": "assets/uploads/2017/03/gian-phoi-xep-ngang-loai-to-300x300.jpg",
+    "alt": "gian-phoi-xep-ngang-loai-to",
+    "old": "1,450,000",
+    "new": "1,150,000"
+   }
+  ]
+ }
+}

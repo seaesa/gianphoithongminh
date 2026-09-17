@@ -1,0 +1,194 @@
+/* ===========================================================================
+   Chrome this clone fixes rather than clones: the Facebook page card in the
+   footer (the real one is an SDK iframe that is never loaded) and the search
+   results page (the real one is a WordPress query there is no server for).
+
+   Palette follows the theme: blue #0082c6 · green #1a7b1c · orange #fcb040.
+   =========================================================================== */
+
+/* ── footer: Facebook page card ─────────────────────────────────────────────
+   The live page reserves 340x200 for Facebook's page plugin. `overrides.css`
+   keeps that box; this fills it with a card of the same proportions, so the
+   footer's height is unchanged whether or not the SDK would have loaded. */
+
+.fb-page-placeholder .fb-card {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 12px 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #1d2129;
+}
+.fb-page-placeholder .fb-card:hover { text-decoration: none; }
+
+.fb-card-cover {
+  display: block;
+  margin: 0 -12px;
+  height: 74px;
+  background: linear-gradient(135deg, #3b5998 0%, #4c70ba 100%);
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 40px;
+  line-height: 74px;
+}
+
+.fb-card-avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin: -28px auto 6px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #3b5998;
+  color: #fff;
+  font-size: 26px;
+  line-height: 50px;
+}
+
+.fb-card-name {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 17px;
+  /* two lines at most, so a long page name cannot push the CTA out of the box */
+  max-height: 34px;
+  overflow: hidden;
+}
+
+.fb-card-meta {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  color: #90949c;
+}
+
+.fb-card-cta {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 14px;
+  border-radius: 2px;
+  background: #4267b2;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.fb-page-placeholder .fb-card:hover .fb-card-cta { background: #365899; }
+
+/* ── search results ─────────────────────────────────────────────────────── */
+
+.gp-search-summary {
+  margin: 0 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eaeaea;
+  color: #666;
+}
+.gp-search-summary strong { color: #333; }
+
+/* the results reuse the archive card, plus a kind badge and an optional price */
+.gp-search-kind {
+  display: inline-block;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  background: #0082c6;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.gp-search-kind[data-kind="Sản phẩm"] { background: #1a7b1c; }
+.gp-search-kind[data-kind="Tin tức"]  { background: #fcb040; }
+.gp-search-kind[data-kind="Chuyên mục"],
+.gp-search-kind[data-kind="Danh mục"] { background: #777; }
+
+.gp-search-price {
+  display: block;
+  margin: 4px 0 0;
+  color: #e60f1e;
+  font-weight: 700;
+}
+
+/* the thumbnail box is fixed so results of mixed shapes still line up */
+.gp-search-results .post-thumbnail {
+  width: 200px;
+  height: 140px;
+  overflow: hidden;
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+}
+.gp-search-results .post-thumbnail img {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+
+.gp-search-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: #666;
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+}
+.gp-search-empty i {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 40px;
+  color: #ccc;
+}
+.gp-search-empty h3 { margin: 0 0 8px; font-size: 18px; color: #333; }
+.gp-search-empty ul {
+  display: inline-block;
+  margin: 12px 0 0;
+  padding: 0;
+  text-align: left;
+  list-style: none;
+}
+.gp-search-empty li { padding: 2px 0; }
+.gp-search-empty li:before {
+  content: "\f105";
+  font: normal normal normal 14px/1 FontAwesome;
+  padding-right: 8px;
+  color: #1a7b1c;
+}
+
+.gp-search-more {
+  margin-top: 20px;
+  text-align: center;
+}
+.gp-search-more button {
+  padding: 8px 22px;
+  border: 1px solid #eaeaea;
+  background: #fafafa;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+}
+.gp-search-more button:hover {
+  background: #fcb040;
+  border-color: #fcb040;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .gp-search-results .post-thumbnail,
+  .gp-search-results .post-thumbnail img {
+    float: none;
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+  .gp-search-results .post-thumbnail { margin-bottom: 12px; }
+}
+
+/* matched terms inside a result; the browser default yellow is too loud next
+   to the theme's palette */
+.gp-search-results mark {
+  padding: 0 1px;
+  background: #fff3d6;
+  color: inherit;
+  font-weight: 700;
+}

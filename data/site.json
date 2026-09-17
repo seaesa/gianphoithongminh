@@ -1,0 +1,1572 @@
+{
+ "topbar": {
+  "social": [
+   {
+    "icon": "fa-facebook",
+    "href": "https://www.facebook.com/noithatthongminhdaihoaphat"
+   }
+  ],
+  "account": "Đăng nhập - Đăng ký",
+  "items": [
+   {
+    "icon": "fa-phone",
+    "text": "Hotline:",
+    "strong": "0902 725 760",
+    "href": "tel:0902725760"
+   },
+   {
+    "icon": "fa-envelope-o",
+    "text": "daihoaphat999@gmail.com",
+    "strong": "daihoaphat999@gmail.com",
+    "href": "mailto:daihoaphat999@gmail.com"
+   }
+  ]
+ },
+ "logo": {
+  "src": "http://thegioigianphoi.vn/wp-content/uploads/2017/12/logo-hoa-phat-01-1.png",
+  "seo": "Giàn phơi quần áo thông minh Hòa Phát"
+ },
+ "search_placeholder": "Nhập từ khoá tìm kiếm...",
+ "cart_empty": "Chưa có sản phẩm trong giỏ hàng.",
+ "mainnav": [
+  {
+   "text": "GIÀN PHƠI HÒA PHÁT",
+   "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+  },
+  {
+   "text": "GIÀN PHƠI ĐIỀU KHIỂN",
+   "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-dieu-khien/"
+  },
+  {
+   "text": "GIÀN PHƠI XẾP NGANG",
+   "href": "http://thegioigianphoi.vn/danh-muc/gian-phoi-xep-ngang/"
+  },
+  {
+   "text": "GIÀN PHƠI THÔNG MINH",
+   "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-minh/"
+  },
+  {
+   "text": "GIÀN PHƠI THÔNG DỤNG",
+   "href": "http://thegioigianphoi.vn/danh-muc/gian-phoi-thong-dung/"
+  }
+ ],
+ "pr_nav_title": "Danh mục sản phẩm",
+ "slides": [
+  {
+   "src": "http://thegioigianphoi.vn/wp-content/uploads/2017/03/banner4_zps1870ab77.jpg",
+   "alt": "Test"
+  }
+ ],
+ "features": [
+  {
+   "cls": "free_ship_textarea",
+   "icon": "fa-usd",
+   "title": "Khảo sát tại nhà miễn phí",
+   "sub": "Đơn hàng tại Hà Nội, TPHCM"
+  },
+  {
+   "cls": "thutien_textarea",
+   "icon": "fa-calculator",
+   "title": "THANH TOÁN",
+   "sub": "Lắp đặt xong mới thanh toán"
+  },
+  {
+   "cls": "doitrahang_textarea",
+   "icon": "fa-gift",
+   "title": "KHUYẾN MẠI HẤP DẪN",
+   "sub": "Giảm 10%, tặng bảo hành vàng"
+  }
+ ],
+ "product_widgets": [
+  {
+   "id": "hrm_tab_products-4",
+   "heading": "GIÀN PHƠI HÒA PHÁT",
+   "tabs": [
+    {
+     "label": "GIÀN PHƠI HÒA PHÁT",
+     "active": true
+    }
+   ],
+   "panes": [
+    {
+     "id": "cat1_hrm_tab_products-4",
+     "active": true,
+     "products": [
+      {
+       "discount": "25%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-nhap-khau-20A-01-300x300.jpg",
+       "alt": "gian-phoi-nhap-khau-20A-01",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-s-20a-nhap-khau-dai-loan/",
+       "title": "GP S-20A Nhập khẩu Đài Loan",
+       "old": {
+        "num": "2,000,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,500,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "50%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-05-300x300.jpg",
+       "alt": "gian-phoi-05",
+       "href": "https://thegioigianphoi.vn/cua-hang/gp-nhap-khau-bo-toi-k-95/",
+       "title": "GP nhập khẩu bộ tời K-95",
+       "old": {
+        "num": "3,000,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,500,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "42%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-cu-chuong-02-300x300.jpg",
+       "alt": "gian-phoi-cu-chuong-02",
+       "href": "https://thegioigianphoi.vn/cua-hang/gp-nhap-khau-bo-toi/",
+       "title": "GP nhập khẩu bộ tời",
+       "old": {
+        "num": "2,150,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,250,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "33%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-duy-loi-300x300.png",
+       "alt": "gian-phoi-duy-loi",
+       "href": "https://thegioigianphoi.vn/cua-hang/gp-duy-loi-seri-04/",
+       "title": "GP Hòa Phát Seri 04",
+       "old": {
+        "num": "2,250,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,500,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "17%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/Gin_phi__GP14-300x300.jpg",
+       "alt": "Gin_phi__GP14",
+       "href": "https://thegioigianphoi.vn/cua-hang/gp-duy-loi-seri-03/",
+       "title": "GP Hòa Phát seri 03",
+       "old": {
+        "num": "2,050,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,700,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "49%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/GP-THONG_DUNG_DUY_LOI_SERI02-300x300.png",
+       "alt": "GP-THONG_DUNG_DUY_LOI_SERI02",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-thong-minh-seri-02/",
+       "title": "GP Hòa Phát Seri 02",
+       "old": {
+        "num": "1,950,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,000,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "32%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/Gian-phoi-thong-minh-seri01-300x300.jpg",
+       "alt": "Gian-phoi-thong-minh-seri01",
+       "href": "https://thegioigianphoi.vn/cua-hang/gp-duy-loi-seri-01/",
+       "title": "GP Hòa Phát Seri 01",
+       "old": {
+        "num": "1,850,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,250,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "26%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-xep-ngang-loai-to-300x300.jpg",
+       "alt": "gian-phoi-xep-ngang-loai-to",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-xep-ngang-thanh-nhom-duy-loi/",
+       "title": "Giàn phơi xếp ngang thanh nhôm Hòa Phát",
+       "old": {
+        "num": "1,350,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,000,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "12%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-xep-ngang-loai-to-01-300x300.jpg",
+       "alt": "gian-phoi-xep-ngang-loai-to-01",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-xep-ngang-loai/",
+       "title": "Giàn phơi xếp ngang loại to",
+       "old": {
+        "num": "2,050,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,800,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "30%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2019/06/FB_IMG_1537770874091-300x300.jpg",
+       "alt": "FB_IMG_1537770874091",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-takashi/",
+       "title": "Giàn Phơi TAKASHI",
+       "old": {
+        "num": "2,500,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,750,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "16%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/bo-toi-999a-500x682-300x300.png",
+       "alt": "bo-toi-999a-500x682",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-cao-cap-seri-999a/",
+       "title": "Giàn phơi Seri 999B",
+       "old": {
+        "num": "1,550,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,300,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "23%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-888A-300x300.png",
+       "alt": "gian-phoi-888A",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-thong-minh-seri-888/",
+       "title": "Giàn phơi Seri 888 A",
+       "old": {
+        "num": "1,500,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,150,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "32%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-inox-Series-B–01-model-2013-300x300.jpg",
+       "alt": "gian-phoi-inox-Series-B–01-model-2013",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-inox-series-b-01-model-2013/",
+       "title": "Giàn phơi inox Series B – 01 model 2013",
+       "old": {
+        "num": "1,250,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "850,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "24%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-inox-CMA–888-300x300.jpg",
+       "alt": "gian-phoi-inox-CMA–888",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-inox-cma-888/",
+       "title": "Giàn phơi inox CMA – 888",
+       "old": {
+        "num": "1,450,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,100,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "7%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/45shoe-360-gian-phoi-dieu-khien-tu-xa-300x300.jpg",
+       "alt": "45shoe-360-gian-phoi-dieu-khien-tu-xa",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-dieu-khien-duy-loi/",
+       "title": "Giàn phơi điều khiển từ xa Hòa Phát",
+       "old": {
+        "num": "13,500,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "12,500,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      }
+     ],
+     "cols": "columns-5"
+    }
+   ]
+  },
+  {
+   "id": "hrm_tab_products-2",
+   "heading": "GIÀN PHƠI THÔNG DỤNG",
+   "tabs": [
+    {
+     "label": "GIÀN PHƠI THÔNG DỤNG",
+     "active": true
+    },
+    {
+     "label": "GIÀN PHƠI QUẦN ÁO",
+     "active": false
+    },
+    {
+     "label": "",
+     "active": false
+    }
+   ],
+   "panes": [
+    {
+     "id": "cat1_hrm_tab_products-2",
+     "active": true,
+     "products": [
+      {
+       "discount": "12%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-xep-ngang-loai-to-01-300x300.jpg",
+       "alt": "gian-phoi-xep-ngang-loai-to-01",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-xep-ngang-loai/",
+       "title": "Giàn phơi xếp ngang loại to",
+       "old": {
+        "num": "2,050,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,800,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "26%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-xep-ngang-loai-to-300x300.jpg",
+       "alt": "gian-phoi-xep-ngang-loai-to",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-xep-ngang-thanh-nhom-duy-loi/",
+       "title": "Giàn phơi xếp ngang thanh nhôm Hòa Phát",
+       "old": {
+        "num": "1,350,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,000,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "32%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/Gian-phoi-thong-minh-seri01-300x300.jpg",
+       "alt": "Gian-phoi-thong-minh-seri01",
+       "href": "https://thegioigianphoi.vn/cua-hang/gp-duy-loi-seri-01/",
+       "title": "GP Hòa Phát Seri 01",
+       "old": {
+        "num": "1,850,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,250,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "33%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-duy-loi-300x300.png",
+       "alt": "gian-phoi-duy-loi",
+       "href": "https://thegioigianphoi.vn/cua-hang/gp-duy-loi-seri-04/",
+       "title": "GP Hòa Phát Seri 04",
+       "old": {
+        "num": "2,250,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,500,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "24%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-duy-loi-07-300x300.jpeg",
+       "alt": "gian-phoi-duy-loi-07",
+       "href": "https://thegioigianphoi.vn/cua-hang/gp-duy-loi-seri-07/",
+       "title": "GP Hòa Phát Seri 07",
+       "old": {
+        "num": "1,850,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,400,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "42%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-cu-chuong-02-300x300.jpg",
+       "alt": "gian-phoi-cu-chuong-02",
+       "href": "https://thegioigianphoi.vn/cua-hang/gp-nhap-khau-bo-toi/",
+       "title": "GP nhập khẩu bộ tời",
+       "old": {
+        "num": "2,150,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,250,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "50%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-05-300x300.jpg",
+       "alt": "gian-phoi-05",
+       "href": "https://thegioigianphoi.vn/cua-hang/gp-nhap-khau-bo-toi-k-95/",
+       "title": "GP nhập khẩu bộ tời K-95",
+       "old": {
+        "num": "3,000,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,500,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "25%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-nhap-khau-20A-01-300x300.jpg",
+       "alt": "gian-phoi-nhap-khau-20A-01",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-s-20a-nhap-khau-dai-loan/",
+       "title": "GP S-20A Nhập khẩu Đài Loan",
+       "old": {
+        "num": "2,000,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,500,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      }
+     ],
+     "cols": "columns-4"
+    },
+    {
+     "id": "cat2_hrm_tab_products-2",
+     "active": false,
+     "products": [
+      {
+       "discount": "24%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-inox-CMA–888-300x300.jpg",
+       "alt": "gian-phoi-inox-CMA–888",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-inox-cma-888/",
+       "title": "Giàn phơi inox CMA – 888",
+       "old": {
+        "num": "1,450,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,100,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "32%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-inox-Series-B–01-model-2013-300x300.jpg",
+       "alt": "gian-phoi-inox-Series-B–01-model-2013",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-inox-series-b-01-model-2013/",
+       "title": "Giàn phơi inox Series B – 01 model 2013",
+       "old": {
+        "num": "1,250,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "850,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "23%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-888A-300x300.png",
+       "alt": "gian-phoi-888A",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-thong-minh-seri-888/",
+       "title": "Giàn phơi Seri 888 A",
+       "old": {
+        "num": "1,500,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,150,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "12%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-xep-ngang-loai-to-01-300x300.jpg",
+       "alt": "gian-phoi-xep-ngang-loai-to-01",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-xep-ngang-loai/",
+       "title": "Giàn phơi xếp ngang loại to",
+       "old": {
+        "num": "2,050,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,800,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "17%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/Gin_phi__GP14-300x300.jpg",
+       "alt": "Gin_phi__GP14",
+       "href": "https://thegioigianphoi.vn/cua-hang/gp-duy-loi-seri-03/",
+       "title": "GP Hòa Phát seri 03",
+       "old": {
+        "num": "2,050,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,700,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "25%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-nhap-khau-20A-01-300x300.jpg",
+       "alt": "gian-phoi-nhap-khau-20A-01",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-s-20a-nhap-khau-dai-loan/",
+       "title": "GP S-20A Nhập khẩu Đài Loan",
+       "old": {
+        "num": "2,000,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,500,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      }
+     ],
+     "cols": "columns-4"
+    },
+    {
+     "id": "cat3_hrm_tab_products-2",
+     "active": false,
+     "products": [
+      {
+       "discount": null,
+       "sale_label": null,
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/12/su-dung-bat-che-dung-cach-1-300x300.png",
+       "alt": "su-dung-bat-che-dung-cach-1",
+       "href": "https://thegioigianphoi.vn/cua-hang/ba%cc%a3t-che-nang-mua-tu%cc%a3-cuon-hoa-phat/",
+       "title": "Bạt tự cuốn Hòa Phát",
+       "old": null,
+       "new": null,
+       "btn": "Đọc tiếp",
+       "btn_type": "read",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": null,
+       "sale_label": null,
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-hoa-phat-2-300x300.png",
+       "alt": "gian-phoi-hoa-phat-2",
+       "href": "https://thegioigianphoi.vn/cua-hang/dich-vu-sua-chua/",
+       "title": "DỊCH VỤ SỬA CHỮA",
+       "old": null,
+       "new": null,
+       "btn": "Đọc tiếp",
+       "btn_type": "read",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "20%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2019/06/received_333703417258663-300x300.jpeg",
+       "alt": "received_333703417258663",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-4-thanh/",
+       "title": "Giàn Phơi 4 Thanh",
+       "old": {
+        "num": "2,500,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "2,000,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": null,
+       "sale_label": null,
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-ban-dien-300x300.jpg",
+       "alt": "gian-ban-dien",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-bam-dien/",
+       "title": "GIàn Phơi Bấm Điện",
+       "old": null,
+       "new": null,
+       "btn": "Đọc tiếp",
+       "btn_type": "read",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "30%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-chuong-co-2-300x300.jpg",
+       "alt": "gian-phoi-chuong-co-2",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-chuong-co/",
+       "title": "Giàn Phơi Chuông Cổ",
+       "old": {
+        "num": "2,500,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,750,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "32%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2019/06/IMG_20190511_092005-300x300.jpg",
+       "alt": "IMG_20190511_092005",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-dieu-khien/",
+       "title": "Giàn Phơi Điều Khiển",
+       "old": {
+        "num": "18,500,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "12,500,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "7%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/45shoe-360-gian-phoi-dieu-khien-tu-xa-300x300.jpg",
+       "alt": "45shoe-360-gian-phoi-dieu-khien-tu-xa",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-dieu-khien-duy-loi/",
+       "title": "Giàn phơi điều khiển từ xa Hòa Phát",
+       "old": {
+        "num": "13,500,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "12,500,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "24%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-inox-CMA–888-300x300.jpg",
+       "alt": "gian-phoi-inox-CMA–888",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-inox-cma-888/",
+       "title": "Giàn phơi inox CMA – 888",
+       "old": {
+        "num": "1,450,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,100,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      }
+     ],
+     "cols": "columns-4"
+    }
+   ]
+  },
+  {
+   "id": "hrm_tab_products-3",
+   "heading": "GIÀN PHƠI BÁN CHẠY 2019",
+   "tabs": [
+    {
+     "label": "GIÀN PHƠI BÁN CHẠY 2017",
+     "active": true
+    },
+    {
+     "label": "GIÀN PHƠI ĐIỀU KHIỂN",
+     "active": false
+    },
+    {
+     "label": "GIÀN PHƠI ĐỒ",
+     "active": false
+    }
+   ],
+   "panes": [
+    {
+     "id": "cat1_hrm_tab_products-3",
+     "active": true,
+     "products": [
+      {
+       "discount": "7%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/45shoe-360-gian-phoi-dieu-khien-tu-xa-300x300.jpg",
+       "alt": "45shoe-360-gian-phoi-dieu-khien-tu-xa",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-dieu-khien-duy-loi/",
+       "title": "Giàn phơi điều khiển từ xa Hòa Phát",
+       "old": {
+        "num": "13,500,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "12,500,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "32%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-inox-Series-B–01-model-2013-300x300.jpg",
+       "alt": "gian-phoi-inox-Series-B–01-model-2013",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-inox-series-b-01-model-2013/",
+       "title": "Giàn phơi inox Series B – 01 model 2013",
+       "old": {
+        "num": "1,250,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "850,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "23%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-888A-300x300.png",
+       "alt": "gian-phoi-888A",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-thong-minh-seri-888/",
+       "title": "Giàn phơi Seri 888 A",
+       "old": {
+        "num": "1,500,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,150,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "16%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/bo-toi-999a-500x682-300x300.png",
+       "alt": "bo-toi-999a-500x682",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-cao-cap-seri-999a/",
+       "title": "Giàn phơi Seri 999B",
+       "old": {
+        "num": "1,550,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,300,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "12%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-xep-ngang-loai-to-01-300x300.jpg",
+       "alt": "gian-phoi-xep-ngang-loai-to-01",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-xep-ngang-loai/",
+       "title": "Giàn phơi xếp ngang loại to",
+       "old": {
+        "num": "2,050,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,800,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "26%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-xep-ngang-loai-to-300x300.jpg",
+       "alt": "gian-phoi-xep-ngang-loai-to",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-xep-ngang-thanh-nhom-duy-loi/",
+       "title": "Giàn phơi xếp ngang thanh nhôm Hòa Phát",
+       "old": {
+        "num": "1,350,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,000,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "42%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-cu-chuong-02-300x300.jpg",
+       "alt": "gian-phoi-cu-chuong-02",
+       "href": "https://thegioigianphoi.vn/cua-hang/gp-nhap-khau-bo-toi/",
+       "title": "GP nhập khẩu bộ tời",
+       "old": {
+        "num": "2,150,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,250,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "25%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/gian-phoi-nhap-khau-20A-01-300x300.jpg",
+       "alt": "gian-phoi-nhap-khau-20A-01",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-s-20a-nhap-khau-dai-loan/",
+       "title": "GP S-20A Nhập khẩu Đài Loan",
+       "old": {
+        "num": "2,000,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,500,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      }
+     ],
+     "cols": "columns-4"
+    },
+    {
+     "id": "cat2_hrm_tab_products-3",
+     "active": false,
+     "products": [
+      {
+       "discount": "32%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2019/06/IMG_20190511_092005-300x300.jpg",
+       "alt": "IMG_20190511_092005",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-dieu-khien/",
+       "title": "Giàn Phơi Điều Khiển",
+       "old": {
+        "num": "18,500,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "12,500,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": "7%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/45shoe-360-gian-phoi-dieu-khien-tu-xa-300x300.jpg",
+       "alt": "45shoe-360-gian-phoi-dieu-khien-tu-xa",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-dieu-khien-duy-loi/",
+       "title": "Giàn phơi điều khiển từ xa Hòa Phát",
+       "old": {
+        "num": "13,500,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "12,500,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      }
+     ],
+     "cols": "columns-4"
+    },
+    {
+     "id": "cat3_hrm_tab_products-3",
+     "active": false,
+     "products": [
+      {
+       "discount": "16%",
+       "sale_label": "Giảm giá!",
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/03/bo-toi-999a-500x682-300x300.png",
+       "alt": "bo-toi-999a-500x682",
+       "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-cao-cap-seri-999a/",
+       "title": "Giàn phơi Seri 999B",
+       "old": {
+        "num": "1,550,000",
+        "sym": "₫"
+       },
+       "new": {
+        "num": "1,300,000",
+        "sym": "₫"
+       },
+       "btn": "Thêm vào giỏ",
+       "btn_type": "add",
+       "hover": "Xem chi tiết"
+      }
+     ],
+     "cols": "columns-4"
+    }
+   ]
+  },
+  {
+   "id": "hrm_tab_products-5",
+   "heading": "SẢN PHẨM LƯỚI AN TOÀN, BẠT TỰ CUỐN",
+   "tabs": [
+    {
+     "label": "SẢN PHẨM KHÁC",
+     "active": true
+    }
+   ],
+   "panes": [
+    {
+     "id": "cat1_hrm_tab_products-5",
+     "active": true,
+     "products": [
+      {
+       "discount": null,
+       "sale_label": null,
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/12/skf1480845044-300x300.jpg",
+       "alt": "skf1480845044",
+       "href": "https://thegioigianphoi.vn/cua-hang/luoi-cu%cc%89a-so%cc%89-hoa-phat/",
+       "title": "Lưới cửa sổ Hòa Phát",
+       "old": null,
+       "new": null,
+       "btn": "Đọc tiếp",
+       "btn_type": "read",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": null,
+       "sale_label": null,
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/12/15400967_890814741019758_4023223122909052422_n-300x300.jpg",
+       "alt": "15400967_890814741019758_4023223122909052422_n",
+       "href": "https://thegioigianphoi.vn/cua-hang/luoi-toan-cau-thang-hoa-phat/",
+       "title": "Lưới cầu thang Hòa Phát",
+       "old": null,
+       "new": null,
+       "btn": "Đọc tiếp",
+       "btn_type": "read",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": null,
+       "sale_label": null,
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/12/su-dung-bat-che-dung-cach-1-300x300.png",
+       "alt": "su-dung-bat-che-dung-cach-1",
+       "href": "https://thegioigianphoi.vn/cua-hang/ba%cc%a3t-che-nang-mua-tu%cc%a3-cuon-hoa-phat/",
+       "title": "Bạt tự cuốn Hòa Phát",
+       "old": null,
+       "new": null,
+       "btn": "Đọc tiếp",
+       "btn_type": "read",
+       "hover": "Xem chi tiết"
+      },
+      {
+       "discount": null,
+       "sale_label": null,
+       "img": "https://thegioigianphoi.vn/wp-content/uploads/2017/12/lưới_at-300x300.jpg",
+       "alt": "lưới_at",
+       "href": "https://thegioigianphoi.vn/cua-hang/luoi-toan-ban-cong-hoa-phat/",
+       "title": "Lưới ban công Hòa Phát",
+       "old": null,
+       "new": null,
+       "btn": "Đọc tiếp",
+       "btn_type": "read",
+       "hover": "Xem chi tiết"
+      }
+     ],
+     "cols": "columns-4"
+    }
+   ]
+  }
+ ],
+ "static_block_html": "<div class=\"textwidget\"><div class=\"block-static-inner\">\n<div class=\"img\">\n</div>\n<div class=\"content hidden-xs\">\n<h3>Giàn Phơi Thông Minh</h3>\n<h2>Hòa Phát</h2>\n<p>sự lựa chọn sáng suốt cho mọi căn hộ</p>\n</div>\n<div class=\"trending\">\n<div class=\"trending-inner\">\n<h3>  model 2017</h3>\n<h2> Hòa Phát</h2>\n<p>  độc quyền</p>\n</div>\n</div>\n</div></div>",
+ "home_news_html": "<div class=\"textwidget\"></div>",
+ "sidebar_raw": [
+  {
+   "id": "nav_menu-4",
+   "cls": [
+    "widget",
+    "widget_nav_menu"
+   ],
+   "title": "Danh mục sản phẩm",
+   "html": "<div class=\"widget widget_nav_menu\" id=\"nav_menu-4\"><div class=\"widget-top\"><h3 class=\"widget-title\">Danh mục sản phẩm</h3></div><div class=\"menu-danh-muc-san-pham-container\"><ul class=\"menu\" id=\"menu-danh-muc-san-pham-2\"><li class=\"menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1309\"><a href=\"https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/\">GIÀN PHƠI HÒA PHÁT</a></li>\n<li class=\"menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1221\"><a href=\"https://thegioigianphoi.vn/danh-muc/gian-phoi-dieu-khien/\">GIÀN PHƠI ĐIỀU KHIỂN</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-1224\"><a href=\"http://thegioigianphoi.vn/danh-muc/gian-phoi-xep-ngang/\">GIÀN PHƠI XẾP NGANG</a></li>\n<li class=\"menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1218\"><a href=\"https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-minh/\">GIÀN PHƠI THÔNG MINH</a></li>\n<li class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-1317\"><a href=\"http://thegioigianphoi.vn/danh-muc/gian-phoi-thong-dung/\">GIÀN PHƠI THÔNG DỤNG</a></li>\n</ul></div></div>"
+  },
+  {
+   "id": "text-8",
+   "cls": [
+    "widget",
+    "widget_text"
+   ],
+   "title": "GIÀN PHƠI HÒA PHÁT",
+   "html": "<div class=\"widget widget_text\" id=\"text-8\"><div class=\"widget-top\"><h3 class=\"widget-title\">GIÀN PHƠI HÒA PHÁT</h3></div> <div class=\"textwidget\"><div class=\"info-service\">\n<div class=\"title-info-service\"></div>\n<div class=\"number-info-service\">\n<div class=\"cont-info-service\">\n<p><i class=\"fa fa-thumbs-o-up\"></i>Có tem bảo hành chất lượng</p>\n<p><i class=\"fa fa-refresh\"></i>Sản phẩm chính hãng</p>\n<p><i class=\"fa fa-heart\"></i>Dịch vụ khách hàng tốt nhất</p>\n</div>\n<div class=\"list-number-info-service\">\n<i class=\"fa fa-phone\"></i>\n<p>0902.725.760</p>\n<span>( Đặt hàng qua điện thoại )</span>\n</div>\n<div class=\"sp-list\">\n<p class=\"support-online-skype\"><a href=\"\"><i class=\"spyke\"></i>Đặt hàng:</a></p>\n<p class=\"support-online-fb\"><a href=\"https://www.facebook.com/noithatthongminhdaihoaphat\" rel=\"nofollow\" target=\"_blank\"><i class=\"fa fa-facebook-square\"></i>Qua Facebook</a></p>\n<p class=\"support-online\"><a href=\"mailto:daihoaphat999@gmail.com\"><i class=\"fa fa-envelope-o\"></i>Gửi Email</a></p>\n</div>\n</div><!--end ..number-info-servic-->\n</div></div>\n</div>"
+  },
+  {
+   "id": "woocommerce_products-3",
+   "cls": [
+    "widget",
+    "woocommerce",
+    "widget_products"
+   ],
+   "title": "Sản phẩm mới",
+   "html": "<div class=\"widget woocommerce widget_products\" id=\"woocommerce_products-3\"><div class=\"widget-top\"><h3 class=\"widget-title\">Sản phẩm mới</h3></div><ul class=\"product_list_widget\">\n<li>\n<a href=\"https://thegioigianphoi.vn/cua-hang/gian-phoi-dieu-khien/\" title=\"Giàn Phơi Điều Khiển\">\n<img alt=\"\" class=\"attachment-shop_thumbnail size-shop_thumbnail wp-post-image\" height=\"180\" sizes=\"(max-width: 180px) 100vw, 180px\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2019/06/IMG_20190511_092005-180x180.jpg\" srcset=\"https://thegioigianphoi.vn/wp-content/uploads/2019/06/IMG_20190511_092005-180x180.jpg 180w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/IMG_20190511_092005-150x150.jpg 150w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/IMG_20190511_092005-300x300.jpg 300w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/IMG_20190511_092005-400x400.jpg 400w\" width=\"180\"/> <span class=\"product-title\">Giàn Phơi Điều Khiển</span>\n</a>\n<del><span class=\"woocommerce-Price-amount amount\">18,500,000 <span class=\"woocommerce-Price-currencySymbol\">₫</span></span></del> <ins><span class=\"woocommerce-Price-amount amount\">12,500,000 <span class=\"woocommerce-Price-currencySymbol\">₫</span></span></ins></li>\n<li>\n<a href=\"https://thegioigianphoi.vn/cua-hang/gian-phoi-chuong-co/\" title=\"Giàn Phơi Chuông Cổ\">\n<img alt=\"\" class=\"attachment-shop_thumbnail size-shop_thumbnail wp-post-image\" height=\"180\" sizes=\"(max-width: 180px) 100vw, 180px\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-chuong-co-2-180x180.jpg\" srcset=\"https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-chuong-co-2-180x180.jpg 180w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-chuong-co-2-150x150.jpg 150w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-chuong-co-2-300x300.jpg 300w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-chuong-co-2-400x400.jpg 400w\" width=\"180\"/> <span class=\"product-title\">Giàn Phơi Chuông Cổ</span>\n</a>\n<del><span class=\"woocommerce-Price-amount amount\">2,500,000 <span class=\"woocommerce-Price-currencySymbol\">₫</span></span></del> <ins><span class=\"woocommerce-Price-amount amount\">1,750,000 <span class=\"woocommerce-Price-currencySymbol\">₫</span></span></ins></li>\n<li>\n<a href=\"https://thegioigianphoi.vn/cua-hang/gian-phoi-bam-dien/\" title=\"GIàn Phơi Bấm Điện\">\n<img alt=\"\" class=\"attachment-shop_thumbnail size-shop_thumbnail wp-post-image\" height=\"180\" sizes=\"(max-width: 180px) 100vw, 180px\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-ban-dien-180x180.jpg\" srcset=\"https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-ban-dien-180x180.jpg 180w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-ban-dien-150x150.jpg 150w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-ban-dien-300x300.jpg 300w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-ban-dien-400x400.jpg 400w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-ban-dien.jpg 600w\" width=\"180\"/> <span class=\"product-title\">GIàn Phơi Bấm Điện</span>\n</a>\n</li>\n<li>\n<a href=\"https://thegioigianphoi.vn/cua-hang/gian-phoi-4-thanh/\" title=\"Giàn Phơi 4 Thanh\">\n<img alt=\"\" class=\"attachment-shop_thumbnail size-shop_thumbnail wp-post-image\" height=\"180\" sizes=\"(max-width: 180px) 100vw, 180px\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2019/06/received_333703417258663-180x180.jpeg\" srcset=\"https://thegioigianphoi.vn/wp-content/uploads/2019/06/received_333703417258663-180x180.jpeg 180w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/received_333703417258663-150x150.jpeg 150w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/received_333703417258663-300x300.jpeg 300w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/received_333703417258663-400x400.jpeg 400w\" width=\"180\"/> <span class=\"product-title\">Giàn Phơi 4 Thanh</span>\n</a>\n<del><span class=\"woocommerce-Price-amount amount\">2,500,000 <span class=\"woocommerce-Price-currencySymbol\">₫</span></span></del> <ins><span class=\"woocommerce-Price-amount amount\">2,000,000 <span class=\"woocommerce-Price-currencySymbol\">₫</span></span></ins></li>\n<li>\n<a href=\"https://thegioigianphoi.vn/cua-hang/gian-phoi-xep-ngang-inox/\" title=\"Giàn Phơi xếp ngang Inox\">\n<img alt=\"\" class=\"attachment-shop_thumbnail size-shop_thumbnail wp-post-image\" height=\"180\" sizes=\"(max-width: 180px) 100vw, 180px\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-xep-ngang-17-180x180.jpg\" srcset=\"https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-xep-ngang-17-180x180.jpg 180w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-xep-ngang-17-150x150.jpg 150w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-xep-ngang-17-300x300.jpg 300w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-xep-ngang-17-400x400.jpg 400w, https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-xep-ngang-17.jpg 700w\" width=\"180\"/> <span class=\"product-title\">Giàn Phơi xếp ngang Inox</span>\n</a>\n<del><span class=\"woocommerce-Price-amount amount\">1,850,000 <span class=\"woocommerce-Price-currencySymbol\">₫</span></span></del> <ins><span class=\"woocommerce-Price-amount amount\">1,500,000 <span class=\"woocommerce-Price-currencySymbol\">₫</span></span></ins></li>\n</ul></div>"
+  },
+  {
+   "id": "hrm-recent-posts-widget-2",
+   "cls": [
+    "widget",
+    "hrm-recent-posts-widget"
+   ],
+   "title": "Tin tức mới",
+   "html": "<div class=\"widget hrm-recent-posts-widget\" id=\"hrm-recent-posts-widget-2\"><div class=\"widget-top\"><h3 class=\"widget-title\">Tin tức mới</h3></div> <div class=\"list-post-ct\">\n<article class=\"hrm-recent-post\">\n<a class=\"hrm-thumb\" href=\"https://thegioigianphoi.vn/ban-da-phoi-quan-ao-dung-cach-tren-gian-phoi-moi-chua/\" title=\"Bạn đã phơi quần áo đúng cách trên giàn phơi thế hệ mới chưa?\"><img alt=\"Bạn đã phơi quần áo đúng cách trên giàn phơi thế hệ mới chưa?\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2017/05/Screenshot_8-433x330.png\"/></a> <div class=\"hrm-text\">\n<a class=\"hrm-title\" href=\"https://thegioigianphoi.vn/ban-da-phoi-quan-ao-dung-cach-tren-gian-phoi-moi-chua/\" rel=\"bookmark\" title=\"Đuờng dẫn đến Bạn đã phơi quần áo đúng cách trên giàn phơi thế hệ mới chưa?\">Bạn đã phơi quần áo đúng cách trên giàn phơi thế hệ mới chưa?</a>\n<div class=\"date-detail\">\n</div>\n</div>\n</article>\n<article class=\"hrm-recent-post\">\n<a class=\"hrm-thumb\" href=\"https://thegioigianphoi.vn/cach-thuc-lua-chon-gian-phoi-thong-minh-phu-hop-voi-moi-gia-dinh/\" title=\"Cách thức lựa chọn giàn phơi thông minh phù hợp với mỗi gia đình\"><img alt=\"Cách thức lựa chọn giàn phơi thông minh phù hợp với mỗi gia đình\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2017/05/Screenshot_4-3-463x330.png\"/></a> <div class=\"hrm-text\">\n<a class=\"hrm-title\" href=\"https://thegioigianphoi.vn/cach-thuc-lua-chon-gian-phoi-thong-minh-phu-hop-voi-moi-gia-dinh/\" rel=\"bookmark\" title=\"Đuờng dẫn đến Cách thức lựa chọn giàn phơi thông minh phù hợp với mỗi gia đình\">Cách thức lựa chọn giàn phơi thông minh phù hợp với mỗi gia đình</a>\n<div class=\"date-detail\">\n</div>\n</div>\n</article>\n<article class=\"hrm-recent-post\">\n<a class=\"hrm-thumb\" href=\"https://thegioigianphoi.vn/nhung-li-ban-nen-chon-gian-phoi-duy-loi-cho-giai-phap-phoi-cua-gia-dinh/\" title=\"Những lí do bạn nên chọn giàn phơi Duy Lợi cho giải pháp phơi đồ của gia đình\"><img alt=\"Những lí do bạn nên chọn giàn phơi Duy Lợi cho giải pháp phơi đồ của gia đình\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2017/05/Screenshot_4-2-500x330.png\"/></a> <div class=\"hrm-text\">\n<a class=\"hrm-title\" href=\"https://thegioigianphoi.vn/nhung-li-ban-nen-chon-gian-phoi-duy-loi-cho-giai-phap-phoi-cua-gia-dinh/\" rel=\"bookmark\" title=\"Đuờng dẫn đến Những lí do bạn nên chọn giàn phơi Duy Lợi cho giải pháp phơi đồ của gia đình\">Những lí do bạn nên chọn giàn phơi Duy Lợi cho giải pháp phơi đồ của gia đình</a>\n<div class=\"date-detail\">\n</div>\n</div>\n</article>\n<article class=\"hrm-recent-post\">\n<a class=\"hrm-thumb\" href=\"https://thegioigianphoi.vn/gian-phoi-thong-minh-trong-cuoc-song-cua-gia-dinh-viet-ngay-nay/\" title=\"Giàn phơi thông minh trong cuộc sống của gia đình Việt ngày nay\"><img alt=\"Giàn phơi thông minh trong cuộc sống của gia đình Việt ngày nay\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2017/05/Screenshot_4-1-500x330.png\"/></a> <div class=\"hrm-text\">\n<a class=\"hrm-title\" href=\"https://thegioigianphoi.vn/gian-phoi-thong-minh-trong-cuoc-song-cua-gia-dinh-viet-ngay-nay/\" rel=\"bookmark\" title=\"Đuờng dẫn đến Giàn phơi thông minh trong cuộc sống của gia đình Việt ngày nay\">Giàn phơi thông minh trong cuộc sống của gia đình Việt ngày nay</a>\n<div class=\"date-detail\">\n</div>\n</div>\n</article>\n<article class=\"hrm-recent-post\">\n<a class=\"hrm-thumb\" href=\"https://thegioigianphoi.vn/thay-moi-gian-phoi-gia-khuyen-mai-o-khu-vuc-ninh-binh/\" title=\"Thay mới giàn phơi  giá khuyến mại ở khu vực Ninh Bình\"><img alt=\"Thay mới giàn phơi  giá khuyến mại ở khu vực Ninh Bình\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2017/05/ninhbinh-500x330.jpg\"/></a> <div class=\"hrm-text\">\n<a class=\"hrm-title\" href=\"https://thegioigianphoi.vn/thay-moi-gian-phoi-gia-khuyen-mai-o-khu-vuc-ninh-binh/\" rel=\"bookmark\" title=\"Đuờng dẫn đến Thay mới giàn phơi  giá khuyến mại ở khu vực Ninh Bình\">Thay mới giàn phơi  giá khuyến mại ở khu vực Ninh Bình</a>\n<div class=\"date-detail\">\n</div>\n</div>\n</article>\n<article class=\"hrm-recent-post\">\n<a class=\"hrm-thumb\" href=\"https://thegioigianphoi.vn/tong-hop-cac-thiet-ke-gian-phoi-thong-minh-dang-duoc-ua-chuong-nhat-hien-nay/\" title=\"Tổng hợp các thiết kế giàn phơi thông minh đang được ưa chuộng nhất hiện nay\"><img alt=\"Tổng hợp các thiết kế giàn phơi thông minh đang được ưa chuộng nhất hiện nay\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2017/05/Screenshot_5-500x330.png\"/></a> <div class=\"hrm-text\">\n<a class=\"hrm-title\" href=\"https://thegioigianphoi.vn/tong-hop-cac-thiet-ke-gian-phoi-thong-minh-dang-duoc-ua-chuong-nhat-hien-nay/\" rel=\"bookmark\" title=\"Đuờng dẫn đến Tổng hợp các thiết kế giàn phơi thông minh đang được ưa chuộng nhất hiện nay\">Tổng hợp các thiết kế giàn phơi thông minh đang được ưa chuộng nhất hiện nay</a>\n<div class=\"date-detail\">\n</div>\n</div>\n</article>\n<article class=\"hrm-recent-post\">\n<a class=\"hrm-thumb\" href=\"https://thegioigianphoi.vn/bao-tri-gian-phoi-thong-minh-gia-re-o-dia-diem-thai-binh/\" title=\"Bảo trì giàn phơi thông minh giá rẻ ở địa điểm Thái Bình\"><img alt=\"Bảo trì giàn phơi thông minh giá rẻ ở địa điểm Thái Bình\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2017/05/thaibinh-500x330.jpg\"/></a> <div class=\"hrm-text\">\n<a class=\"hrm-title\" href=\"https://thegioigianphoi.vn/bao-tri-gian-phoi-thong-minh-gia-re-o-dia-diem-thai-binh/\" rel=\"bookmark\" title=\"Đuờng dẫn đến Bảo trì giàn phơi thông minh giá rẻ ở địa điểm Thái Bình\">Bảo trì giàn phơi thông minh giá rẻ ở địa điểm Thái Bình</a>\n<div class=\"date-detail\">\n</div>\n</div>\n</article>\n<article class=\"hrm-recent-post\">\n<a class=\"hrm-thumb\" href=\"https://thegioigianphoi.vn/gian-phoi-quan-ao-tu-dong-xu-huong-phoi-hien-dai-va-dang-cap/\" title=\"Giàn phơi quần áo tự động- xu hướng phơi đồ hiện đại và đẳng cấp\"><img alt=\"Giàn phơi quần áo tự động- xu hướng phơi đồ hiện đại và đẳng cấp\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2017/05/Screenshot_4-500x299.png\"/></a> <div class=\"hrm-text\">\n<a class=\"hrm-title\" href=\"https://thegioigianphoi.vn/gian-phoi-quan-ao-tu-dong-xu-huong-phoi-hien-dai-va-dang-cap/\" rel=\"bookmark\" title=\"Đuờng dẫn đến Giàn phơi quần áo tự động- xu hướng phơi đồ hiện đại và đẳng cấp\">Giàn phơi quần áo tự động- xu hướng phơi đồ hiện đại và đẳng cấp</a>\n<div class=\"date-detail\">\n</div>\n</div>\n</article>\n<article class=\"hrm-recent-post\">\n<a class=\"hrm-thumb\" href=\"https://thegioigianphoi.vn/lap-rap-gian-phoi-thong-minh-gia-uu-dai-o-vi-tri-nam-dinh/\" title=\"Lắp ráp giàn phơi thông minh  giá ưu đãi ở vị trí Nam Định\"><img alt=\"Lắp ráp giàn phơi thông minh  giá ưu đãi ở vị trí Nam Định\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2017/05/namdinh-500x330.jpg\"/></a> <div class=\"hrm-text\">\n<a class=\"hrm-title\" href=\"https://thegioigianphoi.vn/lap-rap-gian-phoi-thong-minh-gia-uu-dai-o-vi-tri-nam-dinh/\" rel=\"bookmark\" title=\"Đuờng dẫn đến Lắp ráp giàn phơi thông minh  giá ưu đãi ở vị trí Nam Định\">Lắp ráp giàn phơi thông minh  giá ưu đãi ở vị trí Nam Định</a>\n<div class=\"date-detail\">\n</div>\n</div>\n</article>\n<article class=\"hrm-recent-post\">\n<a class=\"hrm-thumb\" href=\"https://thegioigianphoi.vn/nhung-thong-tin-chi-tiet-nhat-ve-bo-gian-phoi-quan-ao-gan-tuong-cho-ban-quan-tam/\" title=\"Những thông tin chi tiết nhất về bộ giàn phơi quần áo gắn tường cho bạn quan tâm\"><img alt=\"Những thông tin chi tiết nhất về bộ giàn phơi quần áo gắn tường cho bạn quan tâm\" src=\"https://thegioigianphoi.vn/wp-content/uploads/2017/05/Screenshot_1-500x330.png\"/></a> <div class=\"hrm-text\">\n<a class=\"hrm-title\" href=\"https://thegioigianphoi.vn/nhung-thong-tin-chi-tiet-nhat-ve-bo-gian-phoi-quan-ao-gan-tuong-cho-ban-quan-tam/\" rel=\"bookmark\" title=\"Đuờng dẫn đến Những thông tin chi tiết nhất về bộ giàn phơi quần áo gắn tường cho bạn quan tâm\">Những thông tin chi tiết nhất về bộ giàn phơi quần áo gắn tường cho bạn quan tâm</a>\n<div class=\"date-detail\">\n</div>\n</div>\n</article>\n</div>\n</div>"
+  }
+ ],
+ "upper_footer": [
+  {
+   "icon": "fa-truck",
+   "title": "TƯ VẤN - Lắp đặt",
+   "desc": [
+    "+ Tư vấn, lắp đặt miễn phí tại nhà 24/24 không ngại xa"
+   ],
+   "href": "#"
+  },
+  {
+   "icon": "fa-money",
+   "title": "Thanh toán linh động",
+   "desc": [
+    "+ Khách hàng nhiệm thu xong mới thanh toán",
+    "+ Thanh toán trực tiếp tại nhà khách hàng"
+   ],
+   "href": "#"
+  },
+  {
+   "icon": "fa-refresh",
+   "title": "Bảo hành - Bảo trì",
+   "desc": [
+    "+ Bảo hành tại nhà lên đến 2 năm",
+    "+ Bảo trì định kỳ theo tháng miễn phí"
+   ],
+   "href": ""
+  }
+ ],
+ "footer": {
+  "support_title": "Đăng ký nhận thông tin miễn phí từ Website của chúng tôi",
+  "support_html": "<div class=\"textwidget\"></div>",
+  "socials": [
+   {
+    "cls": "hrm-social-network-icon hrm-facebook hrm-icon-facebook",
+    "icon": "fa-facebook",
+    "href": "https://www.facebook.com/noithatthongminhdaihoaphat",
+    "style": "border-radius:50%;padding:0;font-size:16px;color:#fff;background-color:#3b5998;border-color:#3b5998;",
+    "title": "Facebook"
+   },
+   {
+    "cls": "hrm-social-network-icon hrm-google-plus hrm-icon-google-plus",
+    "icon": "fa-google-plus",
+    "href": "#",
+    "style": "border-radius:50%;padding:0;font-size:16px;color:#fff;background-color:#dd4b39;border-color:#dd4b39;",
+    "title": "Google-plus"
+   },
+   {
+    "cls": "hrm-social-network-icon hrm-skype hrm-icon-skype",
+    "icon": "fa-skype",
+    "href": "#",
+    "style": "border-radius:50%;padding:0;font-size:16px;color:#fff;background-color:#00aff0;border-color:#00aff0;",
+    "title": "Skype"
+   },
+   {
+    "cls": "hrm-social-network-icon hrm-youtube hrm-icon-youtube",
+    "icon": "fa-youtube",
+    "href": "#",
+    "style": "border-radius:50%;padding:0;font-size:16px;color:#fff;background-color:#55acee;border-color:#55acee;",
+    "title": "Youtube"
+   }
+  ],
+  "contact_title": "GIÀN PHƠI CHÍNH HÃNG",
+  "contact_html": "<div id=\"address-box\">\n<div id=\"address-list\">\n<div class=\"info-item address\">\n<i class=\"fa fa-home\"></i>\n<div class=\"tit-contain\">HỆ THỐNG CỬA HÀNG GIÀN PHƠI CHÍNH HÃNG\nĐường 48, khu phố 6, Hiệp Bình Chánh, TP Hồ Chí Minh</div>\n</div>\n<div class=\"info-item phone\">\n<i class=\"fa fa-phone\"></i>\n<div class=\"tit-contain\">HOTLINE TƯ VẤN MIỄN PHÍ\nĐường 48, khu phố 6, Hiệp Bình Chánh, TP Hồ Chí Minh</div>\n</div>\n<div class=\"info-item email\">\n<i class=\"fa fa-envelope\"></i>\n<div class=\"tit-contain\">daihoaphat999@gmail.com</div>\n</div>\n</div>\n</div>",
+  "dmca_html": "<div class=\"textwidget\">Bản quyền được bảo vệ bởi <a class=\"dmca-badge\" href=\"http://www.dmca.com/Protection/Status.aspx?id=dc8106ca-bbb1-458d-aa27-7aa61043fed5\" title=\"DMCA.com Protection Status\"> <img alt=\"DMCA.com Protection Status\" src=\"http://images.dmca.com/Badges/dmca-badge-w100-2x1-04.png?ID=dc8106ca-bbb1-458d-aa27-7aa61043fed5\"/></a> <script src=\"//images.dmca.com/Badges/DMCABadgeHelper.min.js\"> </script>\n</div>",
+  "menus": [
+   {
+    "id": "nav_menu-6",
+    "title": "Hỗ Trợ Khách Hàng",
+    "items": [
+     {
+      "text": "Hướng dẫn mua hàng",
+      "href": "https://thegioigianphoi.vn/huong-dan-mua-hang/"
+     },
+     {
+      "text": "Hướng dẫn thanh toán",
+      "href": "https://thegioigianphoi.vn/huong-dan-thanh-toan/"
+     },
+     {
+      "text": "Câu hỏi thường gặp",
+      "href": "https://thegioigianphoi.vn/cau-hoi-thuong-gap/"
+     },
+     {
+      "text": "Phàn nàn, khiếu nại",
+      "href": "https://thegioigianphoi.vn/phan-nan-khieu-nai/"
+     },
+     {
+      "text": "Chính sách trả hàng",
+      "href": "https://thegioigianphoi.vn/chinh-sach-tra-hang/"
+     },
+     {
+      "text": "Chính sách hậu mãi",
+      "href": "https://thegioigianphoi.vn/chinh-sach-hau-mai/"
+     },
+     {
+      "text": "Hợp tác với chúng tôi",
+      "href": "https://thegioigianphoi.vn/hop-tac-voi-chung-toi/"
+     },
+     {
+      "text": "Trang chủ",
+      "href": "http://thegioigianphoi.vn"
+     },
+     {
+      "text": "Chính sách hậu mãi",
+      "href": "https://thegioigianphoi.vn/chinh-sach-hau-mai/"
+     }
+    ],
+    "html": ""
+   },
+   {
+    "id": "text-6",
+    "title": "",
+    "items": [],
+    "html": "<div class=\"textwidget\"><p><a href=\"http://dichvutannha.org/shop/cap-cau-thang\"><b>Dây cáp cầu thang</b></a> | <a href=\"http://dichvutannha.org/san-pham/cap-tang-do-cau-thang\"><b>Cáp tăng đơ cầu thang</b></a> | <a href=\"http://dichvutannha.org/san-pham/cap-inox-cau-thang\"><b>cáp inox cầu thang</b></a> | <a href=\"http://dichvutannha.org/san-pham/lap-dat-luoi-cau-thang-dep\"><b>Lưới cầu thang</b></a> | <a href=\"http://dichvutannha.org/san-pham/lap-dat-luoi-cau-thang-dep\"><b>Luoi cau thang</b></a> | <a href=\"http://dichvutannha.org/san-pham/lap-dat-luoi-cau-thang-dep\"><b>Luoi an toan cau thang</b></a></p>\n<div class=\"fb-page\" data-adapt-container-width=\"true\" data-height=\"200\" data-hide-cover=\"false\" data-href=\"https://www.facebook.com/noithatthongminhdaihoaphat\" data-show-facepile=\"true\" data-small-header=\"false\" data-tabs=\"timeline\">\n<blockquote cite=\"https://www.facebook.com/noithatthongminhdaihoaphat\" class=\"fb-xfbml-parse-ignore\"><p><a href=\"https://www.facebook.com/noithatthongminhdaihoaphat\">Giàn Phơi Thông Minh</a></p></blockquote>\n</div>\n<style> #floating-phone { display: none; position: fixed; left: 0px; bottom: 0px; height: 48px; width: 360px;  background: #111111 url(http://thegioigianphoi.vn/wp-content/uploads/2017/03/anh-bia-mau-den-1-300x74.jpg) center / 330px no-repeat; z-index: 99; color: White; font-size: 35px; line-height: 55px; text- align: center; border-radius: 0%; -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.5); -moz-box-shadow: 0 2px 5px rgba(0,0,0,.5); box-shadow: 0 2px 5px rgba(0,0,0,.5); } @media (max-width: 650px) { #floating-phone { display: block; } } </style>\n</div>"
+   },
+   {
+    "id": "text-11",
+    "title": "",
+    "items": [],
+    "html": "<div class=\"textwidget\"></div>"
+   }
+  ],
+  "bottom": "",
+  "contact": [
+   {
+    "icon": "fa-home",
+    "cls": "address",
+    "lines": [
+     "HỆ THỐNG CỬA HÀNG GIÀN PHƠI CHÍNH HÃNG",
+     "Đường 48, khu phố 6, Hiệp Bình Chánh, TP Hồ Chí Minh",
+     "Khu vực phục vụ: TP.HCM & Bình Dương"
+    ]
+   },
+   {
+    "icon": "fa-phone",
+    "cls": "phone",
+    "lines": [
+     "HOTLINE TƯ VẤN MIỄN PHÍ",
+     "0902 725 760",
+     "Giờ làm việc: 08:00 – 20:00, tất cả các ngày trong tuần"
+    ]
+   },
+   {
+    "icon": "fa-envelope",
+    "cls": "email",
+    "lines": [
+     "daihoaphat999@gmail.com"
+    ]
+   }
+  ],
+  "support_text": "",
+  "links_html": "<div class=\"textwidget\"><p><a href=\"http://dichvutannha.org/shop/cap-cau-thang\"><b>Dây cáp cầu thang</b></a> | <a href=\"http://dichvutannha.org/san-pham/cap-tang-do-cau-thang\"><b>Cáp tăng đơ cầu thang</b></a> | <a href=\"http://dichvutannha.org/san-pham/cap-inox-cau-thang\"><b>cáp inox cầu thang</b></a> | <a href=\"http://dichvutannha.org/san-pham/lap-dat-luoi-cau-thang-dep\"><b>Lưới cầu thang</b></a> | <a href=\"http://dichvutannha.org/san-pham/lap-dat-luoi-cau-thang-dep\"><b>Luoi cau thang</b></a> | <a href=\"http://dichvutannha.org/san-pham/lap-dat-luoi-cau-thang-dep\"><b>Luoi an toan cau thang</b></a></p>\n<div class=\"fb-page\" data-adapt-container-width=\"true\" data-height=\"200\" data-hide-cover=\"false\" data-href=\"https://www.facebook.com/noithatthongminhdaihoaphat\" data-show-facepile=\"true\" data-small-header=\"false\" data-tabs=\"timeline\">\n<blockquote cite=\"https://www.facebook.com/noithatthongminhdaihoaphat\" class=\"fb-xfbml-parse-ignore\"><p><a href=\"https://www.facebook.com/noithatthongminhdaihoaphat\">Giàn Phơi Thông Minh</a></p></blockquote>\n</div>\n<style> #floating-phone { display: none; position: fixed; left: 0px; bottom: 0px; height: 48px; width: 360px;  background: #111111 url(http://thegioigianphoi.vn/wp-content/uploads/2017/03/anh-bia-mau-den-1-300x74.jpg) center / 330px no-repeat; z-index: 99; color: White; font-size: 35px; line-height: 55px; text- align: center; border-radius: 0%; -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.5); -moz-box-shadow: 0 2px 5px rgba(0,0,0,.5); box-shadow: 0 2px 5px rgba(0,0,0,.5); } @media (max-width: 650px) { #floating-phone { display: block; } } </style>\n</div>",
+  "links": [
+   {
+    "text": "Dây cáp cầu thang",
+    "href": "http://dichvutannha.org/shop/cap-cau-thang"
+   },
+   {
+    "text": "Cáp tăng đơ cầu thang",
+    "href": "http://dichvutannha.org/san-pham/cap-tang-do-cau-thang"
+   },
+   {
+    "text": "cáp inox cầu thang",
+    "href": "http://dichvutannha.org/san-pham/cap-inox-cau-thang"
+   },
+   {
+    "text": "Lưới cầu thang",
+    "href": "http://dichvutannha.org/san-pham/lap-dat-luoi-cau-thang-dep"
+   },
+   {
+    "text": "Luoi cau thang",
+    "href": "http://dichvutannha.org/san-pham/lap-dat-luoi-cau-thang-dep"
+   },
+   {
+    "text": "Luoi an toan cau thang",
+    "href": "http://dichvutannha.org/san-pham/lap-dat-luoi-cau-thang-dep"
+   },
+   {
+    "text": "Giàn Phơi Thông Minh",
+    "href": "https://www.facebook.com/noithatthongminhdaihoaphat"
+   }
+  ],
+  "dmca": {
+   "text": "Bản quyền được bảo vệ bởi",
+   "img": "http://images.dmca.com/Badges/dmca-badge-w100-2x1-04.png?ID=dc8106ca-bbb1-458d-aa27-7aa61043fed5",
+   "href": "http://www.dmca.com/Protection/Status.aspx?id=dc8106ca-bbb1-458d-aa27-7aa61043fed5"
+  }
+ },
+ "sidebar": {
+  "categories": {
+   "title": "Danh mục sản phẩm",
+   "items": [
+    {
+     "text": "GIÀN PHƠI HÒA PHÁT",
+     "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-hoa-phat/"
+    },
+    {
+     "text": "GIÀN PHƠI ĐIỀU KHIỂN",
+     "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-dieu-khien/"
+    },
+    {
+     "text": "GIÀN PHƠI XẾP NGANG",
+     "href": "http://thegioigianphoi.vn/danh-muc/gian-phoi-xep-ngang/"
+    },
+    {
+     "text": "GIÀN PHƠI THÔNG MINH",
+     "href": "https://thegioigianphoi.vn/danh-muc/gian-phoi-thong-minh/"
+    },
+    {
+     "text": "GIÀN PHƠI THÔNG DỤNG",
+     "href": "http://thegioigianphoi.vn/danh-muc/gian-phoi-thong-dung/"
+    }
+   ]
+  },
+  "service": {
+   "title": "GIÀN PHƠI HÒA PHÁT",
+   "points": [
+    {
+     "icon": "fa-thumbs-o-up",
+     "text": "Có tem bảo hành chất lượng"
+    },
+    {
+     "icon": "fa-refresh",
+     "text": "Sản phẩm chính hãng"
+    },
+    {
+     "icon": "fa-heart",
+     "text": "Dịch vụ khách hàng tốt nhất"
+    }
+   ],
+   "phone": "0902.725.760",
+   "phone_note": "( Đặt hàng qua điện thoại )",
+   "links": [
+    {
+     "icon": "spyke",
+     "text": "Đặt hàng:",
+     "href": ""
+    },
+    {
+     "icon": "fa-facebook-square",
+     "text": "Qua Facebook",
+     "href": "https://www.facebook.com/noithatthongminhdaihoaphat"
+    },
+    {
+     "icon": "fa-envelope-o",
+     "text": "Gửi Email",
+     "href": "mailto:daihoaphat999@gmail.com"
+    }
+   ]
+  },
+  "new_products": {
+   "title": "Sản phẩm mới",
+   "items": [
+    {
+     "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-dieu-khien/",
+     "title": "Giàn Phơi Điều Khiển",
+     "img": "https://thegioigianphoi.vn/wp-content/uploads/2019/06/IMG_20190511_092005-180x180.jpg",
+     "old": {
+      "num": "18,500,000",
+      "sym": "₫"
+     },
+     "new": {
+      "num": "12,500,000",
+      "sym": "₫"
+     }
+    },
+    {
+     "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-chuong-co/",
+     "title": "Giàn Phơi Chuông Cổ",
+     "img": "https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-chuong-co-2-180x180.jpg",
+     "old": {
+      "num": "2,500,000",
+      "sym": "₫"
+     },
+     "new": {
+      "num": "1,750,000",
+      "sym": "₫"
+     }
+    },
+    {
+     "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-bam-dien/",
+     "title": "GIàn Phơi Bấm Điện",
+     "img": "https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-ban-dien-180x180.jpg",
+     "old": null,
+     "new": null
+    },
+    {
+     "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-4-thanh/",
+     "title": "Giàn Phơi 4 Thanh",
+     "img": "https://thegioigianphoi.vn/wp-content/uploads/2019/06/received_333703417258663-180x180.jpeg",
+     "old": {
+      "num": "2,500,000",
+      "sym": "₫"
+     },
+     "new": {
+      "num": "2,000,000",
+      "sym": "₫"
+     }
+    },
+    {
+     "href": "https://thegioigianphoi.vn/cua-hang/gian-phoi-xep-ngang-inox/",
+     "title": "Giàn Phơi xếp ngang Inox",
+     "img": "https://thegioigianphoi.vn/wp-content/uploads/2019/06/gian-phoi-xep-ngang-17-180x180.jpg",
+     "old": {
+      "num": "1,850,000",
+      "sym": "₫"
+     },
+     "new": {
+      "num": "1,500,000",
+      "sym": "₫"
+     }
+    }
+   ]
+  },
+  "recent_posts": {
+   "title": "Tin tức mới",
+   "items": [
+    {
+     "href": "https://thegioigianphoi.vn/lap-dat-gian-phoi-thong-minh-chinh-hang-quan-3-tp-hcm-gia-re/",
+     "img": "@@LOCAL@@assets/news/posts/23/thumbnails/lap-dat-gian-phoi-thong-minh-chinh-hang-quan-3-tp-hcm-gia-re-300x200.webp",
+     "title": "Lắp đặt giàn phơi thông minh chính hãng quận 3 TP HCM giá rẻ",
+     "alt": "Lắp đặt giàn phơi thông minh chính hãng quận 3 TP HCM giá rẻ"
+    },
+    {
+     "href": "https://thegioigianphoi.vn/lap-dat-gian-phoi-thong-minh-chinh-hang-tai-phuong-di-an-tphcm-binh-duong-cu/",
+     "img": "@@LOCAL@@assets/news/posts/22/thumbnails/lap-dat-gian-phoi-thong-minh-chinh-hang-tai-phuong-di-an-tphcm-binh-duong-cu-300x200.webp",
+     "title": "Lắp đặt giàn phơi thông minh chính hãng tại phường Dĩ An TPHCM (Bình Dương cũ)",
+     "alt": "Lắp đặt giàn phơi thông minh chính hãng tại phường Dĩ An TPHCM (Bình Dương cũ)"
+    },
+    {
+     "href": "https://thegioigianphoi.vn/lap-dat-gian-phoi-thong-minh-chinh-hang-quan-1-tphcm/",
+     "img": "@@LOCAL@@assets/news/posts/21/thumbnails/lap-dat-gian-phoi-thong-minh-chinh-hang-quan-1-tphcm-300x200.webp",
+     "title": "Lắp đặt giàn phơi thông minh chính hãng quận 1 TPHCM",
+     "alt": "Lắp đặt giàn phơi thông minh chính hãng quận 1 TPHCM"
+    },
+    {
+     "href": "https://thegioigianphoi.vn/cach-giai-quyet-quan-ao-phoi-trong-nha-co-mui-hoi/",
+     "img": "@@LOCAL@@assets/news/posts/20/thumbnails/cach-giai-quyet-quan-ao-phoi-trong-nha-co-mui-hoi-300x200.webp",
+     "title": "Cách giải quyết quần áo phơi trong nhà có mùi hôi",
+     "alt": "Cách giải quyết quần áo phơi trong nhà có mùi hôi"
+    },
+    {
+     "href": "https://thegioigianphoi.vn/gian-phoi-thong-minh-cho-chung-cu-giai-phap-hien-dai-toi-uu-khong-gian-song-nam-2025/",
+     "img": "@@LOCAL@@assets/news/posts/19/thumbnails/gian-phoi-thong-minh-cho-chung-cu-giai-phap-hien-dai-toi-uu-khong-gian-song-nam-2025-300x200.webp",
+     "title": "Giàn phơi thông minh cho chung cư: Giải pháp hiện đại tối ưu không gian sống năm 2025",
+     "alt": "Giàn phơi thông minh cho chung cư: Giải pháp hiện đại tối ưu không gian sống năm 2025"
+    },
+    {
+     "href": "https://thegioigianphoi.vn/mua-mua-sai-gon-va-giai-phap-bat-che-nang-mua-cho-moi-nha/",
+     "img": "@@LOCAL@@assets/news/posts/18/thumbnails/mua-mua-sai-gon-va-giai-phap-bat-che-nang-mua-cho-moi-nha-300x200.webp",
+     "title": "Mùa mưa Sài Gòn và giải pháp bạt che nắng mưa cho mọi nhà",
+     "alt": "Mùa mưa Sài Gòn và giải pháp bạt che nắng mưa cho mọi nhà"
+    },
+    {
+     "href": "https://thegioigianphoi.vn/top-5-thuong-hieu-gian-phoi-thong-minh-uy-tin-nhat-viet-nam/",
+     "img": "@@LOCAL@@assets/news/posts/17/thumbnails/top-5-thuong-hieu-gian-phoi-thong-minh-uy-tin-nhat-viet-nam-300x200.webp",
+     "title": "Top 5 thương hiệu giàn phơi thông minh uy tín nhất Việt Nam",
+     "alt": "Top 5 thương hiệu giàn phơi thông minh uy tín nhất Việt Nam"
+    },
+    {
+     "href": "https://thegioigianphoi.vn/top-5-mau-gian-phoi-thong-minh-moi-nhat-nam-2025-tien-nghi-hien-dai-va-tiet-kiem-khong-gian/",
+     "img": "@@LOCAL@@assets/news/posts/16/thumbnails/top-5-mau-gian-phoi-thong-minh-moi-nhat-nam-2025-tien-nghi-hien-dai-va-tiet-kiem-khong-gian-300x200.webp",
+     "title": "Top 5 mẫu giàn phơi thông minh mới nhất năm 2025: Tiện nghi, hiện đại và tiết kiệm không gian",
+     "alt": "Top 5 mẫu giàn phơi thông minh mới nhất năm 2025: Tiện nghi, hiện đại và tiết kiệm không gian"
+    },
+    {
+     "href": "https://thegioigianphoi.vn/dich-vu-lap-dat-vach-lanh-ngan-dieu-hoa-tai-binh-duong/",
+     "img": "@@LOCAL@@assets/news/posts/15/thumbnails/dich-vu-lap-dat-vach-lanh-ngan-dieu-hoa-tai-binh-duong-300x200.webp",
+     "title": "Dịch Vụ Lắp Đặt Vách Lạnh Ngăn Điều Hòa Tại Bình Dương",
+     "alt": "Dịch Vụ Lắp Đặt Vách Lạnh Ngăn Điều Hòa Tại Bình Dương"
+    },
+    {
+     "href": "https://thegioigianphoi.vn/giai-phap-gian-phoi-thong-minh-phu-hop-cho-tung-khong-gian/",
+     "img": "@@LOCAL@@assets/news/posts/14/thumbnails/giai-phap-gian-phoi-thong-minh-phu-hop-cho-tung-khong-gian-300x200.webp",
+     "title": "Giải pháp giàn phơi thông minh phù hợp cho từng không gian",
+     "alt": "Giải pháp giàn phơi thông minh phù hợp cho từng không gian"
+    }
+   ]
+  }
+ },
+ "floating": {
+  "ring_html": "<div class=\"hotline-phone-ring-wrap\"><div class=\"hotline-phone-ring\"><div class=\"hotline-phone-ring-circle\"></div><div class=\"hotline-phone-ring-circle-fill\"></div><div class=\"hotline-phone-ring-img-circle\"> <a class=\"pps-btn-img locationus\" href=\"tel:0902 725 760\"> <img alt=\"Gọi điện thoại\" src=\"https://thegioigianphoi.vn/wp-content/themes/hrm/images/icon-call.png\" width=\"50\"/> </a></div></div></div>",
+  "tail_html": ""
+ }
+}

@@ -1,0 +1,98 @@
+/* ===========================================================================
+   News section — the posts imported from gianphoichinhhang.com.
+
+   The theme was only ever fed WordPress' own `<p>`/`<img>` output, so it has no
+   styling for the `<figure>`, `<figcaption>` and `<hr>` elements the imported
+   articles use, nor for the headings inside a long article. Everything here is
+   scoped to the post templates so no other page can be affected.
+   =========================================================================== */
+
+/* ── article body ───────────────────────────────────────────────────────── */
+
+.single-post .entry-content h2,
+.single-post .entry-content h3,
+.single-post .entry-content h4 {
+  font-weight: 700;
+  color: #1a7b1c;
+  line-height: 1.35;
+  margin: 24px 0 10px;
+}
+.single-post .entry-content h2 { font-size: 22px; }
+.single-post .entry-content h3 { font-size: 18px; color: #333; }
+.single-post .entry-content h4 { font-size: 16px; color: #333; }
+
+.single-post .entry-content p { margin-bottom: 14px; text-align: justify; }
+
+.single-post .entry-content hr {
+  border: 0;
+  border-top: 1px solid #eaeaea;
+  margin: 24px 0;
+}
+
+.single-post .entry-content strong { color: #333; }
+
+.single-post .entry-content blockquote {
+  border-left: 3px solid #1a7b1c;
+  background: #fafafa;
+  padding: 12px 18px;
+  margin: 18px 0;
+  font-size: 14px;
+}
+
+.single-post .entry-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+}
+.single-post .entry-content table th,
+.single-post .entry-content table td {
+  border: 1px solid #eaeaea;
+  padding: 8px 10px;
+  text-align: left;
+}
+.single-post .entry-content table th { background: #fafafa; font-weight: 700; }
+
+/* figures: the imported articles wrap every inline photo in one */
+.single-post .entry-content figure {
+  margin: 20px 0;
+  text-align: center;
+}
+.single-post .entry-content figure img {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #eaeaea;
+}
+.single-post .entry-content figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  font-style: italic;
+  color: #777;
+}
+
+/* the post's own thumbnail, shown above the body */
+.single-post .entry-content p.post-hero {
+  margin-bottom: 20px;
+}
+.single-post .entry-content p.post-hero img {
+  border: 1px solid #eaeaea;
+}
+
+/* ── archive listings ───────────────────────────────────────────────────── */
+
+/* the theme pins .post-thumbnail img at 300px, which leaves a 20px-wide text
+   column once the viewport drops below ~480px — stack the card instead */
+@media (max-width: 600px) {
+  .archive .post-listing .post-thumbnail,
+  .archive .post-listing .post-thumbnail img {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+  .archive .post-listing .post-thumbnail { margin-bottom: 12px; }
+  .archive .post-listing .entry { clear: both; }
+}
+
+/* pagination sits under the list, and reads better centred on a phone */
+@media (max-width: 600px) {
+  .hrm-pagenavi { text-align: center; }
+}

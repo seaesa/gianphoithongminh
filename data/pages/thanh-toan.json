@@ -1,0 +1,58 @@
+{
+ "url": "https://thegioigianphoi.vn/thanh-toan/",
+ "path": "thanh-toan/index.html",
+ "kind": "page",
+ "bodyClass": "page-template-default page page-id-55 woocommerce-cart woocommerce-page",
+ "title": "Giỏ Hàng - thegioigianphoi.vn",
+ "description": "",
+ "menuState": {
+  "nav": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "sidebar": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "mobile": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "footer": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "topmenu": [
+   "",
+   ""
+  ]
+ },
+ "breadcrumbs": [
+  {
+   "text": "Trang chủ",
+   "href": "https://thegioigianphoi.vn"
+  },
+  {
+   "text": "Giỏ hàng"
+  }
+ ],
+ "main": "\n<article class=\"post-55 page type-page status-publish hentry\" id=\"post-55\">\n<header class=\"entry-header\">\n<h1 class=\"entry-title\">Giỏ hàng</h1> </header><!-- .entry-header -->\n<div class=\"entry-content\">\n<div class=\"woocommerce\">\n<p class=\"cart-empty\">\n\tChưa có sản phẩm nào trong giỏ hàng.</p>\n<p class=\"return-to-shop\">\n<a class=\"button wc-backward\" href=\"@@ROOT@@/cua-hang/index.html\">\n\t\t\tQuay lại cửa hàng\t\t</a>\n</p>\n</div>\n</div><!-- .entry-content -->\n<footer class=\"entry-footer\">\n</footer><!-- .entry-footer -->\n</article><!-- #post-## -->\n",
+ "primaryClass": "content-area col-md-9",
+ "extraCss": []
+}

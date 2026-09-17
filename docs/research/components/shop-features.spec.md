@@ -121,7 +121,7 @@ line total, then subtotal / shipping / total.
 
 The main menu links here but the live site returns **404**, so the page is
 rebuilt using the same markup a WooCommerce product archive emits: breadcrumb,
-`h1.page-title`, term description, result count, the ordering `<select>`, and
+`h1.page-title`, result count, the ordering `<select>`, and
 `.woocommerce-loop > ul.products` of the standard product cards. Card hover
 behaviour therefore comes free from `theme.css`.
 
@@ -130,6 +130,9 @@ Eight products: the **three real** xếp-ngang products from the catalogue, plus
 size or finish variant of one of the three and links to that real product page;
 its image is an existing xếp-ngang photo already on the site. Nothing is
 fabricated beyond the variant names and prices.
+
+It carries **no term description**: none of the archives the live site ships has
+one, and an intro paragraph here was the only thing setting this page apart.
 
 The page also lights up `current-menu-item` on the main, sidebar and mobile
 menus, exactly as a real category page does — so the nav tab turns red.

@@ -14,6 +14,7 @@ clone does not load — or because the live site does not do it at all.
 | 6 | Liên hệ had no way to get in touch but a phone number | `/lien-he/` |
 | 7 | The favicon was the raw logo PNG | `<head>`, every page |
 | 8 | Every URL ended in `index.html` | every link, `vercel.json` |
+| 9 | The cart was green-on-orange beside a blue header | `.cart-header`, every page |
 
 Styling for all of them is in `assets/css/site.css`, which is hand-written and so
 not tree-shaken by `build-css.py`.
@@ -339,9 +340,115 @@ reason.
 
 ---
 
+## 9. The cart wears the site's primary colour
+
+The theme paints the header cart control green on an orange border:
+
+```css
+.cart-header          { border: 1px solid #fcb040; }
+.cart-header .cart-icon { background: #1a7b1c; }
+```
+
+Those are the only two places in the header that use either colour, and they sit
+immediately to the right of a `#0082c6` search button, under a `#0082c6` menu
+bar. `shop.css` repaints both in that blue and darkens it on hover:
+
+```css
+.cart-header            { border-color: var(--gp-blue); }
+.cart-header .cart-icon { background: var(--gp-blue); }
+.cart-header:hover .cart-icon { background: var(--gp-blue-dark); }
+```
+
+**Colours only.** The border stays 1px, the padding stays `5px 10px`, the glyph
+stays white — so the control occupies exactly the box the live one does, which
+is what keeps `#masthead` and everything below it comparable.
+
+Two things deliberately stay as they are:
+
+- **the count badge** is still `--gp-red`. It is an alert, and blue on blue
+  would not read.
+- **`--gp-orange`** is still declared in `shop.css`; it documents the theme
+  palette even though nothing paints with it any more. The two quantity
+  steppers that used to go orange on hover (cart page and quick-order modal)
+  now go blue, for the same reason as the cart itself.
+
+### How it is verified
+
+`verify.mjs` compares `.cart-header` and `.cart-icon` against the live site at
+every width. Rather than skip the selectors — which would stop checking their
+geometry — it excuses **two properties on two selectors** and nothing else:
+
+```js
+const RECOLOURED = {
+  '.cart-header': ['border-top-color'],
+  '.cart-icon': ['background-color'],
+};
+```
+
+`verify-interactions.mjs` drives the hover on both sites, so `cart icon hover`
+cannot match either. It is listed in `EXPECTED` with a predicate rather than
+ignored: the clone still has to produce `--gp-blue-dark`, so a hover that
+stopped working would still fail.
+
+Both need to wait out `a { transition: all ease 0.5s }`, which the theme applies
+to every anchor — the cart icon included. A 400ms wait reads a colour ~96% of
+the way there (`rgb(0, 103, 157)` instead of `rgb(0, 102, 156)`) and fails for
+the wrong reason.
+
+`verify-site.mjs` pins the result: both colours, the 1px border, the `5px 10px`
+padding and the white glyph, from two pages, plus the hover and the still-red
+badge.
+
+---
+
+## 10. Where the business actually works
+
+Everything the old shop's copy promised about coverage was inherited from other
+sites: Hà Nội branches, nationwide installation, and — on `/van-chuyen-san-pham/`
+— a pharmacy in Thái Bình. This business surveys and installs in
+`data/contact.json`'s `area` only.
+
+`apply-contact.py` owns every one of those claims:
+
+| field | value | used for |
+|---|---|---|
+| `area` | `Bình Dương và TP. Hồ Chí Minh` | prose — footer, `/lien-he/`, checkout |
+| `areaShort` | `Bình Dương, TP.HCM` | tight lines — the homepage strip, product copy |
+
+`AREA_RULES` is a list of literal `(old, new)` pairs rather than a regex, because
+these run inside pages that `verify-pages.mjs` still measures against the live
+site: **a replacement that rewraps a line changes the page height**. Each new
+string is kept close in length to what it replaces. `DESC_RULES` adds two more
+spellings that only ever appear in a `<meta name="description">`, where length
+does not matter because nothing measures it.
+
+Delivery is deliberately left nationwide — that is a courier, not a site visit —
+so `giao hàng toàn quốc` is untouched.
+
+### The one line that would not fit
+
+The homepage feature strip's sub-line lives in a box **173px wide at ≥1200px and
+166px at 320px**. The live text, `Đơn hàng tại Hà Nội, TPHCM`, is 146px.
+`Đơn hàng tại Bình Dương, TP.HCM` measures **174px** — one pixel over, which
+wraps it to a second line, makes the strip 3px taller and pushes the whole
+homepage down.
+
+So that line keeps `areaShort` and shortens the lead-in instead:
+`Khu vực Bình Dương, TP.HCM`, 152px, clear at every width, and it echoes the
+footer's own *Khu vực phục vụ*. (Between 992 and 1199px the box is only 135px
+and **the live line wraps too**, so both sides wrap there.)
+
+Article titles and bodies imported from gianphoichinhhang.com still say
+Hà Nội where they say it — for instance *"…tại những thành phố lớn như TP. Hồ
+Chí Minh, Bình Dương, Hà Nội, Đà Nẵng"*. That is someone else's editorial
+content, not a promise this site is making, and rewriting it would falsify the
+import.
+
+---
+
 ## Verification — `scripts/verify-site.mjs`
 
-**195 checks**:
+**223 checks**:
 
 - the cart icon carries a real `href` from three different directory depths,
   navigates to `/gio-hang/`, and the page it reaches is the working cart
@@ -383,6 +490,12 @@ reason.
 - the five icon links resolve and are non-empty, `theme-color` is `#0082c6`, the
   manifest lists two icons that both resolve, and a page three levels down still
   points at `/favicon.ico`
+- the cart icon and its border are `#0082c6` from two pages, the border is still
+  1px, the padding still `5px 10px` and the glyph still white; hovering darkens
+  it to `#00669c`; the count badge is still red
+- the homepage feature strip names `areaShort`, the xếp-ngang archive carries no
+  term description, and seven pages advertise Hà Nội in neither their body nor
+  their meta description
 - no JS errors anywhere in the run
 
 `verify.mjs --all` covers the nav at all 15 widths from 320 to 1920px.

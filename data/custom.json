@@ -80,13 +80,13 @@
   }
  ],
  "bank": {
-  "name": "Vietcombank — Chi nhánh Hà Nội",
+  "name": "Vietcombank — Chi nhánh TP. Hồ Chí Minh",
   "account": "0123 456 789",
   "holder": "CÔNG TY TNHH NỘI THẤT THÔNG MINH ĐẠI HOA PHÁT",
   "note": "Họ tên + số điện thoại đặt hàng"
  },
  "shipping": {
-  "freeNote": "Miễn phí khảo sát và lắp đặt tại TP. Hồ Chí Minh.",
+  "freeNote": "Miễn phí khảo sát và lắp đặt tại Bình Dương và TP. Hồ Chí Minh.",
   "codNote": "Trả tiền mặt cho nhân viên sau khi lắp đặt xong.",
   "bankNote": "Thông tin tài khoản hiện ra sau khi bạn chọn."
  },
@@ -213,7 +213,6 @@
   }
  ],
  "xepNgang": {
-  "intro": "Giàn phơi xếp ngang gấp gọn sát tường, phù hợp với ban công và logia chung cư có diện tích hạn chế. Tất cả sản phẩm đều được khảo sát và lắp đặt miễn phí tại Hà Nội và TP.HCM.",
   "_demoNote": "The live site's /danh-muc/gian-phoi-xep-ngang/ returns 404 (broken menu link). Items marked demo:true are sample variants written for this clone; each links to the real base product it varies and reuses an image already on the site.",
   "products": [
    {

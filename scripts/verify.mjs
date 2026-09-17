@@ -84,6 +84,17 @@ const MOBILE_HEADER = ['.site-branding', '.top-mid-right', '.search-form', '#s',
 const MOBILE_BEHAVIOURS = ['menuOpenBox'];
 const divergent = (w) => NAV_ITEMS.concat(w <= 991 ? MOBILE_HEADER : []);
 
+/**
+ * Properties a selector may differ on, and nothing else. The cart control is
+ * painted in the site's primary blue instead of the theme's green-on-orange
+ * (site-fixes.spec.md §9); its box, padding and border width still have to
+ * match the live site to the pixel, so only the two colours are excused.
+ */
+const RECOLOURED = {
+  '.cart-header': ['border-top-color'],
+  '.cart-icon': ['background-color'],
+};
+
 const behaviours = () => {
   const r = {};
   const box = s => { const e = document.querySelector(s); if (!e) return null; const b = e.getBoundingClientRect(); return [Math.round(b.x), Math.round(b.y), Math.round(b.width), Math.round(b.height)]; };
@@ -202,8 +213,10 @@ function cmpStyles(a, b, shiftY = 0, headerBottom = 0) {
       const d = Math.abs((x.box[i] - adjust) - y.box[i]);
       if (d > 1.5) diffs.push({ sel, prop: 'box[' + 'xywh'[i] + ']', orig: x.box[i], clone: y.box[i], delta: Math.round(d * 10) / 10 });
     }
+    const excused = RECOLOURED[sel] || [];
     for (const p of PROPS) {
       if (x[p] === y[p]) continue;
+      if (excused.includes(p)) continue;
       if (NUM.test(x[p]) && NUM.test(y[p]) && Math.abs(parseFloat(x[p]) - parseFloat(y[p])) <= 1) continue;
       diffs.push({ sel, prop: p, orig: x[p], clone: y[p] });
     }

@@ -108,6 +108,89 @@ def branches(text):
         text)
 
 
+# ── where the copy still promises the wrong half of the country ─────────────
+#
+# The old shop's product copy was itself assembled from other sites, so it
+# advertises Hà Nội branches, nationwide installation and (on the shipping
+# page) a pharmacy in Thái Bình. This business surveys and installs in
+# `contact.json`'s `area` only. Delivery stays nationwide — that is a courier,
+# not a site visit — so `giao hàng toàn quốc` is deliberately left alone.
+#
+# Replacements are kept close to the length of what they replace: these run
+# inside pages that scripts/verify-pages.mjs still measures against the live
+# site, and a line that rewraps changes the page height.
+
+AREA_RULES = [
+    # ── installation / survey promises ──
+    ('Lắp đặt trong ngày tại Hà Nội và TPHCM',
+     f'Lắp đặt trong ngày tại {C["areaShort"]}'),
+    ('Lắp đặt trong ngày tại Hà Nội, TPHCM',
+     f'Lắp đặt trong ngày tại {C["areaShort"]}'),
+    ('Lắp đặt trên toàn quốc', 'Lắp đặt tận nơi tại TP.HCM'),
+    ('hỗ trợ lắp đặt mọi nơi trên toàn quốc',
+     f'hỗ trợ lắp đặt tận nơi tại {C["area"]}'),
+    ('Giá tốt nhất trên toàn Quốc', 'Giá tốt nhất khu vực TP.HCM'),
+    ('giao hàng, lắp đặt tại nhà trên toàn Quốc',
+     f'giao hàng, lắp đặt tại nhà tại {C["areaShort"]}'),
+    ('lưới chắn cầu thang</strong> trên toàn Quốc.',
+     f'lưới chắn cầu thang</strong> tại {C["areaShort"]}.'),
+
+    # ── quotes and coverage that name Hà Nội ──
+    ('báo giá tại Hà Nội, Thành Phố Hồ Chí Minh',
+     'báo giá tại Bình Dương, Thành Phố Hồ Chí Minh'),
+    ('lưới an toàn ban công\xa0\xa0Hà Nội</strong>, Hồ Chí Minh',
+     'lưới an toàn ban công\xa0\xa0Bình Dương</strong>, Hồ Chí Minh'),
+    ('trong khu vực hà nội còn', 'trong khu vực TP.HCM còn'),
+    ('trên địa bàn Hà Nội và Hồ Chí Minh', 'trên địa bàn Bình Dương và Hồ Chí Minh'),
+    ('lắp đặt lưới cầu thang tại Hà Nội hay Thành Phố Hồ Chí Minh',
+     'lắp đặt lưới cầu thang tại Bình Dương hay Thành Phố Hồ Chí Minh'),
+    ('bạt che nắng mưa tại Hà Nội', 'bạt che nắng mưa tại TP.HCM'),
+    # the SEO keyword run at the foot of the cầu thang page
+    ('lưới cầu thang Hà Nội,', 'lưới cầu thang Bình Dương,'),
+    ('luoi cau thang HN,', 'luoi cau thang BD,'),
+
+    # ── the two branch lines the generic BRANCH_RUN_RE never matched ──
+    ('Cơ sở Hà Nội: Số 146 – Đường Mễ Trì Thượng – Từ Liêm – Hà Nội',
+     f'Địa chỉ: {C["address"]}'),
+    ('Cơ sở HCM: 4361/15 Đường Phan Văn Trị – Phường 11- Q. Bình Thạnh – Tp.HCM',
+     f'Khu vực phục vụ: {C["area"]}'),
+
+    # ── /van-chuyen-san-pham/, lifted wholesale from a pharmacy's site ──
+    ('QUYETDUYENPHARMA', C['shortName']),
+    ('miễn phí giao nhận hàng hóa phạm vi Thành Phố Thái Bình',
+     f'miễn phí giao nhận hàng hóa phạm vi {C["areaShort"]}'),
+    ('Đối với khu vực phạm vi Thành Phố Thái Bình',
+     f'Đối với khu vực phạm vi {C["areaShort"]}'),
+    ('khách hàng ở ngoại Thành Phố Thái Bình',
+     f'khách hàng ở ngoài khu vực {C["areaShort"]}'),
+]
+
+# The `<meta name="description">` of three pages advertises Hà Nội in wordings
+# that never appear in a page body. Descriptions are not measured by
+# verify-pages.mjs, so these are free to be longer than what they replace.
+DESC_RULES = [
+    ('tại Hà Nội, TPHCM', f'tại {C["areaShort"]}'),
+    ('giá rẻ nhất Hà Nội', f'giá rẻ nhất {C["areaShort"]}'),
+]
+
+
+# two more businesses the copy still credits, same class as ÁNH DƯƠNG
+STRAY_BRANDS = [
+    (re.compile(r'[Dd]ichvutannha\.org'), C['websiteLabel']),
+    (re.compile(r'\bdichvutannha\b'), C['shortName']),
+    (re.compile(r'NỘI THẤT TÀI PHÁT'), C['shortName']),
+]
+
+
+def areas(text, extra=()):
+    """Point every survey/installation claim at the area actually served."""
+    for old, new in list(AREA_RULES) + list(extra):
+        text = text.replace(old, new)
+    for pat, new in STRAY_BRANDS:
+        text = pat.sub(new, text)
+    return text
+
+
 def rewrite(text):
     if not text:
         return text
@@ -123,6 +206,7 @@ def rewrite(text):
     text = COMPANY_MIXED_RE.sub(C['companyMixed'], text)
     text = STORE_TITLE_RE.sub(C['storeTitle'], text)
     text = text.replace('ÁNH DƯƠNG', C['shortName'])
+    text = areas(text)
     return text
 
 
@@ -257,6 +341,19 @@ def apply_site():
          'href': 'mailto:' + C['email']},
     ]
 
+    # The first feature is "Khảo sát tại nhà miễn phí" — its sub-line is the only
+    # place on the homepage that names where that survey happens.
+    #
+    # The lead-in is "Khu vực", not the live site's "Đơn hàng tại", for a reason
+    # worth keeping: the line box is 173px wide at >=1200px and 166px at 320px,
+    # and "Đơn hàng tại Bình Dương, TP.HCM" measures 174px. One pixel over wraps
+    # it, which makes the strip 3px taller and pushes the whole homepage down —
+    # the one thing verify.mjs compares exactly. "Khu vực " is 152px and clears
+    # every width, and it echoes the footer's own "Khu vực phục vụ".
+    for f in s['features']:
+        if f['cls'] == 'free_ship_textarea':
+            f['sub'] = f'Khu vực {C["areaShort"]}'
+
     sv = s['sidebar']['service']
     sv['phone'] = C['phoneDots']
     for link in sv['links']:
@@ -304,7 +401,8 @@ def apply_pages():
     touched = 0
     for f in sorted(glob.glob('data/pages/*.json')):
         rec = json.load(open(f, encoding='utf-8'))
-        before = (rec['main'], rec['title'], json.dumps(rec['menuState'], sort_keys=True))
+        before = (rec['main'], rec['title'], rec.get('description', ''),
+                  json.dumps(rec['menuState'], sort_keys=True))
         if f.endswith('/lien-he.json'):
             rec['main'] = CONTACT_PAGE
             # index 1 of `extranav` is LIÊN HỆ (see render.py's header())
@@ -312,7 +410,12 @@ def apply_pages():
         else:
             rec['main'] = rewrite(before[0])
         rec['title'] = STRAY_TITLE_RE.sub(SITE_NAME, rec['title'])
-        if (rec['main'], rec['title'], json.dumps(rec['menuState'], sort_keys=True)) != before:
+        # the description is what a search engine quotes — it makes the same
+        # promises as the body and has to name the same area
+        if rec.get('description'):
+            rec['description'] = areas(rewrite(rec['description']), DESC_RULES)
+        if (rec['main'], rec['title'], rec.get('description', ''),
+                json.dumps(rec['menuState'], sort_keys=True)) != before:
             json.dump(rec, open(f, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
             touched += 1
 
@@ -331,6 +434,7 @@ def apply_pages():
 def apply_custom():
     c = json.load(open('data/custom.json', encoding='utf-8'))
     c['bank']['holder'] = C['company']
+    c['bank']['name'] = 'Vietcombank — Chi nhánh TP. Hồ Chí Minh'
     c['shipping']['freeNote'] = f'Miễn phí khảo sát và lắp đặt tại {C["area"]}.'
     json.dump(c, open('data/custom.json', 'w', encoding='utf-8'),
               ensure_ascii=False, indent=1)

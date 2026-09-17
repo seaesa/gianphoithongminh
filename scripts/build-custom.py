@@ -314,7 +314,6 @@ def archive_main(ctx):
         <a href="{ctx.prefix}index.html">Trang chủ</a> / <a href="{ctx.prefix}cua-hang/index.html">Sản phẩm</a> / GIÀN PHƠI XẾP NGANG
       </nav>
       <h1 class="page-title">GIÀN PHƠI XẾP NGANG</h1>
-      <div class="term-description"><p>{e(xn['intro'])}</p></div>
       <p class="woocommerce-result-count">Hiển thị tất cả {len(xn['products'])} sản phẩm</p>
       <form class="woocommerce-ordering" method="get" action="#">
         <select name="orderby" class="orderby">

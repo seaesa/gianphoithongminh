@@ -180,13 +180,28 @@ for (const [name, url] of Object.entries(TARGETS)) {
 }
 await browser.close();
 
+/**
+ * Interactions the clone answers differently on purpose. The cart control is
+ * painted in the site's primary blue rather than the theme's green
+ * (components/site-fixes.spec.md §9), so its hover colour cannot match — but it
+ * still has to *have* one, which is what the assertion below checks.
+ */
+const EXPECTED = {
+  'cart icon hover': v => /background-color=rgb\(0, 102, 156\)/.test(v),
+};
+
 const keys = Object.keys(results.original);
 let bad = 0;
 for (const k of keys) {
   const a = results.original[k], b = results.clone[k];
-  const same = a === b;
+  let same = a === b;
+  let note = '';
+  if (!same && EXPECTED[k]) {
+    same = EXPECTED[k](b);
+    note = same ? '  (recoloured on purpose)' : '';
+  }
   if (!same) bad++;
-  console.log(`${same ? 'OK  ' : 'DIFF'}  ${k}`);
+  console.log(`${same ? 'OK  ' : 'DIFF'}  ${k}${note}`);
   if (!same) {
     console.log(`        orig : ${a}`);
     console.log(`        clone: ${b}`);

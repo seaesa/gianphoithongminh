@@ -19,6 +19,16 @@
 
 /* ─────────────────────────────────────────────── header mini-cart */
 
+/* The theme paints the cart green on an orange border — the only two places in
+   the header that use either colour, right next to a blue search button. The
+   site's primary is that blue (the menu bar, the widget heads, every button),
+   so the cart wears it too. Colours only: same 1px border, same padding, so the
+   control keeps the live site's geometry. The count badge stays red — it is an
+   alert, and blue on blue would not read. */
+.cart-header { border-color: var(--gp-blue); }
+.cart-header .cart-icon { background: var(--gp-blue); }
+.cart-header:hover .cart-icon { background: var(--gp-blue-dark); }
+
 .cart-header .cart-count {
   position: absolute;
   top: -9px;
@@ -220,7 +230,7 @@
   line-height: 1;
   cursor: pointer;
 }
-.gp-qty button:hover { background: var(--gp-orange); color: #fff; }
+.gp-qty button:hover { background: var(--gp-blue); color: #fff; }
 .gp-qty input {
   width: 44px;
   height: 32px;
@@ -557,7 +567,7 @@
   text-transform: none;
 }
 .woocommerce div.product-main .hrm_custom_price .gp-qty button:hover {
-  background-color: var(--gp-orange);
+  background-color: var(--gp-blue);
   color: #fff;
 }
 .woocommerce div.product-main .hrm_custom_price .gp-btn--primary,

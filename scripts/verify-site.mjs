@@ -405,6 +405,80 @@ await page.goto(ROOT + 'category/tin-tuc/page/2/', { waitUntil: 'domcontentloade
 const deep = await page.evaluate(() => document.querySelector('link[rel="icon"][href$=".ico"]').href);
 ok(new URL(deep).pathname === '/favicon.ico', `deep page points at ${deep}`);
 
+/* ── 8. the cart wears the primary colour, and so does the service area ──── */
+
+const BLUE = 'rgb(0, 130, 198)';
+const BLUE_DARK = 'rgb(0, 102, 156)';
+
+for (const from of ['', 'cua-hang/gian-phoi-4-thanh/']) {
+  await page.goto(ROOT + from, { waitUntil: 'domcontentloaded' });
+  const paint = await page.evaluate(() => {
+    const icon = document.querySelector('.cart-icon');
+    const head = document.querySelector('.cart-header');
+    const c = getComputedStyle(icon), h = getComputedStyle(head);
+    return {
+      icon: c.backgroundColor,
+      border: h.borderTopColor,
+      // the theme's own box must survive the repaint
+      borderWidth: h.borderTopWidth,
+      padding: c.padding,
+      text: c.color,
+    };
+  });
+  ok(paint.icon === BLUE, `/${from}: cart icon is ${paint.icon}, expected ${BLUE}`);
+  ok(paint.border === BLUE, `/${from}: cart border is ${paint.border}, expected ${BLUE}`);
+  ok(paint.borderWidth === '1px', `/${from}: cart border is ${paint.borderWidth} wide`);
+  ok(paint.padding === '5px 10px', `/${from}: cart icon padding is ${paint.padding}`);
+  ok(paint.text === 'rgb(255, 255, 255)', `/${from}: cart icon glyph is ${paint.text}`);
+}
+
+// hovering the control darkens the same blue rather than falling back to green.
+// The mouse is parked first: it survives navigation, and a `hover()` that lands
+// on the coordinates it is already at never re-runs hit-testing, so `:hover`
+// would silently never apply.
+await page.goto(ROOT, { waitUntil: 'networkidle' });
+await page.mouse.move(0, 0);
+await page.hover('.cart-header');
+await page.waitForTimeout(800);   // the theme gives every <a> `transition: all ease .5s`
+const hovered = await page.evaluate(() =>
+  getComputedStyle(document.querySelector('.cart-icon')).backgroundColor);
+ok(hovered === BLUE_DARK, `the cart icon is ${hovered} on hover, expected ${BLUE_DARK}`);
+
+// the count badge stays red — blue on blue would not read
+await page.goto(ROOT + 'cua-hang/gian-phoi-4-thanh/', { waitUntil: 'networkidle' });
+await page.click('button.single_add_to_cart_button');
+await page.waitForTimeout(400);
+ok(await page.evaluate(() => {
+  const b = document.querySelector('.cart-count');
+  return b ? getComputedStyle(b).backgroundColor : '';
+}) === 'rgb(230, 15, 30)', 'the cart badge is no longer red');
+
+// every survey / installation promise names data/contact.json's area
+await page.goto(ROOT, { waitUntil: 'domcontentloaded' });
+const strip = await page.textContent('.free_ship_textarea .text-list-opt');
+ok(strip.includes(contact.areaShort),
+  `the homepage feature strip says "${strip.trim()}", expected ${contact.areaShort}`);
+
+// the added category page carries no term description — none of the archives
+// the live site ships has one either
+await page.goto(ROOT + 'danh-muc/gian-phoi-xep-ngang/', { waitUntil: 'domcontentloaded' });
+ok(await page.locator('.term-description, .taxonomy-description').count() === 0,
+  'the xếp-ngang archive has a description the other archives do not');
+
+// and no page outside the imported news still advertises Hà Nội
+for (const path of ['', 'danh-muc/gian-phoi-xep-ngang/', 'van-chuyen-san-pham/',
+                    'cua-hang/gp-duy-loi-seri-01/', 'cua-hang/gp-duy-loi-seri-07/',
+                    'danh-muc/gian-phoi/', 'lien-he/']) {
+  await page.goto(ROOT + path, { waitUntil: 'domcontentloaded' });
+  const found = await page.evaluate(() => {
+    const body = (document.querySelector('main#main') || document.body).innerText;
+    const meta = document.querySelector('meta[name="description"]');
+    return { body: body.includes('Hà Nội'), meta: (meta ? meta.content : '').includes('Hà Nội') };
+  });
+  ok(!found.body, `/${path} still advertises Hà Nội in its body`);
+  ok(!found.meta, `/${path} still advertises Hà Nội in its meta description`);
+}
+
 ok(jsErrors.length === 0, `JS errors: ${jsErrors[0]}`);
 
 await browser.close();

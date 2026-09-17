@@ -47,6 +47,8 @@ Features the live site either lacks or ships broken. Details in
 | **Liên hệ request form** | `/lien-he/` | the live page is an address list and nothing else; the clone leads with a validated request form (code + `gprequests.v1`). |
 | **Favicon set** | every page | the original points `shortcut icon` at the raw logo PNG; `build-favicon.py` draws a real 16/32/48 `.ico`, apple-touch and maskable icons, plus a web manifest. |
 | **Extensionless URLs** | every link | `index.html` is stripped from all 8,679 internal links and `vercel.json` canonicalises the rest. |
+| **Cart in the site's blue** | every page | the theme paints it green on an orange border beside a blue search button; colours only, so the box still matches. |
+| **Real service area** | every page | the inherited copy promised Hà Nội branches and nationwide installation; every such claim now names `contact.json`'s `area`. |
 
 The product grids keep the theme's hidden add-to-cart buttons, so every archive
 layout still matches the original exactly.
@@ -79,7 +81,7 @@ driving the same actions**.
 | All 56 comparable pages — height, chrome geometry, `main` children, image integrity | **56 / 56 clean**, worst pixel diff **0.52 %** |
 | Cart / checkout / quick-order / new category (end to end) | **66 / 66 checks pass** |
 | Imported news — 47 pages load clean, pagination walks, feed coverage, phone layout | **310 / 310 checks pass** |
-| Cart icon, Facebook card, search, menu, mobile header, contact form, URLs, favicon | **195 / 195 checks pass** |
+| Cart icon + colour, Facebook card, search, menu, mobile header, contact form, URLs, favicon, service area | **223 / 223 checks pass** |
 | Link + asset integrity across the generated site | **14,476 refs, 7 missing** (all dead on the live site too) |
 
 **52 pages are deliberately not comparable** with the live site and are skipped:
@@ -117,7 +119,7 @@ node scripts/verify-pages.mjs --responsive       # one per template × 3 viewpor
 node scripts/verify-pages.mjs --kind product     # one template
 node scripts/verify-shop.mjs                     # cart, checkout, quick order
 node scripts/verify-news.mjs                     # imported posts, archives, pagination
-node scripts/verify-site.mjs                     # cart icon, Facebook card, search, menu, mobile header, contact form, URLs, favicon
+node scripts/verify-site.mjs                     # cart, Facebook card, search, menu, mobile header, contact form, URLs, favicon, area
 node scripts/check-links.mjs                     # local hrefs/srcs resolve
 ```
 
@@ -195,8 +197,12 @@ The pipeline, in order:
    the sidebar's *Tin tức mới* widget. (`fetch-news.py` refreshes `news.json`
    itself and is run on demand, not by `build.sh` — it downloads ~8 MB of images.)
 6. **`apply-contact.py`** — pushes `data/contact.json` into `site.json`,
-   `custom.json` and the 33 page records whose extracted content quotes the old
-   shop's phone numbers, mailboxes or branch addresses, and rebuilds `/lien-he/`.
+   `custom.json` and the page records whose extracted content quotes the old
+   shop's phone numbers, mailboxes, branch addresses or **service area** (the
+   inherited copy advertised Hà Nội branches and nationwide installation), and
+   rebuilds `/lien-he/`. Replacements are kept close in length to what they
+   replace — these pages are still measured against the live site, and a line
+   that rewraps changes the page height.
 7. **`build-search.py`** — one index entry per page (title, kind, excerpt,
    thumbnail, price and an accent-free haystack), built from the page records so
    it does not depend on render order.
@@ -275,7 +281,14 @@ Deliberate departures:
 - Every contact detail — hotline, email, address, Facebook, Zalo, company name —
   belongs to that same business, not to thegioigianphoi.vn. `/lien-he/` is
   rebuilt around it rather than patched, and leads with a request form the live
-  page does not have.
+  page does not have. The same goes for **where the business works**: the
+  original copy promised Hà Nội branches and nationwide installation, and every
+  such line now names `contact.json`'s `area`. Delivery stays nationwide — that
+  is a courier, not a site visit. Imported article text keeps whatever cities it
+  names; it is someone else's content, not this site's promise.
+- The header cart is painted in the site's primary blue instead of the theme's
+  green-on-orange. Colours only — its box, border width and padding are the live
+  site's, so nothing measured moves.
 - The live site's favicon is the **raw 255×198 logo PNG** on a `rel="shortcut
   icon"` — not square, not an `.ico`, and with no apple-touch or maskable icon,
   so "HÒA PHÁT" is an unreadable smudge in a tab. The clone draws a proper set

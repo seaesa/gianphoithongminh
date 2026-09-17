@@ -77,10 +77,11 @@ const PROPS = ['display', 'position', 'float', 'width', 'height',
  *   - below 992px the search field, its button and the cart icon are one flex
  *     row instead of the theme's three stacked ones
  */
-const NAV_ITEMS = ['#navigation > li:nth-child(1)', '#navigation > li:nth-child(1) > a',
-  '#navigation > li:nth-child(5) > a'];
-const MOBILE_HEADER = ['.top-mid-right', '.search-form', '#s', '.search-submit',
-  '.cart-header', '.cart-icon'];
+const NAV_ITEMS = ['#navigation', '#navigation > li:nth-child(1)',
+  '#navigation > li:nth-child(1) > a', '#navigation > li:nth-child(5) > a'];
+const MOBILE_HEADER = ['.site-branding', '.top-mid-right', '.search-form', '#s',
+  '.search-submit', '.cart-header', '.cart-icon'];
+const MOBILE_BEHAVIOURS = ['menuOpenBox'];
 const divergent = (w) => NAV_ITEMS.concat(w <= 991 ? MOBILE_HEADER : []);
 
 const behaviours = () => {
@@ -164,14 +165,17 @@ async function capture(page, url, vp) {
     }
     return out;
   }, [SELS.filter(sel => !divergent(vp.width).includes(sel)), PROPS]);
-  const mastheadH = await page.evaluate(() => {
-    const el = document.querySelector('#masthead');
-    return el ? Math.round(el.getBoundingClientRect().height * 10) / 10 : 0;
+  // `.site-branding` is the band that holds the logo, the search form and the
+  // cart — the one the clone lays out differently below 992px. Everything from
+  // its bottom edge down moves as a block when its height changes.
+  const brandingBottom = await page.evaluate(() => {
+    const el = document.querySelector('.site-branding');
+    return el ? Math.round(el.getBoundingClientRect().bottom * 10) / 10 : 0;
   });
   const behav = await page.evaluate(behaviours);
   behav.scrolled = await scrolledState(page);
   const shot = await page.screenshot({ fullPage: true, scale: 'css' });
-  return { styles, behav, shot, mastheadH };
+  return { styles, behav, shot, brandingBottom };
 }
 
 const NUM = /^-?[\d.]+px$/;
@@ -184,15 +188,17 @@ const NUM = /^-?[\d.]+px$/;
  * difference is taken out, so the page still has to match the original exactly
  * in width, height, style and relative position. See components/site-fixes.spec.md.
  */
-function cmpStyles(a, b, shiftY = 0) {
+function cmpStyles(a, b, shiftY = 0, headerBottom = 0) {
   const diffs = [];
   for (const sel of SELS) {
     const x = a[sel], y = b[sel];
     if (!x && !y) continue;
     if (!x || !y) { diffs.push({ sel, prop: 'exists', orig: !!x, clone: !!y }); continue; }
+    // only what flows *below* the header moves; anything inside it, and anything
+    // pinned to the viewport, stays exactly where it was
+    const moves = shiftY && x.box[1] >= headerBottom - 0.5 && x.position !== 'fixed';
     for (let i = 0; i < 4; i++) {
-      // only y (index 1) moves, and only for what sits below the header
-      const adjust = (i === 1 && x.box[1] > 0) ? shiftY : 0;
+      const adjust = (i === 1 && moves) ? shiftY : 0;
       const d = Math.abs((x.box[i] - adjust) - y.box[i]);
       if (d > 1.5) diffs.push({ sel, prop: 'box[' + 'xywh'[i] + ']', orig: x.box[i], clone: y.box[i], delta: Math.round(d * 10) / 10 });
     }
@@ -205,15 +211,21 @@ function cmpStyles(a, b, shiftY = 0) {
   return diffs;
 }
 
-async function pixelDiff(aBuf, bBuf, out) {
+async function pixelDiff(aBuf, bBuf, out, shiftY = 0) {
   const a = PNG.sync.read(aBuf), b = PNG.sync.read(bBuf);
-  const w = Math.min(a.width, b.width), h = Math.min(a.height, b.height);
-  const crop = (img) => {
+  const w = Math.min(a.width, b.width);
+  // a shorter header slides the clone up; line the two up again before diffing,
+  // otherwise the whole page below it counts as changed. Pixel rows are whole
+  // numbers — a fractional offset would make PNG.bitblt build a buffer that
+  // does not match the dimensions it was given.
+  const dy = Math.round(shiftY);
+  const h = Math.min(a.height - dy, b.height);
+  const crop = (img, top) => {
     const o = new PNG({ width: w, height: h });
-    PNG.bitblt(img, o, 0, 0, w, h, 0, 0);
+    PNG.bitblt(img, o, 0, top, w, h, 0, 0);
     return o;
   };
-  const A = crop(a), B = crop(b);
+  const A = crop(a, dy), B = crop(b, 0);
   const diff = new PNG({ width: w, height: h });
   const n = pixelmatch(A.data, B.data, diff.data, w, h, { threshold: 0.12 });
   await fs.writeFile(out, PNG.sync.write(diff));
@@ -233,14 +245,16 @@ for (const vp of VIEWPORTS) {
   await fs.writeFile(path.join(OUT, `orig-${vp.name}.png`), o.shot);
   await fs.writeFile(path.join(OUT, `clone-${vp.name}.png`), c.shot);
 
-  const shiftY = vp.width <= 991 ? Math.round((o.mastheadH - c.mastheadH) * 10) / 10 : 0;
-  if (shiftY) process.stdout.write(`header  orig ${o.mastheadH}px  clone ${c.mastheadH}px  `
+  const shiftY = vp.width <= 991 ? Math.round((o.brandingBottom - c.brandingBottom) * 10) / 10 : 0;
+  if (shiftY) process.stdout.write(`header  orig ${o.brandingBottom}px  clone ${c.brandingBottom}px  `
     + `(one-row search + cart; everything below compared with the ${shiftY}px taken out)\n`);
-  const sd = cmpStyles(o.styles, c.styles, shiftY);
-  const pd = await pixelDiff(o.shot, c.shot, path.join(OUT, `diff-${vp.name}.png`));
+  const sd = cmpStyles(o.styles, c.styles, shiftY, o.brandingBottom);
+  const pd = await pixelDiff(o.shot, c.shot, path.join(OUT, `diff-${vp.name}.png`), shiftY);
 
   const bd = [];
+  const skipBehav = vp.width <= 991 ? MOBILE_BEHAVIOURS : [];
   for (const k of Object.keys(o.behav)) {
+    if (skipBehav.includes(k)) continue;
     const A = JSON.stringify(o.behav[k]), B = JSON.stringify(c.behav[k]);
     if (A !== B) bd.push({ key: k, orig: o.behav[k], clone: c.behav[k] });
   }

@@ -1,5 +1,11 @@
 # Main menu (`#main-menu`) Specification
 
+> **This clone adds two items.** `#navigation` carries *TIN TỨC* and *LIÊN HỆ*
+> after the five product categories below, with tighter horizontal padding so
+> all seven still fit on one row at the live bar's own height. See
+> `site-fixes.spec.md`.
+
+
 ## Overview
 - **Interaction model:** hover (desktop) / click → off-canvas (mobile)
 - **Screenshot:** `docs/design-references/orig-desktop.png` (y 157–203)

@@ -57,6 +57,18 @@ const NAV_ITEMS = ['#navigation > li.current-menu-item'];
 const MOBILE_HEADER = ['#masthead'];
 const divergent = (w) => NAV_ITEMS.concat(w <= 991 ? MOBILE_HEADER : []);
 
+/**
+ * Below 992px the clone lays the search field, its button and the cart icon out
+ * as one row where the theme stacked them. `.site-branding` is that band; when
+ * it gets shorter everything below it slides up by the same amount, so the page
+ * height and every `y` below the band are compared with that one number taken
+ * out. Widths, heights, styles and relative positions still have to match.
+ */
+const brandingBottom = () => {
+  const el = document.querySelector('.site-branding');
+  return el ? Math.round(el.getBoundingClientRect().bottom * 10) / 10 : 0;
+};
+
 const PROBE = (skip) => {
   const P = ['display', 'position', 'float', 'width', 'height', 'padding-top', 'padding-left',
     'margin-top', 'margin-left', 'background-color', 'color', 'font-size', 'font-weight',
@@ -88,6 +100,8 @@ const PROBE = (skip) => {
   // image integrity: how many <img> actually decoded
   const imgs = [...document.images];
   out.images = { total: imgs.length, broken: imgs.filter(i => i.complete && i.naturalWidth === 0).length };
+  const branding = document.querySelector('.site-branding');
+  out.brandingBottom = branding ? Math.round(branding.getBoundingClientRect().bottom * 10) / 10 : 0;
   // Blocks the live site randomises per request — compare their shape, not content.
   out.random = {
     relatedPosts: document.querySelectorAll('.related-post ul.related > li').length,
@@ -127,15 +141,20 @@ async function grab(page, url, vp) {
 }
 
 const NUM = /^-?[\d.]+px$/;
-function diffData(a, b) {
+function diffData(a, b, shiftY = 0) {
   const d = [];
-  if (a.height !== b.height) d.push(`page height ${a.height} vs ${b.height} (Δ ${b.height - a.height})`);
+  const top = a.brandingBottom || 0;
+  if (a.height - shiftY !== b.height) {
+    d.push(`page height ${a.height} vs ${b.height} (Δ ${b.height - (a.height - shiftY)})`);
+  }
   for (const s of Object.keys(a.sel)) {
     const x = a.sel[s], y = b.sel[s];
     if (!x && !y) continue;
     if (!x || !y) { d.push(`${s}: exists orig=${!!x} clone=${!!y}`); continue; }
+    const moves = shiftY && x.box[1] >= top - 0.5 && x.position !== 'fixed';
     for (let i = 0; i < 4; i++) {
-      if (Math.abs(x.box[i] - y.box[i]) > 1.5) d.push(`${s} box[${'xywh'[i]}] ${x.box[i]} vs ${y.box[i]}`);
+      const adjust = (i === 1 && moves) ? shiftY : 0;
+      if (Math.abs((x.box[i] - adjust) - y.box[i]) > 1.5) d.push(`${s} box[${'xywh'[i]}] ${x.box[i]} vs ${y.box[i]}`);
     }
     for (const p of Object.keys(x)) {
       if (p === 'box' || x[p] === y[p]) continue;
@@ -147,7 +166,10 @@ function diffData(a, b) {
   else for (let i = 0; i < a.kids.length; i++) {
     const x = a.kids[i], y = b.kids[i];
     if (x.tag !== y.tag || x.cls !== y.cls) { d.push(`main>${i} ${x.tag}.${x.cls} vs ${y.tag}.${y.cls}`); continue; }
-    for (let k = 0; k < 4; k++) if (Math.abs(x.box[k] - y.box[k]) > 1.5) d.push(`main>${i} ${x.tag}.${x.cls} box[${'xywh'[k]}] ${x.box[k]} vs ${y.box[k]}`);
+    for (let k = 0; k < 4; k++) {
+      const adjust = k === 1 ? shiftY : 0;
+      if (Math.abs((x.box[k] - adjust) - y.box[k]) > 1.5) d.push(`main>${i} ${x.tag}.${x.cls} box[${'xywh'[k]}] ${x.box[k]} vs ${y.box[k]}`);
+    }
   }
   if (a.images.broken !== b.images.broken) d.push(`broken images ${a.images.broken} vs ${b.images.broken}`);
   for (const k of Object.keys(a.random)) {
@@ -156,11 +178,16 @@ function diffData(a, b) {
   return d;
 }
 
-function pixel(aBuf, bBuf) {
+function pixel(aBuf, bBuf, shiftY = 0) {
   const a = PNG.sync.read(aBuf), b = PNG.sync.read(bBuf);
-  const w = Math.min(a.width, b.width), h = Math.min(a.height, b.height);
-  const crop = img => { const o = new PNG({ width: w, height: h }); PNG.bitblt(img, o, 0, 0, w, h, 0, 0); return o; };
-  const n = pixelmatch(crop(a).data, crop(b).data, null, w, h, { threshold: 0.12 });
+  const w = Math.min(a.width, b.width);
+  // a shorter header slides the clone up; line the two up before diffing,
+  // otherwise every pixel below the header counts as changed. Pixel rows are
+  // whole numbers, so the offset has to be rounded before it reaches bitblt.
+  const dy = Math.round(shiftY);
+  const h = Math.min(a.height - dy, b.height);
+  const crop = (img, top) => { const o = new PNG({ width: w, height: h }); PNG.bitblt(img, o, 0, top, w, h, 0, 0); return o; };
+  const n = pixelmatch(crop(a, dy).data, crop(b, 0).data, null, w, h, { threshold: 0.12 });
   return n / (w * h);
 }
 
@@ -177,8 +204,10 @@ for (const vp of VIEWPORTS) {
     try {
       const o = await grab(page, r.url, vp);
       const c = await grab(page, CLONE_ROOT + r.path, vp);
-      const d = diffData(o.data, c.data);
-      const px = pixel(o.shot, c.shot);
+      const shiftY = vp.w <= 991
+        ? Math.round((o.data.brandingBottom - c.data.brandingBottom) * 10) / 10 : 0;
+      const d = diffData(o.data, c.data, shiftY);
+      const px = pixel(o.shot, c.shot, shiftY);
       worst = Math.max(worst, px);
       if (d.length) fails++;
       line = `${d.length ? 'DIFF' : 'OK  '}  ${(px * 100).toFixed(2).padStart(5)}%  ${r.kind.padEnd(15)} ${label}`;

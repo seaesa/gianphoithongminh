@@ -41,6 +41,8 @@ Features the live site either lacks or ships broken. Details in
 | **Working search** | header box + `/tim-kiem/` | the live box posts to WordPress; here it ranks a 104-page index in the browser, accent-insensitively. |
 | **Cart icon** | every page | the theme ships `href="#"` and a WooCommerce handler; now a real link to `/gio-hang/`. |
 | **Footer Facebook card** | every page | the real one is an SDK iframe that is never loaded; the clone draws the same 340×200 card itself. |
+| **Tin tức + Liên hệ in the menu** | every page | the live menu is five product categories with no way to reach either page; gaps tightened so all seven stay on one row. |
+| **One-row mobile header** | ≤991px | the theme stacks the search field, its button and the cart three-deep on a phone; they are one flex row now. |
 
 The product grids keep the theme's hidden add-to-cart buttons, so every archive
 layout still matches the original exactly.
@@ -70,11 +72,11 @@ driving the same actions**.
 | Homepage full-page height | **identical** at all 15 widths |
 | Homepage interactions (hover / click / scroll / responsive) | **37 / 37 match** |
 | Single-product interactions (tabs, carousel, stepper, modal, lightbox) | **15 / 15 match** |
-| All 56 comparable pages — height, chrome geometry, `main` children, image integrity | **56 / 56 clean**, worst pixel diff **0.38 %** |
+| All 56 comparable pages — height, chrome geometry, `main` children, image integrity | **56 / 56 clean**, worst pixel diff **0.52 %** |
 | Cart / checkout / quick-order / new category (end to end) | **66 / 66 checks pass** |
 | Imported news — 47 pages load clean, pagination walks, feed coverage, phone layout | **310 / 310 checks pass** |
-| Cart icon, footer Facebook card, search (ranking, accents, highlight offsets) | **46 / 46 checks pass** |
-| Link + asset integrity across the generated site | **13,504 refs, 7 missing** (all dead on the live site too) |
+| Cart icon, Facebook card, search, main menu, mobile header | **135 / 135 checks pass** |
+| Link + asset integrity across the generated site | **13,936 refs, 7 missing** (all dead on the live site too) |
 
 **52 pages are deliberately not comparable** with the live site and are skipped:
 the 47 news pages and `/lien-he/` (content this clone owns — see
@@ -87,6 +89,16 @@ print them — the top bar, the footer contact widget, the sidebar's *Tin tức 
 list, the floating call / Zalo buttons and the footer's Facebook box — are hidden
 on **both** sides before measuring, the same way `.related-post` already was.
 Everything around them still has to match to the pixel.
+
+Two more deliberate changes are handled by measurement rather than hiding. The
+main menu's list items are narrower (seven items in a bar built for five), so
+those selectors are skipped — but `#main-menu` and `#navigation` are not, and the
+bar's height still matches the live one at every width. Below 992px the header is
+**80px shorter** because the search field, its button and the cart share a row;
+that single number is measured on `.site-branding` and taken out of every `y`
+below it, out of the page height and out of the screenshot alignment, so
+everything else is still compared exactly. Details in
+`docs/research/components/site-fixes.spec.md`.
 
 Widths tested on the homepage: 320, 375, 390, 480, 500, 650, 767, 768, 991, 992,
 1199, 1200, 1366, 1440, 1920. One page per template is additionally verified at
@@ -101,7 +113,7 @@ node scripts/verify-pages.mjs --responsive       # one per template × 3 viewpor
 node scripts/verify-pages.mjs --kind product     # one template
 node scripts/verify-shop.mjs                     # cart, checkout, quick order
 node scripts/verify-news.mjs                     # imported posts, archives, pagination
-node scripts/verify-site.mjs                     # cart icon, Facebook card, search
+node scripts/verify-site.mjs                     # cart icon, Facebook card, search, menu, mobile header
 node scripts/check-links.mjs                     # local hrefs/srcs resolve
 ```
 
@@ -112,6 +124,7 @@ index.html                 homepage
 <slug>/index.html          the other 107 pages, mirroring the live URL paths
 data/
   site.json                chrome content: menus, widgets, footer, homepage grids
+                           (incl. `extranav`: the two items added to the menu)
   products.json            one record per product, for the added pages
   custom.json              the added pages, bank details, provinces, sample products
   contact.json             every phone/email/address/social link, one source
@@ -127,7 +140,7 @@ assets/
   css/overrides.css        what the live pages ship as inline <style> blocks
   css/shop.css             cart, checkout and quick-order UI (added, not cloned)
   css/news.css             article body + archive card styling (added, not cloned)
-  css/site.css             Facebook card + search results (added, not cloned)
+  css/site.css             Facebook card, search results, menu + mobile header
   vendor/                  Font Awesome, prettyPhoto, Select2 (subsets)
   fonts/ uploads/ theme/   564 assets downloaded from the live site (46 MB)
   news/                    138 images for the imported posts (7.8 MB)

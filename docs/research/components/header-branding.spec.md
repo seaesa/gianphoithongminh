@@ -25,6 +25,8 @@ The live form posts `?s=` to WordPress; this clone points its `action` at
 `font-weight:bold; padding:0 4px; height:36px; margin-left:-4px; margin-top:1px`
 ### `.cart-header`
 `float:right; position:relative; padding:1px; border:1px solid #fcb040`
+Below 992px this clone lays `.search-form` and `.cart-header` out as one flex
+row instead of the theme's stack — see `site-fixes.spec.md`.
 `.cart-icon` — `padding:5px 10px; background:#1a7b1c; color:#fff; display:block; text-align:center`
 The live theme gives it `href="#"` and a WooCommerce click handler; the clone
 links it straight to `/gio-hang/` — see `site-fixes.spec.md`.

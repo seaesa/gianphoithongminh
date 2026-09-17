@@ -272,12 +272,14 @@
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* theme already drops to 10px 15px here; seven items still overflow the
-     940px bar, so the label shrinks a point as well */
+/* The live bar stops wrapping at exactly 952px, where `#navigation` reaches its
+   920px cap and the five items' 920px just fit. Seven have to fit the same
+   920px, so from there up to 1199px the gaps tighten and the label drops a
+   point: 811px of text + 14 x 7px = 909px. Below 952px both sites wrap. */
+@media (min-width: 952px) and (max-width: 1199px) {
   ul#navigation > li > a {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 7px;
+    padding-right: 7px;
     font-size: 12px;
   }
 }

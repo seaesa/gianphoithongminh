@@ -173,8 +173,8 @@
         foot.innerHTML = '<p class="total">Tổng cộng: <span class="woocommerce-Price-amount amount">'
           + formatMoney(Cart.subtotal()) + '</span></p>'
           + '<p class="buttons">'
-          + '<a class="button" href="' + prefix + 'gio-hang/index.html">Xem giỏ hàng</a>'
-          + '<a class="button checkout" href="' + prefix + 'thanh-toan/index.html">Thanh toán</a>'
+          + '<a class="button" href="' + prefix + 'gio-hang/">Xem giỏ hàng</a>'
+          + '<a class="button checkout" href="' + prefix + 'thanh-toan/">Thanh toán</a>'
           + '</p>';
       } else if (foot) {
         foot.remove();
@@ -250,7 +250,7 @@
     var qty = qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
 
     Cart.add(item, qty);
-    Cart.toast('Đã thêm “' + item.title + '” vào giỏ hàng.', rootPrefix() + 'gio-hang/index.html');
+    Cart.toast('Đã thêm “' + item.title + '” vào giỏ hàng.', rootPrefix() + 'gio-hang/');
   });
 
   /* Keep the header in sync, including across tabs. */

@@ -18,8 +18,9 @@ layer is re-implemented in vanilla JS.
 ./scripts/serve.sh          # http://127.0.0.1:8777/
 ```
 
-Pretty URLs need a server, so use `serve.sh` (or any static host) rather than
-opening the files directly.
+Pages link to directories (`/lien-he/`, not `/lien-he/index.html`), so they need
+a server — `serve.sh`, or any static host — rather than being opened from
+`file://`. `vercel.json` makes Vercel serve and canonicalise the same URLs.
 
 ## Added on top of the clone
 
@@ -43,6 +44,9 @@ Features the live site either lacks or ships broken. Details in
 | **Footer Facebook card** | every page | the real one is an SDK iframe that is never loaded; the clone draws the same 340×200 card itself. |
 | **Tin tức + Liên hệ in the menu** | every page | the live menu is five product categories with no way to reach either page; gaps tightened so all seven stay on one row. |
 | **One-row mobile header** | ≤991px | the theme stacks the search field, its button and the cart three-deep on a phone; they are one flex row now. |
+| **Liên hệ request form** | `/lien-he/` | the live page is an address list and nothing else; the clone leads with a validated request form (code + `gprequests.v1`). |
+| **Favicon set** | every page | the original points `shortcut icon` at the raw logo PNG; `build-favicon.py` draws a real 16/32/48 `.ico`, apple-touch and maskable icons, plus a web manifest. |
+| **Extensionless URLs** | every link | `index.html` is stripped from all 8,679 internal links and `vercel.json` canonicalises the rest. |
 
 The product grids keep the theme's hidden add-to-cart buttons, so every archive
 layout still matches the original exactly.
@@ -75,8 +79,8 @@ driving the same actions**.
 | All 56 comparable pages — height, chrome geometry, `main` children, image integrity | **56 / 56 clean**, worst pixel diff **0.52 %** |
 | Cart / checkout / quick-order / new category (end to end) | **66 / 66 checks pass** |
 | Imported news — 47 pages load clean, pagination walks, feed coverage, phone layout | **310 / 310 checks pass** |
-| Cart icon, Facebook card, search, main menu, mobile header | **135 / 135 checks pass** |
-| Link + asset integrity across the generated site | **13,936 refs, 7 missing** (all dead on the live site too) |
+| Cart icon, Facebook card, search, menu, mobile header, contact form, URLs, favicon | **195 / 195 checks pass** |
+| Link + asset integrity across the generated site | **14,476 refs, 7 missing** (all dead on the live site too) |
 
 **52 pages are deliberately not comparable** with the live site and are skipped:
 the 47 news pages and `/lien-he/` (content this clone owns — see
@@ -113,7 +117,7 @@ node scripts/verify-pages.mjs --responsive       # one per template × 3 viewpor
 node scripts/verify-pages.mjs --kind product     # one template
 node scripts/verify-shop.mjs                     # cart, checkout, quick order
 node scripts/verify-news.mjs                     # imported posts, archives, pagination
-node scripts/verify-site.mjs                     # cart icon, Facebook card, search, menu, mobile header
+node scripts/verify-site.mjs                     # cart icon, Facebook card, search, menu, mobile header, contact form, URLs, favicon
 node scripts/check-links.mjs                     # local hrefs/srcs resolve
 ```
 
@@ -122,6 +126,9 @@ node scripts/check-links.mjs                     # local hrefs/srcs resolve
 ```
 index.html                 homepage
 <slug>/index.html          the other 107 pages, mirroring the live URL paths
+vercel.json                trailing slashes + index.html → directory redirects
+favicon.ico                16/32/48, drawn from the Hòa Phát mark
+site.webmanifest           name, theme colour and the two maskable icons
 data/
   site.json                chrome content: menus, widgets, footer, homepage grids
                            (incl. `extranav`: the two items added to the menu)
@@ -140,13 +147,15 @@ assets/
   css/overrides.css        what the live pages ship as inline <style> blocks
   css/shop.css             cart, checkout and quick-order UI (added, not cloned)
   css/news.css             article body + archive card styling (added, not cloned)
-  css/site.css             Facebook card, search results, menu + mobile header
+  css/site.css             Facebook card, search results, menu, mobile header,
+                           the Liên hệ form
+  img/                     favicon PNGs, apple-touch and maskable icons
   vendor/                  Font Awesome, prettyPhoto, Select2 (subsets)
   fonts/ uploads/ theme/   564 assets downloaded from the live site (46 MB)
   news/                    138 images for the imported posts (7.8 MB)
   js/main.js               behaviour layer (see docs/research/BEHAVIORS.md)
   js/cart.js               localStorage cart + header mini-cart
-  js/shop.js               cart page, checkout, quick-order modal
+  js/shop.js               cart page, checkout, quick-order modal, contact form
   js/search.js             ranks the search index (loaded only by /tim-kiem/)
 docs/
   research/PAGE_TOPOLOGY.md      homepage section map and z-index layers
@@ -173,6 +182,10 @@ The pipeline, in order:
    menus, widgets, footer, inline styles).
 3. **`collect-assets.py` + `download-assets.mjs`** — finds every `src`, `srcset`,
    `url()` and favicon across every crawled page and downloads them to `assets/`.
+   **`build-favicon.py`** then draws the icon set: the live site ships no favicon
+   at all, so the three-triangle Hòa Phát mark (measured off the logo, not
+   redrawn by eye) is rendered onto the theme blue at every size a browser,
+   iOS or Android asks for, plus `site.webmanifest`.
 4. **`extract-pages.py`** — per page: title, body class, breadcrumbs, the four
    menus' state classes, and the `main#main` region with URLs rewritten to a
    `@@ROOT@@/` marker and scripts stripped.
@@ -189,19 +202,46 @@ The pipeline, in order:
    it does not depend on render order.
 8. **`build.py` / `build-pages.py`** — render every page from `render.py`'s shared
    chrome plus that page's `main`, resolving `@@ROOT@@/` to each page's own
-   relative prefix (so the output works from `file://` too).
+   relative prefix.
 9. **`build-custom.py`** — renders the cart, checkout, `xếp ngang` and search
    pages using the same shared chrome. It must run *after* `build-pages.py`, which
    would otherwise re-render the cloned `/gio-hang/` over the working one.
    `build-sitemap-doc.py` then regenerates `docs/research/SITE_MAP.md`.
-10. **`build-css.py`** — keeps only the rules that can match the generated DOM
+10. **`clean-urls.py`** — one pass over the generated pages that turns every
+    `…/index.html` link into the directory it names, so no generator has to know
+    how the site is served and no click costs a redirect. Nothing moves on disk.
+11. **`build-css.py`** — keeps only the rules that can match the generated DOM
     across **all** pages, plus runtime-only classes (`.owl-*`, `.modal`, `.pp_*`,
     `.select2`, `.wc-tab`, hover/focus states), rewrites asset URLs, and drops the
     four background images that 404 on the original. Bootstrap shrinks 116 KB →
     35 KB, WooCommerce 75 KB → 22 KB. `overrides.css`, `shop.css`, `news.css`
     and `site.css` are hand-written and pass through untouched.
-11. **`check-links.mjs`** — every local `href` and `src` in the generated site
-    has to resolve on disk.
+12. **`check-links.mjs`** — every local `href` and `src` in the generated site
+    has to resolve on disk (a directory href resolving to its `index.html`).
+
+## Deploying
+
+The site is plain static files, so any host works. `vercel.json` configures the
+one thing that is not automatic — how URLs are spelled:
+
+```json
+{
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/index.html",        "destination": "/" },
+    { "source": "/:path+/index.html", "destination": "/:path+/" }
+  ]
+}
+```
+
+`trailingSlash` is not cosmetic: every page resolves its stylesheets, images and
+links **relative to its own directory**, so the browser's base URL has to stay
+`/lien-he/`. With `trailingSlash: false` the base would become `/` and every
+relative path on the page would break.
+
+The redirects are written out rather than using Vercel's `cleanUrls`, which
+would do the same job for `/x/index.html` but rewrites the root `/index.html` to
+`//` — a URL with an empty host.
 
 ## Notes on fidelity
 
@@ -234,11 +274,20 @@ Deliberate departures:
   archives are gone.
 - Every contact detail — hotline, email, address, Facebook, Zalo, company name —
   belongs to that same business, not to thegioigianphoi.vn. `/lien-he/` is
-  rebuilt around it rather than patched.
+  rebuilt around it rather than patched, and leads with a request form the live
+  page does not have.
+- The live site's favicon is the **raw 255×198 logo PNG** on a `rel="shortcut
+  icon"` — not square, not an `.ico`, and with no apple-touch or maskable icon,
+  so "HÒA PHÁT" is an unreadable smudge in a tab. The clone draws a proper set
+  from the same logo's three-triangle mark instead. It lives in `<head>`, not in
+  any layout, so nothing measured changes.
 - The account page and the cloned WooCommerce forms are presentation only. The
-  cart, checkout and search **do** work, but entirely in the browser: there is no
-  backend, so orders are stored in `localStorage`, the QR code is decorative, and
-  search ranks a pre-built index inlined into `/tim-kiem/`.
+  cart, checkout, contact form and search **do** work, but entirely in the
+  browser: there is no backend, so orders land in `localStorage` (`gporders.v1`)
+  and contact requests in `gprequests.v1`, the QR code is decorative, and search
+  ranks a pre-built index inlined into `/tim-kiem/`. **Nothing reaches the shop
+  owner** — wiring these three to a real endpoint is the one change production
+  needs, alongside the placeholder bank account in `data/custom.json`.
 - The cart icon, the footer's Facebook box and the search form are *fixed*, not
   cloned — on the live site they depend on a WooCommerce handler, Facebook's SDK
   and a WordPress query respectively. See

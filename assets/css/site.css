@@ -283,3 +283,58 @@
     font-size: 12px;
   }
 }
+
+/* ───────────────────────────────────────────── Liên hệ: request form
+
+   The live page is an address list and nothing else. The clone leads with the
+   form — the reason people open a contact page — and keeps the address list
+   beside it. Field, button and success styling is shared with the checkout
+   (`shop.css`); only the two-column shell lives here.
+   ------------------------------------------------------------------------- */
+
+.gp-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+  margin: 18px 0 24px;
+}
+.gp-contact__main { flex: 1 1 400px; min-width: 0; }
+.gp-contact__aside { flex: 1 1 260px; min-width: 0; }
+
+.gp-contact__title {
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #0082c6;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: #222;
+}
+.gp-contact__lead { margin: 0 0 14px; color: #555; }
+
+.gp-contact-form {
+  margin: 0;
+  padding: 16px;
+  border: 1px solid #eaeaea;
+  background: #fafafa;
+}
+.gp-contact-form[hidden] { display: none; }
+.gp-contact-form .gp-btn { margin-top: 4px; }
+.gp-contact__hint { margin: 12px 0 0; font-size: 13px; color: #777; }
+.gp-contact__hint a { color: #0082c6; font-weight: 700; }
+
+.gp-contact__aside #address-box {
+  padding: 14px 16px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+}
+.gp-contact__aside #address-list { margin: 0; }
+.gp-contact__aside .info-item { margin-bottom: 10px; }
+.gp-contact__aside .info-item:last-child { margin-bottom: 0; }
+
+/* Two fields per row needs room for both; below that they stack. */
+@media (max-width: 600px) {
+  .gp-contact-form .gp-field-row { display: block; }
+}

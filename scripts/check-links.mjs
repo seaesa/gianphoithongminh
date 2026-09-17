@@ -53,7 +53,9 @@ for (const page of pages) {
     if (/^(https?:)?\/\//i.test(ref) || /^(mailto|tel|data|javascript):/i.test(ref)) { external++; continue; }
     checked++;
     const target = path.normalize(path.join(dir, decodeURIComponent(ref.split('#')[0].split('?')[0])));
-    if (!(await ok(target))) {
+    // links point at directories now (`/lien-he/`), which both Vercel and
+    // http.server answer with the index.html inside them
+    if (!(await ok(target)) && !(await ok(path.join(target, 'index.html')))) {
       missing++;
       const key = `${target}  ← ${page.path}`;
       bad.set(key, (bad.get(key) || 0) + 1);

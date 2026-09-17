@@ -24,10 +24,10 @@
     } catch (e) { /* storage unavailable — the order still shows on screen */ }
   }
 
-  function orderCode() {
+  function orderCode(prefix) {
     var d = new Date();
     var pad = function (n) { return String(n).padStart(2, '0'); };
-    return 'HP' + String(d.getFullYear()).slice(2) + pad(d.getMonth() + 1) + pad(d.getDate())
+    return (prefix || 'HP') + String(d.getFullYear()).slice(2) + pad(d.getMonth() + 1) + pad(d.getDate())
       + '-' + String(Math.floor(Math.random() * 9000) + 1000);
   }
 
@@ -357,5 +357,104 @@
       var ok = $('#gpQuickSuccess');
       if (ok && !ok.hidden) { ok.hidden = true; quickForm.hidden = false; quickForm.reset(); syncQuickTotal(); }
     });
+  }
+
+  /* =======================================================================
+     4. Contact page (/lien-he/)
+
+     There is no backend, so the request is validated, kept in localStorage and
+     confirmed on screen with a request code — the same contract the checkout
+     and the quick-order modal offer.
+     ======================================================================= */
+
+  var contactForm = $('#gpContactForm');
+
+  if (contactForm) {
+    var REQUEST_KEY = 'gprequests.v1';
+
+    var CONTACT_RULES = {
+      gpContactName: function (v) { return v.trim().length >= 2; },
+      gpContactPhone: function (v) { return /^0\d{9}$/.test(v.replace(/[\s.]/g, '')); },
+      /* optional — only a filled-in address has to look like an email */
+      gpContactEmail: function (v) { return !v.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); },
+      gpContactMessage: function (v) { return v.trim().length >= 10; }
+    };
+
+    var contactSuccess = $('#gpContactSuccess');
+
+    function contactField(id) {
+      var el = document.getElementById(id);
+      return el && el.closest('.gp-field') ? el : null;
+    }
+
+    Object.keys(CONTACT_RULES).forEach(function (id) {
+      var el = contactField(id);
+      if (!el) return;
+      /* clear as soon as it is valid, but only complain once the field is left */
+      el.addEventListener('input', function () {
+        if (CONTACT_RULES[id](el.value)) el.closest('.gp-field').classList.remove('has-error');
+      });
+      el.addEventListener('blur', function () {
+        el.closest('.gp-field').classList.toggle('has-error', !CONTACT_RULES[id](el.value));
+      });
+    });
+
+    function saveRequest(req) {
+      try {
+        var all = JSON.parse(window.localStorage.getItem(REQUEST_KEY) || '[]');
+        all.unshift(req);
+        window.localStorage.setItem(REQUEST_KEY, JSON.stringify(all.slice(0, 20)));
+      } catch (e) { /* storage unavailable — the request still shows on screen */ }
+    }
+
+    contactForm.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var firstBad = null;
+      Object.keys(CONTACT_RULES).forEach(function (id) {
+        var el = contactField(id);
+        if (!el) return;
+        var ok = CONTACT_RULES[id](el.value);
+        el.closest('.gp-field').classList.toggle('has-error', !ok);
+        if (!ok && !firstBad) firstBad = el;
+      });
+      if (firstBad) {
+        firstBad.focus();
+        if (firstBad.scrollIntoView) firstBad.scrollIntoView({ block: 'center' });
+        return;
+      }
+
+      var value = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+      var code = orderCode('YC');
+      saveRequest({
+        code: code,
+        at: new Date().toISOString(),
+        name: value('gpContactName'),
+        phone: value('gpContactPhone'),
+        email: value('gpContactEmail'),
+        topic: value('gpContactTopic'),
+        address: value('gpContactAddress'),
+        message: value('gpContactMessage')
+      });
+
+      contactForm.hidden = true;
+      if (contactSuccess) {
+        var out = $('#gpContactCode', contactSuccess);
+        if (out) out.textContent = code;
+        contactSuccess.hidden = false;
+        if (contactSuccess.scrollIntoView) contactSuccess.scrollIntoView({ block: 'center' });
+      }
+    });
+
+    var again = $('#gpContactAgain');
+    if (again) {
+      again.addEventListener('click', function () {
+        if (contactSuccess) contactSuccess.hidden = true;
+        contactForm.reset();
+        $$('.gp-field.has-error', contactForm).forEach(function (f) { f.classList.remove('has-error'); });
+        contactForm.hidden = false;
+        var first = document.getElementById('gpContactName');
+        if (first) first.focus();
+      });
+    }
   }
 })(window, document);

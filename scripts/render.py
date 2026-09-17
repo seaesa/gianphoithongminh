@@ -59,6 +59,25 @@ class Ctx:
         return (' ' + rows[i]) if i < len(rows) and rows[i] else ''
 
 
+# ───────────────────────────────────────────────────────── favicon
+
+# Drawn by scripts/build-favicon.py from the Hòa Phát mark. `favicon.ico` sits
+# at the root because browsers ask for /favicon.ico whether it is linked or not.
+ICONS = [
+    '<link rel="icon" href="@favicon.ico" sizes="any">',
+    '<link rel="icon" type="image/png" sizes="32x32" href="@assets/img/favicon-32x32.png">',
+    '<link rel="icon" type="image/png" sizes="16x16" href="@assets/img/favicon-16x16.png">',
+    '<link rel="apple-touch-icon" sizes="180x180" href="@assets/img/apple-touch-icon.png">',
+    '<link rel="manifest" href="@site.webmanifest">',
+    '<meta name="theme-color" content="#0082c6">',
+]
+
+
+def icons(prefix):
+    """The icon block for a page whose root is `prefix` deep."""
+    return '\n'.join(tag.replace('"@', f'"{prefix}') for tag in ICONS)
+
+
 # ───────────────────────────────────────────────────────────── head
 
 def head(ctx, title, description='', body_class='', extra_css=()):
@@ -75,6 +94,7 @@ def head(ctx, title, description='', body_class='', extra_css=()):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(description)}">
+{icons(p)}
 {links}
 </head>
 <body class="{e(body_class)}">'''

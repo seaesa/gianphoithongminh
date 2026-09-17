@@ -127,14 +127,72 @@ def rewrite(text):
 
 
 # ── the Liên hệ page gets a real contact block, not a patched one ───────────
+#
+# The live page is a bare address list with no form at all. The clone leads with
+# a request form — the thing a visitor actually came to do — and keeps the
+# address list beside it. There is no backend here, so the form validates,
+# stores the request in localStorage and confirms with a request code, exactly
+# like the checkout and the quick-order modal do (assets/js/shop.js).
 
-CONTACT_PAGE = f'''
-<article class="post-8 page type-page status-publish hentry" id="post-8">
-<header class="entry-header">
-<h1 class="entry-title">Liên hệ</h1> </header><!-- .entry-header -->
-<div class="entry-content">
-<div class="col-xs-12" style="margin-bottom: 20px;">
-<p>Để liên hệ với <strong>{C['company']}</strong>, bạn có thể gọi trực tiếp theo hotline bên dưới, nhắn Zalo, gửi email hoặc ghé showroom của chúng tôi.</p>
+CONTACT_FORM = f'''
+<div class="gp-contact">
+<div class="gp-contact__main">
+<h2 class="gp-contact__title">Gửi yêu cầu tư vấn</h2>
+<p class="gp-contact__lead">Để lại thông tin, {C['shortName']} sẽ gọi lại để tư vấn và báo giá miễn phí — khảo sát tận nơi tại {C['area']}.</p>
+<form class="gp-contact-form" id="gpContactForm" novalidate="">
+<div class="gp-field-row">
+<div class="gp-field">
+<label for="gpContactName">Họ và tên <span class="req">*</span></label>
+<input type="text" id="gpContactName" name="name" autocomplete="name" placeholder="Nguyễn Văn A" required="">
+<span class="gp-error">Vui lòng nhập họ và tên.</span>
+</div>
+<div class="gp-field">
+<label for="gpContactPhone">Số điện thoại <span class="req">*</span></label>
+<input type="tel" id="gpContactPhone" name="phone" autocomplete="tel" placeholder="09xx xxx xxx" required="">
+<span class="gp-error">Số điện thoại phải có 10 chữ số.</span>
+</div>
+</div>
+<div class="gp-field-row">
+<div class="gp-field">
+<label for="gpContactEmail">Email</label>
+<input type="email" id="gpContactEmail" name="email" autocomplete="email" placeholder="email@example.com">
+<span class="gp-error">Email chưa đúng định dạng.</span>
+</div>
+<div class="gp-field">
+<label for="gpContactTopic">Bạn cần hỗ trợ về</label>
+<select id="gpContactTopic" name="topic">
+<option>Tư vấn và báo giá</option>
+<option>Đặt lịch khảo sát, lắp đặt</option>
+<option>Bảo hành, sửa chữa</option>
+<option>Hợp tác, làm đại lý</option>
+<option>Khiếu nại dịch vụ</option>
+</select>
+</div>
+</div>
+<div class="gp-field">
+<label for="gpContactAddress">Địa chỉ lắp đặt</label>
+<input type="text" id="gpContactAddress" name="address" autocomplete="street-address" placeholder="Số nhà, tên đường, phường/xã…">
+</div>
+<div class="gp-field">
+<label for="gpContactMessage">Nội dung <span class="req">*</span></label>
+<textarea id="gpContactMessage" name="message" placeholder="Mô tả ban công / lô gia, loại giàn phơi bạn quan tâm, thời gian muốn được gọi lại…" required=""></textarea>
+<span class="gp-error">Vui lòng nhập nội dung cần tư vấn (ít nhất 10 ký tự).</span>
+</div>
+<button type="submit" class="gp-btn gp-btn--primary gp-btn--block" id="gpContactSubmit">GỬI YÊU CẦU</button>
+<p class="gp-contact__hint">Cần gấp? Gọi <a href="tel:{C['phoneTel']}">{C['phone']}</a> hoặc <a href="{C['zalo']}" target="_blank" rel="noopener">chat Zalo</a> — trực máy {C['hours']}.</p>
+</form>
+<div class="gp-success" id="gpContactSuccess" hidden="">
+<i class="fa fa-check-circle" aria-hidden="true"></i>
+<h3>Đã nhận yêu cầu của bạn!</h3>
+<p>Mã yêu cầu: <span class="gp-order-code" id="gpContactCode"></span></p>
+<p>{C['shortName']} sẽ liên hệ lại trong giờ làm việc ({C['hours']}). Cần gấp, vui lòng gọi <a href="tel:{C['phoneTel']}">{C['phone']}</a>.</p>
+<div class="gp-success-actions">
+<button type="button" class="gp-btn gp-btn--ghost" id="gpContactAgain">Gửi yêu cầu khác</button>
+</div>
+</div>
+</div>
+<aside class="gp-contact__aside">
+<h2 class="gp-contact__title">Thông tin liên hệ</h2>
 <div id="address-box">
 <div id="address-list">
 <div class="info-item address">
@@ -167,9 +225,19 @@ CONTACT_PAGE = f'''
 </div>
 </div>
 </div>
+</aside>
+</div>'''
+
+CONTACT_PAGE = f'''
+<article class="post-8 page type-page status-publish hentry" id="post-8">
+<header class="entry-header">
+<h1 class="entry-title">Liên hệ</h1> </header><!-- .entry-header -->
+<div class="entry-content">
+<div class="col-xs-12" style="margin-bottom: 20px;">
+<p>Để liên hệ với <strong>{C['company']}</strong>, bạn có thể gửi yêu cầu tư vấn ngay bên dưới, gọi trực tiếp theo hotline, nhắn Zalo, gửi email hoặc ghé showroom của chúng tôi.</p>
+{CONTACT_FORM}
 <p><iframe src="{C['map']}" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" title="Bản đồ đường tới showroom"></iframe></p>
 </div>
-<div class="col-sm-7"></div>
 </div><!-- .entry-content -->
 <footer class="entry-footer">
 </footer><!-- #post-## -->

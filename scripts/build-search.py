@@ -31,7 +31,7 @@ IMG_RE = re.compile(r'<img\b[^>]*?\bsrc="([^"]+)"', re.I)
 # already shows.
 DROP = ('script, style, .modal, .comments-area, .related-post, .hrm-social-share,'
         ' .woocommerce-breadcrumb, .entry-header, .post-meta, .entry-footer,'
-        ' .woocommerce-tabs ul.tabs, .woocommerce-Reviews, form')
+        ' .woocommerce-tabs ul.tabs, .woocommerce-Reviews, form, .gp-success')
 
 
 def plain(markup):
@@ -88,10 +88,18 @@ SKIP_PATHS = {'gio-hang/index.html', 'thanh-toan/index.html',
               'tai-khoan/index.html', 'tim-kiem/index.html'}
 
 
+def url_of(path):
+    """The link a result card gets. Pages live at `<dir>/index.html` but are
+    served as `<dir>/` — see vercel.json and scripts/clean-urls.py. The home
+    page becomes '', which the search page's own `data-prefix` turns into the
+    site root."""
+    return path[:-len('index.html')] if path.endswith('index.html') else path
+
+
 def entry(path, title, kind, text, img, price=''):
     title = unicodedata.normalize('NFC', SUFFIX_RE.sub('', title).strip())
     return {
-        'u': path,
+        'u': url_of(path),
         't': title,
         'k': KIND_LABEL.get(kind, 'Trang'),
         'x': excerpt(text),

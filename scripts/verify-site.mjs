@@ -1,7 +1,8 @@
 /**
  * Verifies the site chrome this clone fixes rather than clones: the cart icon,
  * the footer's Facebook card, search, the two menu items added to the main nav,
- * and the one-row mobile header.
+ * the one-row mobile header, the Liên hệ request form, and the extensionless
+ * URLs and favicon set.
  *
  *   node scripts/verify-site.mjs        # needs scripts/serve.sh running
  */
@@ -246,6 +247,163 @@ const tap = await page.evaluate(() => {
   return [Math.round(b.width), Math.round(b.height)];
 });
 ok(tap[0] >= 30 && tap[1] >= 28, `mobile cart icon is only ${tap.join('x')}`);
+
+/* ── 6. the Liên hệ request form ─────────────────────────────────────────── */
+
+await page.setViewportSize({ width: 1280, height: 900 });
+await page.goto(ROOT + 'lien-he/', { waitUntil: 'networkidle' });
+
+ok(await page.locator('#gpContactForm').count() === 1, 'no request form on /lien-he/');
+
+// "form first": the form comes before the address list in document order, its
+// column starts no lower, and it is the first thing inside the page body. The
+// column is what is compared, not the form card — the card sits below its own
+// heading and lead paragraph, which the address list does not have.
+const order = await page.evaluate(() => {
+  const form = document.querySelector('#gpContactForm');
+  const box = document.querySelector('#address-box');
+  const main = document.querySelector('.gp-contact__main');
+  const aside = document.querySelector('.gp-contact__aside');
+  if (!form || !box || !main || !aside) return null;
+  const m = main.getBoundingClientRect(), a = aside.getBoundingClientRect();
+  const content = form.closest('.entry-content');
+  return {
+    earlier: !!(form.compareDocumentPosition(box) & Node.DOCUMENT_POSITION_FOLLOWING),
+    top: m.top <= a.top + 1,
+    left: m.left <= a.left + 1,
+    inContent: !!content,
+    // nothing but the one-line intro may precede the form block
+    firstBlock: content
+      ? [...content.querySelectorAll('.gp-contact, #address-box, iframe')][0].className
+          .includes('gp-contact')
+      : false,
+  };
+});
+ok(order && order.earlier, 'the address list comes before the form in the markup');
+ok(order && order.top, 'the form column starts below the address column');
+ok(order && order.left, 'the form column sits to the right of the address column');
+ok(order && order.inContent, 'the form is not inside .entry-content');
+ok(order && order.firstBlock, 'something else comes before the form block');
+
+// and on a phone, where the two columns stack, the form is wholly above
+await page.setViewportSize({ width: 390, height: 844 });
+const stacked = await page.evaluate(() => {
+  const f = document.querySelector('#gpContactForm').getBoundingClientRect();
+  const b = document.querySelector('#address-box').getBoundingClientRect();
+  return { above: f.bottom <= b.top + 1, oneCol: Math.abs(f.left - b.left) < 2 };
+});
+ok(stacked.oneCol, 'the two columns do not stack on a phone');
+ok(stacked.above, 'the form is not above the address list on a phone');
+await page.setViewportSize({ width: 1280, height: 900 });
+
+// an empty submit marks every required field and focuses the first
+await page.click('#gpContactSubmit');
+ok(await page.locator('#gpContactName').evaluate(el => el.closest('.gp-field').classList.contains('has-error')),
+  'empty name was accepted');
+ok(await page.locator('#gpContactMessage').evaluate(el => el.closest('.gp-field').classList.contains('has-error')),
+  'empty message was accepted');
+ok(await page.evaluate(() => document.activeElement && document.activeElement.id) === 'gpContactName',
+  'the first invalid field was not focused');
+ok(await page.locator('#gpContactSuccess').isHidden(), 'an invalid form still confirmed');
+
+// the optional email only has to be valid when it is filled in
+await page.fill('#gpContactName', 'Trần Minh Tường');
+await page.fill('#gpContactPhone', '0912 345 678');
+await page.fill('#gpContactMessage', 'Ban công 2m, cần tư vấn giàn phơi điều khiển.');
+await page.fill('#gpContactEmail', 'khong-phai-email');
+await page.click('#gpContactSubmit');
+ok(await page.locator('#gpContactEmail').evaluate(el => el.closest('.gp-field').classList.contains('has-error')),
+  'a malformed email was accepted');
+
+// a bad phone is caught too
+await page.fill('#gpContactEmail', '');
+await page.fill('#gpContactPhone', '12345');
+await page.click('#gpContactSubmit');
+ok(await page.locator('#gpContactPhone').evaluate(el => el.closest('.gp-field').classList.contains('has-error')),
+  'a 5-digit phone was accepted');
+
+// a complete request confirms with a code and is kept for the shop owner
+await page.fill('#gpContactPhone', '0912 345 678');
+await page.selectOption('#gpContactTopic', { index: 1 });
+await page.fill('#gpContactAddress', 'Đường 48, Hiệp Bình Chánh');
+await page.click('#gpContactSubmit');
+await page.waitForSelector('#gpContactSuccess:not([hidden])', { timeout: 3000 }).catch(() => {});
+ok(await page.locator('#gpContactSuccess').isVisible(), 'a valid request did not confirm');
+ok(await page.locator('#gpContactForm').isHidden(), 'the form stayed on screen after sending');
+const code = (await page.textContent('#gpContactCode') || '').trim();
+ok(/^YC\d{6}-\d{4}$/.test(code), `request code is "${code}"`);
+
+const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('gprequests.v1') || '[]'));
+ok(saved.length === 1, `${saved.length} requests stored, expected 1`);
+ok(saved[0] && saved[0].code === code, 'the stored request has a different code');
+ok(saved[0] && saved[0].phone === '0912 345 678', `stored phone is "${saved[0] && saved[0].phone}"`);
+ok(saved[0] && saved[0].address === 'Đường 48, Hiệp Bình Chánh', 'the address was not stored');
+
+// and the visitor can send another one
+await page.click('#gpContactAgain');
+ok(await page.locator('#gpContactForm').isVisible(), 'sending another request did not bring the form back');
+ok(await page.inputValue('#gpContactName') === '', 'the form came back still filled in');
+ok(await page.locator('.gp-field.has-error').count() === 0, 'error marks survived the reset');
+
+// the page still carries the contact facts it is built from
+const contactText = await page.textContent('#address-box');
+for (const [label, value] of [['phone', contact.phone], ['email', contact.email],
+                              ['address', contact.address], ['area', contact.area]]) {
+  ok(contactText.includes(value), `/lien-he/ does not show the ${label} (${value})`);
+}
+
+/* ── 7. extensionless URLs and the favicon set ───────────────────────────── */
+
+// vercel.json serves `<dir>/index.html` as `<dir>/`, so no page may link to a
+// path ending in index.html — that would cost every click a 308
+for (const path of ['', 'lien-he/', 'cua-hang/', 'category/tin-tuc/', 'gio-hang/']) {
+  await page.goto(ROOT + path, { waitUntil: 'domcontentloaded' });
+  const dirty = await page.evaluate(() =>
+    [...document.querySelectorAll('a[href], form[action]')]
+      .map(el => el.getAttribute('href') || el.getAttribute('action'))
+      .filter(h => h && !/^https?:/i.test(h) && /index\.html(\?|#|$)/.test(h)));
+  ok(dirty.length === 0, `/${path} still links to ${dirty[0]}`);
+}
+
+// the links themselves have to land somewhere
+await page.goto(ROOT, { waitUntil: 'domcontentloaded' });
+const navLinks = await page.evaluate(() =>
+  [...document.querySelectorAll('#navigation > li > a')].map(a => a.href));
+for (const href of navLinks) {
+  const res = await page.request.get(href);
+  ok(res.status() === 200, `${href} answered ${res.status()}`);
+}
+
+const icons = await page.evaluate(() => ({
+  ico: document.querySelector('link[rel="icon"][href$=".ico"]')?.href || '',
+  png32: document.querySelector('link[rel="icon"][sizes="32x32"]')?.href || '',
+  png16: document.querySelector('link[rel="icon"][sizes="16x16"]')?.href || '',
+  apple: document.querySelector('link[rel="apple-touch-icon"]')?.href || '',
+  manifest: document.querySelector('link[rel="manifest"]')?.href || '',
+  theme: document.querySelector('meta[name="theme-color"]')?.content || '',
+}));
+for (const [name, href] of Object.entries(icons)) {
+  if (name === 'theme') continue;
+  ok(!!href, `no ${name} link in <head>`);
+  if (!href) continue;
+  const res = await page.request.get(href);
+  ok(res.status() === 200, `${name} (${href}) answered ${res.status()}`);
+  ok((await res.body()).length > 0, `${name} is empty`);
+}
+ok(icons.theme === '#0082c6', `theme-color is "${icons.theme}"`);
+
+const manifest = await (await page.request.get(icons.manifest)).json();
+ok(Array.isArray(manifest.icons) && manifest.icons.length >= 2,
+  'the manifest lists fewer than two icons');
+for (const i of manifest.icons || []) {
+  const res = await page.request.get(ROOT.replace(/\/$/, '') + i.src);
+  ok(res.status() === 200, `manifest icon ${i.src} answered ${res.status()}`);
+}
+
+// a page three levels down resolves its icons too — the prefix is per page
+await page.goto(ROOT + 'category/tin-tuc/page/2/', { waitUntil: 'domcontentloaded' });
+const deep = await page.evaluate(() => document.querySelector('link[rel="icon"][href$=".ico"]').href);
+ok(new URL(deep).pathname === '/favicon.ico', `deep page points at ${deep}`);
 
 ok(jsErrors.length === 0, `JS errors: ${jsErrors[0]}`);
 

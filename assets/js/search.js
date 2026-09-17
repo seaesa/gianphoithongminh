@@ -166,8 +166,8 @@
       + '<li>Kiểm tra lại chính tả của từ khoá</li>'
       + '<li>Dùng từ khoá ngắn và chung hơn, ví dụ “giàn phơi”</li>'
       + '<li>Bỏ dấu tiếng Việt — tìm kiếm vẫn hoạt động</li>'
-      + '<li><a href="' + prefix + 'cua-hang/index.html">Xem toàn bộ sản phẩm</a></li>'
-      + '<li><a href="' + prefix + 'category/tin-tuc/index.html">Xem tin tức mới nhất</a></li>'
+      + '<li><a href="' + prefix + 'cua-hang/">Xem toàn bộ sản phẩm</a></li>'
+      + '<li><a href="' + prefix + 'category/tin-tuc/">Xem tin tức mới nhất</a></li>'
       + '</ul></div>';
   }
 

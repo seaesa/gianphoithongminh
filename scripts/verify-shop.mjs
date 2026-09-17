@@ -235,9 +235,10 @@ const broken = await page.evaluate(() =>
     .filter(i => i.complete && i.naturalWidth === 0)
     .map(i => i.getAttribute('src')));
 check('all category images load', broken.length === 0, broken.join(' | '));
+// links are extensionless now — `../cua-hang/<slug>/` (see scripts/clean-urls.py)
 check('cards link to real products', await page.evaluate(() =>
   [...document.querySelectorAll('ul.products .woocommerce-LoopProduct-link')]
-    .every(a => /cua-hang\/.+\/index\.html$/.test(a.getAttribute('href')))));
+    .every(a => /cua-hang\/[^/]+\/$/.test(a.getAttribute('href')))));
 
 /* ── 9. private-mode resilience ─────────────────────────────────────── */
 const ctx2 = await browser.newContext({ viewport: { width: 1440, height: 900 } });

@@ -1,8 +1,8 @@
 # Site chrome fixes Specification
 
-Three pieces of the header and footer that the clone had to *fix* rather than
-reproduce, because what the live site does there depends on a server or a
-third-party SDK that this clone does not load.
+Pieces of the site that the clone had to *fix* rather than reproduce, because
+what the live site does there depends on a server or a third-party SDK that this
+clone does not load — or because the live site does not do it at all.
 
 | # | What was broken | Where |
 |---|---|---|
@@ -11,8 +11,11 @@ third-party SDK that this clone does not load.
 | 3 | The search box did nothing | `.search-form` + `/tim-kiem/` |
 | 4 | Search and cart stacked three-deep on a phone | `.top-mid-right`, below 992px |
 | 5 | Tin tức and Liên hệ were not reachable from the menu | `#navigation`, every page |
+| 6 | Liên hệ had no way to get in touch but a phone number | `/lien-he/` |
+| 7 | The favicon was the raw logo PNG | `<head>`, every page |
+| 8 | Every URL ended in `index.html` | every link, `vercel.json` |
 
-Styling for all three is in `assets/css/site.css`, which is hand-written and so
+Styling for all of them is in `assets/css/site.css`, which is hand-written and so
 not tree-shaken by `build-css.py`.
 
 ---
@@ -186,9 +189,159 @@ the only width where the two disagree.
 
 ---
 
+## 6. Liên hệ request form — `/lien-he/`
+
+The live page is an address list, a phone number and a map. There is no form:
+the theme's contact template renders `#address-box` and nothing else, so the
+only way to reach the shop is to pick up the phone.
+
+The clone leads with the form, because that is what a visitor opened the page
+to do. Markup is built by `scripts/apply-contact.py` (`CONTACT_FORM`), from the
+same `data/contact.json` as the rest of the site.
+
+**Layout** — `.gp-contact` is a two-column flex row:
+
+| | |
+|---|---|
+| `.gp-contact__main` | `flex: 1 1 400px` — heading, lead, form, success panel |
+| `.gp-contact__aside` | `flex: 1 1 260px` — the theme's own `#address-box` |
+
+Below ~700px the columns wrap and the form is wholly above the address list; the
+map stays full width under both. Field, button and confirmation styling is
+**reused from `shop.css`** (`.gp-field`, `.gp-field-row`, `.gp-error`, `.gp-btn`,
+`.gp-success`), so the form matches the checkout without a second set of rules.
+
+**Fields and rules** (`assets/js/shop.js`, section 4):
+
+| field | rule |
+|---|---|
+| Họ và tên | ≥ 2 characters |
+| Số điện thoại | `/^0\d{9}$/` after stripping spaces and dots |
+| Email | optional; standard shape only when filled |
+| Bạn cần hỗ trợ về | `<select>`, five topics, always valid |
+| Địa chỉ lắp đặt | optional |
+| Nội dung | ≥ 10 characters |
+
+Errors clear on `input` as soon as the value becomes valid and are (re)applied on
+`blur`, so a visitor is never told off mid-word. Submitting focuses and scrolls
+to the first invalid field.
+
+**On success** the request is pushed to `gprequests.v1` (last 20 kept, every
+access in try/catch), the form is hidden and `#gpContactSuccess` shows a request
+code of the form `YC<yymmdd>-<4 digits>` — the same shape as the checkout's
+`HP…`, from the same `orderCode(prefix)` helper. *Gửi yêu cầu khác* resets the
+form and clears any error marks.
+
+There is no backend, so nothing is sent anywhere. That is the same contract the
+cart, the checkout and the quick-order modal offer, and it is listed in the
+README as the change production needs.
+
+`verify-pages.mjs` skips `/lien-he/` — the page is `cloneOnly` and has been since
+its contact details stopped matching the live site.
+
+---
+
+## 7. Favicon — `scripts/build-favicon.py`
+
+The live site does link an icon, but it is the logo file itself:
+
+```html
+<link rel="shortcut icon" href="…/uploads/2017/12/logo-hoa-phat-01.png">
+```
+
+That is a 255×198 PNG of a shield with "HÒA PHÁT" written across it. It is not
+square, so a browser letterboxes it; at 16px the text is a smudge; and there is
+no apple-touch icon or manifest at all.
+
+What reads at 16px is the **three-triangle mark** inside the shield, so that is
+what the icons carry, white on the theme blue `#0082c6`. The triangles are not
+redrawn by eye — the generator measured the white pixels inside the shield
+(x 85–170, y 83–127 of the logo) and expresses them as fractions of that box, so
+the mark is the real one at any size. Everything is drawn at 8× and downsampled,
+which is what keeps the diagonals clean.
+
+| file | size | shape |
+|---|---|---|
+| `favicon.ico` | 16 / 32 / 48 | rounded square, transparent corners |
+| `assets/img/favicon-16x16.png`, `-32x32.png` | 16, 32 | same |
+| `assets/img/apple-touch-icon.png` | 180 | **full square** — iOS rounds it itself |
+| `assets/img/icon-192.png`, `icon-512.png` | 192, 512 | full square, mark at 56% for the maskable safe zone |
+| `site.webmanifest` | — | name, `theme_color: #0082c6`, both icons `any maskable` |
+
+`render.py`'s `icons()` emits the `<link>` block with each page's own relative
+prefix, so a page three directories down still points at `/favicon.ico`.
+
+The mark is smaller at 16px than at 32px (`mark=0.82` vs `0.76` of a rounded
+canvas) on purpose: at that size the rounding eats more of the canvas.
+
+---
+
+## 8. Extensionless URLs — `vercel.json` + `scripts/clean-urls.py`
+
+Every page in this clone is `<dir>/index.html`, so `/lien-he/index.html` and
+`/lien-he/` are the same file. `vercel.json` makes the second spelling the
+canonical one:
+
+```json
+{
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/index.html",        "destination": "/",         "permanent": true },
+    { "source": "/:path+/index.html", "destination": "/:path+/",  "permanent": true }
+  ]
+}
+```
+
+**`trailingSlash: true` is load-bearing, not cosmetic.** Every page resolves its
+stylesheets, images and links relative to its own directory (`render.py` gives
+each one a `../`-counted prefix). The browser takes that base from the URL: at
+`/lien-he/` it is `/lien-he/`, but at `/lien-he` it is `/`, and every relative
+path on the page would resolve one level too high. Vercel's own trailing-slash
+rule exempts paths containing a dot, so `/x/index.html` still reaches the
+redirect below it.
+
+**Why not `cleanUrls: true`.** It does the same job for `/x/index.html`, but its
+route is `^/(?:(.+)/)?index(?:\.html)?/?$` → `/$1/`, and for the root
+`/index.html` the capture is empty, so the `Location` becomes `//` — a URL with
+an empty host. Two explicit redirects have no such edge.
+
+### The links themselves
+
+A redirect only fixes the address bar; the 8,679 internal links would each still
+cost a 308. `scripts/clean-urls.py` runs after every renderer and rewrites them
+in one pass:
+
+```python
+LINK_RE = re.compile(r'\b(href|action)="([^"]*?)index\.html(["#?])')
+```
+
+`href="foo/index.html"` becomes `href="foo/"`, `href="index.html"` becomes
+`href="./"`, and a path containing `://` is left alone. **Nothing moves on
+disk** — the files are still `<dir>/index.html`, which is what both Vercel and
+`python3 -m http.server` serve for a directory request, so `serve.sh` and every
+verifier keep working unchanged.
+
+Three things generate links outside those pages and are cleaned at their source
+instead:
+
+- `scripts/build-search.py` — `url_of()` strips `index.html` from each entry's
+  `u`; the home page becomes `''`, which the search page's `data-prefix` turns
+  into the site root
+- `assets/js/cart.js` — the mini-cart's two buttons and the toast link
+- `assets/js/search.js` — the two "no results" suggestions
+
+`check-links.mjs` resolves a directory href by looking for the `index.html`
+inside it, so the integrity check still covers all 14,476 references.
+
+The one thing this does **not** work under is `file://`, where a directory href
+opens a listing. The README says so, and `serve.sh` already existed for the same
+reason.
+
+---
+
 ## Verification — `scripts/verify-site.mjs`
 
-**46 checks**:
+**195 checks**:
 
 - the cart icon carries a real `href` from three different directory depths,
   navigates to `/gio-hang/`, and the page it reaches is the working cart
@@ -215,8 +368,24 @@ the only width where the two disagree.
 - searching from the compact mobile header still reaches the results page
 - the cart icon is still at least 30×28px to tap
 
-`verify.mjs --all` covers the nav at all 15 widths from 320 to 1920px.
+- the request form is before the address list in the markup, its column starts
+  no lower and no further right, nothing but the intro precedes it, and on a
+  390px phone the form ends above the address list
+- an empty submit marks name and message, focuses the first bad field and does
+  not confirm; a malformed email and a 5-digit phone are each caught
+- a complete request hides the form, shows a `YC……-….` code, and stores the
+  same code, phone and address in `gprequests.v1`
+- *Gửi yêu cầu khác* brings back an empty form with no error marks
+- `/lien-he/` still prints the phone, email, address and service area from
+  `data/contact.json`
+- five pages at four depths link to nothing ending in `index.html`, and every
+  main-menu link answers 200
+- the five icon links resolve and are non-empty, `theme-color` is `#0082c6`, the
+  manifest lists two icons that both resolve, and a page three levels down still
+  points at `/favicon.ico`
 - no JS errors anywhere in the run
+
+`verify.mjs --all` covers the nav at all 15 widths from 320 to 1920px.
 
 ### How the 80px shorter header is compared
 

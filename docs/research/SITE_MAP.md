@@ -5,6 +5,10 @@ crawling. The post taxonomy was then replaced wholesale with the news feed
 from gianphoichinhhang.com, so the `post` and `post-archive` rows below are
 generated rather than cloned — see `components/news.spec.md`.
 
+Every page is written as `<dir>/index.html` but **served as `<dir>/`** —
+`vercel.json` canonicalises the URL and `scripts/clean-urls.py` strips
+`index.html` from the links. The paths below are the files on disk.
+
 108 pages in total: the homepage, the 105 below, and 2 page this clone adds that the live site never had.
 
 | template | pages | output |

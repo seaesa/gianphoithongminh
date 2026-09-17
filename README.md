@@ -228,8 +228,8 @@ one thing that is not automatic — how URLs are spelled:
 {
   "trailingSlash": true,
   "redirects": [
-    { "source": "/index.html",        "destination": "/" },
-    { "source": "/:path+/index.html", "destination": "/:path+/" }
+    { "source": "/index.html",        "destination": "/",        "permanent": true },
+    { "source": "/:path+/index.html", "destination": "/:path+/", "permanent": true }
   ]
 }
 ```

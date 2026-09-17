@@ -375,7 +375,7 @@
     var CONTACT_RULES = {
       gpContactName: function (v) { return v.trim().length >= 2; },
       gpContactPhone: function (v) { return /^0\d{9}$/.test(v.replace(/[\s.]/g, '')); },
-      /* optional — only a filled-in address has to look like an email */
+      /* optional — only a filled-in mailbox has to be well formed */
       gpContactEmail: function (v) { return !v.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()); },
       gpContactMessage: function (v) { return v.trim().length >= 10; }
     };
